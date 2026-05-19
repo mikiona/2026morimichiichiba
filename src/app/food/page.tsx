@@ -5,7 +5,7 @@ import { OFFICIAL_SITE_URL } from '@/lib/constants';
 export const revalidate = 3600; // 1時間ごとに再取得
 
 export const metadata = {
-  title: 'フード検索 | 森道市場 2026',
+  title: 'ショップ検索 | 森道市場 2026',
 };
 
 const SOURCE_LABELS = {
@@ -28,10 +28,10 @@ export default async function FoodPage() {
     <div className="max-w-6xl mx-auto px-4 py-6">
       <div className="flex items-start justify-between mb-6">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">🍜 フード検索</h1>
+          <h1 className="text-2xl font-bold text-gray-900">🛍️ ショップ検索</h1>
           <div className="flex items-center gap-2 mt-1">
             <p className="text-sm text-gray-500">
-              全 {vendors.length} 店舗 — カテゴリ・アレルゲン・価格帯・エリアで絞り込み
+              全 {vendors.length} 店舗 — ジャンルで絞り込み
             </p>
             <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${sourceInfo.color}`}>
               {sourceInfo.label}
