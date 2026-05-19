@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const NAV_ITEMS = [
   { href: '/',          label: 'ホーム' },
-  { href: '/food',      label: 'フード' },
+  { href: '/food',      label: 'ショップ' },
   { href: '/artists',   label: 'アーティスト' },
   { href: '/timetable', label: 'タイムテーブル' },
   { href: '/news',      label: 'ニュース' },

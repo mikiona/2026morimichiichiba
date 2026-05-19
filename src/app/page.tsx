@@ -4,9 +4,9 @@ import { FESTIVAL_DATES, VENUE_NAME, VENUE_ADDRESS, OFFICIAL_SITE_URL } from '@/
 const SECTIONS = [
   {
     href: '/food',
-    emoji: '🍜',
-    title: 'フード検索',
-    description: '食べたいものをカテゴリ・価格帯・アレルゲン対応で絞り込んで探せます',
+    emoji: '🛍️',
+    title: 'ショップ検索',
+    description: '食べ物・クラフト・ファッション・本など530店舗をジャンルで絞り込んで探せます',
     color: 'from-orange-50 to-amber-50 border-orange-200',
     iconBg: 'bg-orange-100',
   },

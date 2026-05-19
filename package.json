@@ -12,7 +12,9 @@
     "scrape:artists": "tsx scripts/scrape-artists.ts",
     "scrape:timetable": "tsx scripts/scrape-timetable.ts",
     "scrape:food": "tsx scripts/scrape-food.ts",
-    "seed": "tsx scripts/seed-manual.ts"
+    "scrape:food:install": "playwright install chromium",
+    "seed": "tsx scripts/seed-manual.ts",
+    "debug:food": "tsx scripts/debug-food.ts"
   },
   "dependencies": {
     "axios": "^1.16.1",

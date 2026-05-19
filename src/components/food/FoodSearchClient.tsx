@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useMemo } from 'react';
-import type { FoodVendor, FoodFilterState, FoodCategory, AllergenTag, PriceRange } from '@/types';
+import type { FoodVendor, FoodFilterState, FoodCategory } from '@/types';
 import { filterFood } from '@/lib/filters/filterFood';
 import { SearchInput } from '@/components/ui/SearchInput';
 import { FilterChip } from '@/components/ui/FilterChip';
@@ -8,20 +8,14 @@ import { EmptyState } from '@/components/ui/EmptyState';
 import { FoodCard } from './FoodCard';
 
 const CATEGORIES: FoodCategory[] = [
-  '和食', '洋食', 'アジア料理', 'カレー', 'ラーメン・麺類',
-  'バーガー・サンドイッチ', 'ケバブ・中東料理', 'ベトナム料理',
-  'スイーツ・デザート', 'ドリンク・カクテル', 'クラフトビール', 'コーヒー・カフェ',
+  'コーヒー・カフェ', 'クラフトビール', 'パン・スイーツ',
+  'カレー・インド料理', 'アジア料理', '和食・定食', 'ドリンク',
+  'クラフト・工芸', 'ファッション', '本・音楽・アート', 'その他',
 ];
-
-const ALLERGENS: AllergenTag[] = ['ヴィーガン', 'ベジタリアン', 'グルテンフリー', '乳製品不使用', 'ハラール'];
-
-const PRICE_RANGES: PriceRange[] = ['〜¥500', '¥500〜¥1,000', '¥1,000〜¥1,500', '¥1,500〜'];
 
 const INITIAL: FoodFilterState = {
   query: '',
   categories: [],
-  allergens: [],
-  priceRange: null,
   areas: [],
 };
 
@@ -40,11 +34,13 @@ export function FoodSearchClient({ vendors, areas }: FoodSearchClientProps) {
 
   const results = useMemo(() => filterFood(vendors, filter), [vendors, filter]);
 
-  const hasActiveFilters =
-    filter.categories.length > 0 ||
-    filter.allergens.length > 0 ||
-    filter.priceRange !== null ||
-    filter.areas.length > 0;
+  // 実際にデータがあるカテゴリだけ表示
+  const availableCategories = useMemo(() => {
+    const set = new Set(vendors.flatMap((v) => v.categories));
+    return CATEGORIES.filter((c) => set.has(c));
+  }, [vendors]);
+
+  const hasActiveFilters = filter.categories.length > 0 || filter.areas.length > 0;
 
   return (
     <div>
@@ -54,7 +50,7 @@ export function FoodSearchClient({ vendors, areas }: FoodSearchClientProps) {
           <SearchInput
             value={filter.query}
             onChange={(q) => setFilter((f) => ({ ...f, query: q }))}
-            placeholder="店舗名・メニュー名で検索"
+            placeholder="店舗名・よみがなで検索"
           />
         </div>
         <button
@@ -72,7 +68,7 @@ export function FoodSearchClient({ vendors, areas }: FoodSearchClientProps) {
           絞り込み
           {hasActiveFilters && (
             <span className="ml-1 bg-white text-emerald-600 rounded-full w-4 h-4 flex items-center justify-center text-xs font-bold">
-              {filter.categories.length + filter.allergens.length + (filter.priceRange ? 1 : 0) + filter.areas.length}
+              {filter.categories.length + filter.areas.length}
             </span>
           )}
         </button>
@@ -83,9 +79,9 @@ export function FoodSearchClient({ vendors, areas }: FoodSearchClientProps) {
         <div className="bg-white rounded-xl border border-gray-200 p-4 mb-4 space-y-4">
           {/* Categories */}
           <div>
-            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">カテゴリ</h3>
+            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">ジャンル</h3>
             <div className="flex flex-wrap gap-2">
-              {CATEGORIES.map((c) => (
+              {availableCategories.map((c) => (
                 <FilterChip
                   key={c}
                   label={c}
@@ -96,38 +92,8 @@ export function FoodSearchClient({ vendors, areas }: FoodSearchClientProps) {
             </div>
           </div>
 
-          {/* Allergens */}
-          <div>
-            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">アレルゲン対応</h3>
-            <div className="flex flex-wrap gap-2">
-              {ALLERGENS.map((a) => (
-                <FilterChip
-                  key={a}
-                  label={a}
-                  active={filter.allergens.includes(a)}
-                  onClick={() => setFilter((f) => ({ ...f, allergens: toggle(f.allergens, a) }))}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Price range */}
-          <div>
-            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">価格帯</h3>
-            <div className="flex flex-wrap gap-2">
-              {PRICE_RANGES.map((p) => (
-                <FilterChip
-                  key={p}
-                  label={p}
-                  active={filter.priceRange === p}
-                  onClick={() => setFilter((f) => ({ ...f, priceRange: f.priceRange === p ? null : p }))}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Areas */}
-          {areas.length > 0 && (
+          {/* Areas — only if multiple distinct areas exist */}
+          {areas.length > 1 && (
             <div>
               <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">エリア</h3>
               <div className="flex flex-wrap gap-2">
@@ -170,7 +136,7 @@ export function FoodSearchClient({ vendors, areas }: FoodSearchClientProps) {
           ))}
         </div>
       ) : (
-        <EmptyState message="該当するフードが見つかりませんでした" />
+        <EmptyState message="該当する店舗が見つかりませんでした" />
       )}
     </div>
   );

@@ -1,182 +1,161 @@
-import * as cheerio from 'cheerio';
+/**
+ * Playwright を使った /market/ スクレイピング
+ * 実行: npm run scrape:food
+ *
+ * 全店舗はページネーションなしで1ページのDOMに含まれている。
+ * セレクタ: #market_shop_list .column > a.modal_view + h2.c_title + span[data-bg]
+ */
 import * as fs from 'fs';
 import * as path from 'path';
-import { fetchPageSafe } from './utils/fetchPage';
-import type { FoodVendor, FoodCategory, AllergenTag, PriceRange, MenuItem } from '../src/types';
+import type { FoodVendor } from '../src/types';
+import { guessCategory } from './utils/guessCategory';
 
-const BASE_URL = 'https://morimichiichiba.jp';
-const COMMUNE_INDEX = `${BASE_URL}/commune/`;
-const AREA_INDEX    = `${BASE_URL}/area/`;
-const OUT_PATH = path.join(process.cwd(), 'src/data/food.json');
+const MARKET_URL = 'https://morimichiichiba.jp/market/';
+const OUT_PATH   = path.join(process.cwd(), 'src/data/food.json');
 
-function slugify(name: string): string {
-  return name.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').trim();
+function slugify(s: string): string {
+  return s.toLowerCase().replace(/[\s　]+/g, '-').replace(/[^\w\-]/g, '')
+    .replace(/-+/g, '-').replace(/^-|-$/g, '') || String(Date.now());
 }
 
-function guessCategory(text: string): FoodCategory[] {
-  const t = text.toLowerCase();
-  const cats: FoodCategory[] = [];
-  if (/カレー/.test(t)) cats.push('カレー');
-  if (/ケバブ|シャワルマ|中東|トルコ/.test(t)) cats.push('ケバブ・中東料理');
-  if (/バインミー|ベトナム/.test(t)) cats.push('ベトナム料理');
-  if (/ラーメン|麺|うどん|そば/.test(t)) cats.push('ラーメン・麺類');
-  if (/バーガー|サンドイッチ/.test(t)) cats.push('バーガー・サンドイッチ');
-  if (/スイーツ|デザート|ケーキ|アイス|チョコ/.test(t)) cats.push('スイーツ・デザート');
-  if (/コーヒー|カフェ|エスプレッソ|ラテ/.test(t)) cats.push('コーヒー・カフェ');
-  if (/クラフトビール|beer|ビール/.test(t)) cats.push('クラフトビール');
-  if (/ドリンク|カクテル|drinks|juice/.test(t)) cats.push('ドリンク・カクテル');
-  if (/アジア|タイ|インド/.test(t)) cats.push('アジア料理');
-  if (cats.length === 0) cats.push('その他');
-  return cats;
-}
+// ─── ページ内の店舗データを JS で抽出 ────────────────────────
+// Playwright の page.evaluate() 内で実行されるため DOM API を使う
 
-function guessAllergens(text: string): AllergenTag[] {
-  const t = text.toLowerCase();
-  const tags: AllergenTag[] = [];
-  if (/ヴィーガン|vegan/.test(t)) tags.push('ヴィーガン');
-  if (/ベジタリアン|vegetarian/.test(t)) tags.push('ベジタリアン');
-  if (/グルテンフリー|gluten.free/.test(t)) tags.push('グルテンフリー');
-  if (/乳製品不使用|dairy.free/.test(t)) tags.push('乳製品不使用');
-  if (/ハラール|halal/.test(t)) tags.push('ハラール');
-  return tags;
-}
+/* eslint-disable @typescript-eslint/no-explicit-any */
+function extractVendorsFromDOM(): Array<{
+  name: string; kana: string; imageUrl: string; sourceUrl: string;
+}> {
+  const results: Array<{
+    name: string; kana: string; imageUrl: string; sourceUrl: string;
+  }> = [];
+  const seen = new Set<string>();
 
-function guessPriceRange(items: MenuItem[]): PriceRange {
-  const prices = items.map(i => i.price).filter((p): p is number => p !== undefined);
-  if (prices.length === 0) return '¥500〜¥1,000';
-  const avg = prices.reduce((a, b) => a + b, 0) / prices.length;
-  if (avg < 500) return '〜¥500';
-  if (avg < 1000) return '¥500〜¥1,000';
-  if (avg < 1500) return '¥1,000〜¥1,500';
-  return '¥1,500〜';
-}
+  // 全店舗は #market_shop_list の中の div.column に格納されている
+  const items = document.querySelectorAll('#market_shop_list .column');
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function parseMenuItems($: any, $el: any): MenuItem[] {
-  const items: MenuItem[] = [];
-  $el.find('li, .menu-item, tr').each((_: unknown, el: unknown) => {
-    const text = $(el).text().trim();
-    const priceMatch = text.match(/[¥￥](\d{3,5})/);
-    const price = priceMatch ? parseInt(priceMatch[1], 10) : undefined;
-    const name = text.replace(/[¥￥]\d+/g, '').trim();
-    if (name.length > 1) {
-      items.push({
-        name: name.slice(0, 60),
-        price,
-        priceLabel: priceMatch ? `¥${priceMatch[1]}` : undefined,
-        allergens: guessAllergens(text),
-      });
+  items.forEach(el => {
+    const nameEl = el.querySelector('.c_title, h2');
+    const name = nameEl?.textContent?.trim() ?? '';
+    if (!name || seen.has(name)) return;
+    seen.add(name);
+
+    // 画像は span[data-bg] の CSS背景画像（lazy-load）
+    const spanEl = el.querySelector('span[data-bg]') as HTMLElement | null;
+    let imageUrl = spanEl?.dataset?.bg ?? '';
+    if (!imageUrl) {
+      // lazyloaded 状態では style="background-image: url(...)" に入っている場合あり
+      const bgStyle = spanEl?.style?.backgroundImage ?? '';
+      const m = bgStyle.match(/url\(["']?([^"')]+)["']?\)/);
+      if (m) imageUrl = m[1];
     }
-  });
-  return items;
-}
 
-async function scrapeVendorPage(url: string, areaName: string, areaId: string): Promise<FoodVendor[]> {
-  const html = await fetchPageSafe(url);
-  const $ = cheerio.load(html);
-  const vendors: FoodVendor[] = [];
+    // 店舗詳細ページURL
+    const linkEl = el.querySelector('a.modal_view, a[data-target]') as HTMLAnchorElement | null;
+    const sourceUrl = linkEl?.href ?? location.href;
 
-  // Look for vendor blocks
-  const containerSels = ['.shop-item', '.vendor-item', '.commune-shop', '.store-item', 'article'];
-  let found = false;
+    // かな読み（data-name属性）
+    const kana = (el as HTMLElement).dataset?.name ?? '';
 
-  for (const sel of containerSels) {
-    const els = $(sel);
-    if (els.length > 1) {
-      found = true;
-      els.each((_, el) => {
-        const $el = $(el);
-        const name = $el.find('h3, h4, h2, .shop-name, .store-name').first().text().trim();
-        if (!name || name.length > 80) return;
-
-        const descEl = $el.find('p, .description').first();
-        const description = descEl.text().trim() || undefined;
-        const imageUrl = $el.find('img').first().attr('src');
-        const allText = $el.text();
-        const menuItems = parseMenuItems($, $el);
-
-        vendors.push({
-          id: slugify(name),
-          name,
-          area: areaName,
-          areaId,
-          categories: guessCategory(allText),
-          menuItems,
-          priceRange: guessPriceRange(menuItems),
-          allergenTags: guessAllergens(allText),
-          imageUrl,
-          days: ['05-22', '05-23', '05-24'],
-          description,
-          sourceUrl: url,
-          scrapedAt: new Date().toISOString(),
-        });
-      });
-      break;
-    }
-  }
-
-  return vendors;
-}
-
-async function getSubpageUrls(indexUrl: string): Promise<Array<{ url: string; name: string; id: string }>> {
-  const html = await fetchPageSafe(indexUrl);
-  const $ = cheerio.load(html);
-  const results: Array<{ url: string; name: string; id: string }> = [];
-
-  $('a[href]').each((_, el) => {
-    const href = $(el).attr('href') ?? '';
-    const text = $(el).text().trim();
-    if (href.startsWith(indexUrl) && href !== indexUrl && text) {
-      const id = href.replace(indexUrl, '').replace(/\/$/, '');
-      if (id && /^\d+$/.test(id)) {
-        results.push({ url: href, name: text, id });
-      }
-    }
+    results.push({ name, kana, imageUrl, sourceUrl });
   });
 
   return results;
 }
+/* eslint-enable @typescript-eslint/no-explicit-any */
+
+// ─── メイン ───────────────────────────────────────────────────
 
 async function main() {
-  console.log('[scrape-food] Starting...');
-  const allVendors: FoodVendor[] = [];
+  console.log('[scrape-food] Playwright スクレイピング開始...');
 
-  for (const indexUrl of [COMMUNE_INDEX, AREA_INDEX]) {
-    const areaType = indexUrl.includes('commune') ? '盛り場' : 'エリア';
-    let subpages: Array<{ url: string; name: string; id: string }> = [];
-
-    try {
-      subpages = await getSubpageUrls(indexUrl);
-      console.log(`[scrape-food] ${areaType}: found ${subpages.length} subpages`);
-    } catch (err: unknown) {
-      console.error(`[scrape-food] Failed to get ${areaType} index:`, (err as Error).message);
-    }
-
-    for (const { url, name, id } of subpages) {
-      try {
-        const vendors = await scrapeVendorPage(url, `${areaType} / ${name}`, id);
-        console.log(`[scrape-food] ${name}: ${vendors.length} vendors`);
-        allVendors.push(...vendors);
-      } catch (err: unknown) {
-        console.error(`[scrape-food] Failed ${url}:`, (err as Error).message);
-      }
-    }
+  let chromium: typeof import('playwright').chromium;
+  try {
+    ({ chromium } = await import('playwright'));
+  } catch {
+    console.error('[scrape-food] Playwright がインストールされていません。');
+    console.error('  実行: npx playwright install chromium');
+    process.exit(1);
   }
 
-  // Deduplicate by id
-  const seen = new Set<string>();
-  const unique = allVendors.filter(v => {
-    if (seen.has(v.id)) return false;
-    seen.add(v.id);
-    return true;
+  const browser = await chromium.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-blink-features=AutomationControlled'],
   });
 
-  fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
-  fs.writeFileSync(OUT_PATH, JSON.stringify(unique, null, 2), 'utf-8');
-  console.log(`[scrape-food] Saved ${unique.length} vendors to ${OUT_PATH}`);
+  const context = await browser.newContext({
+    userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    locale: 'ja-JP',
+    extraHTTPHeaders: {
+      'Accept-Language': 'ja,en-US;q=0.9',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    },
+  });
+
+  const page = await context.newPage();
+
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+  });
+
+  try {
+    console.log(`[scrape-food] ページ取得: ${MARKET_URL}`);
+    await page.goto(MARKET_URL, { waitUntil: 'networkidle', timeout: 30000 });
+
+    // #market_shop_list が描画されるまで待機
+    await page.waitForSelector('#market_shop_list .column', { timeout: 10000 }).catch(() => {
+      console.warn('[scrape-food] #market_shop_list .column が見つかりません。フォールバックで続行...');
+    });
+    await page.waitForTimeout(500);
+
+    // デバッグ用スクリーンショット
+    await page.screenshot({ path: 'debug-market-page1.png', fullPage: false });
+    const html = await page.content();
+    fs.writeFileSync('debug-market-page1.html', html, 'utf-8');
+    console.log(`  → HTML保存: debug-market-page1.html (${(html.length / 1024).toFixed(0)} KB)`);
+
+    const rawVendors = await page.evaluate(extractVendorsFromDOM);
+    console.log(`  → ${rawVendors.length} 件取得`);
+
+    const allVendors: FoodVendor[] = [];
+    for (const rv of rawVendors) {
+      if (!rv.name) continue;
+      // URLの数値ID (例: /market/994) を stable ID として使う
+      const urlNum = rv.sourceUrl.match(/\/(\d+)\/?$/)?.[1];
+      const id = urlNum ? `market-${urlNum}` : slugify(rv.name);
+      allVendors.push({
+        id,
+        name: rv.name,
+        area: 'マーケット',
+        areaId: 'market',
+        categories: guessCategory(rv.name + ' ' + rv.kana),
+        menuItems: [],
+        priceRange: '¥500〜¥1,000',
+        allergenTags: [],
+        imageUrl: rv.imageUrl || undefined,
+        days: ['05-22', '05-23', '05-24'],
+        description: rv.kana ? `よみ: ${rv.kana}` : undefined,
+        sourceUrl: rv.sourceUrl,
+        scrapedAt: new Date().toISOString(),
+      });
+    }
+
+    console.log(`\n[scrape-food] 合計 ${allVendors.length} 件取得`);
+
+    if (allVendors.length === 0) {
+      console.error('[scrape-food] 店舗データが取得できませんでした。');
+      console.error('[scrape-food] debug-market-page1.html を確認してください。');
+      process.exit(1);
+    }
+
+    fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
+    fs.writeFileSync(OUT_PATH, JSON.stringify(allVendors, null, 2), 'utf-8');
+    console.log(`[scrape-food] ${OUT_PATH} に保存しました ✓`);
+  } finally {
+    await browser.close();
+  }
 }
 
-main().catch((err) => {
-  console.error('[scrape-food] Error:', err.message);
+main().catch(err => {
+  console.error('[scrape-food] エラー:', err.message);
   process.exit(1);
 });

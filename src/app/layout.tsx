@@ -4,10 +4,10 @@ import { Header } from '@/components/layout/Header';
 
 export const metadata: Metadata = {
   title: '森道市場 2026 — 非公式ファンサイト',
-  description: '森道市場2026（5/22〜24・愛知県蒲郡）のフード検索・アーティスト検索・タイムテーブル・最新情報',
+  description: '森道市場2026（5/22〜24・愛知県蒲郡）のショップ検索・アーティスト検索・タイムテーブル・最新情報',
   openGraph: {
     title: '森道市場 2026',
-    description: '2026年5月22〜24日 ラグーナビーチ開催。フード・アーティスト情報満載。',
+    description: '2026年5月22〜24日 ラグーナビーチ開催。ショップ・アーティスト情報満載。',
     locale: 'ja_JP',
     type: 'website',
   },
