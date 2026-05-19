@@ -7,47 +7,15 @@
  */
 import * as fs from 'fs';
 import * as path from 'path';
-import type { FoodVendor, FoodCategory, AllergenTag, PriceRange } from '../src/types';
+import type { FoodVendor } from '../src/types';
+import { guessCategory } from './utils/guessCategory';
 
 const MARKET_URL = 'https://morimichiichiba.jp/market/';
 const OUT_PATH   = path.join(process.cwd(), 'src/data/food.json');
 
-// ─── テキスト解析 ─────────────────────────────────────────────
-
 function slugify(s: string): string {
   return s.toLowerCase().replace(/[\s　]+/g, '-').replace(/[^\w\-]/g, '')
     .replace(/-+/g, '-').replace(/^-|-$/g, '') || String(Date.now());
-}
-
-function guessCategory(t: string): FoodCategory[] {
-  const c: FoodCategory[] = [];
-  if (/カレー|curry/i.test(t)) c.push('カレー');
-  if (/ケバブ|シャワルマ|中東|トルコ|kebab/i.test(t)) c.push('ケバブ・中東料理');
-  if (/バインミー|ベトナム/i.test(t)) c.push('ベトナム料理');
-  if (/ラーメン|麺|うどん|そば/i.test(t)) c.push('ラーメン・麺類');
-  if (/バーガー|ハンバーガー|サンドイッチ/i.test(t)) c.push('バーガー・サンドイッチ');
-  if (/スイーツ|デザート|ケーキ|アイス|菓子|わたあめ/i.test(t)) c.push('スイーツ・デザート');
-  if (/コーヒー|カフェ|珈琲/i.test(t)) c.push('コーヒー・カフェ');
-  if (/クラフトビール|craft.?beer/i.test(t)) c.push('クラフトビール');
-  if (/ドリンク|カクテル|ジュース/i.test(t)) c.push('ドリンク・カクテル');
-  if (/タイ|インド|アジア|ラオス|エスニック/i.test(t)) c.push('アジア料理');
-  if (/焼き|定食|丼|和食|おにぎり|酒場|酒/i.test(t)) c.push('和食');
-  if (/ピザ|パスタ|イタリア/i.test(t)) c.push('洋食');
-  return c.length ? c : ['その他'];
-}
-
-function guessAllergens(t: string): AllergenTag[] {
-  const a: AllergenTag[] = [];
-  if (/ヴィーガン|vegan/i.test(t)) a.push('ヴィーガン');
-  if (/ベジタリアン|vegetarian/i.test(t)) a.push('ベジタリアン');
-  if (/グルテンフリー|gluten.?free/i.test(t)) a.push('グルテンフリー');
-  if (/乳製品不使用|dairy.?free/i.test(t)) a.push('乳製品不使用');
-  if (/ハラール|halal/i.test(t)) a.push('ハラール');
-  return a;
-}
-
-function calcPriceRange(_items: never[]): PriceRange {
-  return '¥500〜¥1,000';
 }
 
 // ─── ページ内の店舗データを JS で抽出 ────────────────────────
@@ -161,8 +129,8 @@ async function main() {
         areaId: 'market',
         categories: guessCategory(rv.name + ' ' + rv.kana),
         menuItems: [],
-        priceRange: calcPriceRange([]),
-        allergenTags: guessAllergens(rv.name),
+        priceRange: '¥500〜¥1,000',
+        allergenTags: [],
         imageUrl: rv.imageUrl || undefined,
         days: ['05-22', '05-23', '05-24'],
         description: rv.kana ? `よみ: ${rv.kana}` : undefined,

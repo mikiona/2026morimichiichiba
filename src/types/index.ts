@@ -66,18 +66,16 @@ export interface ScheduleEntry {
 // ─── フードベンダー ────────────────────────────────────────────
 
 export type FoodCategory =
-  | '和食'
-  | '洋食'
-  | 'アジア料理'
-  | 'カレー'
-  | 'ラーメン・麺類'
-  | 'バーガー・サンドイッチ'
-  | 'ケバブ・中東料理'
-  | 'ベトナム料理'
-  | 'スイーツ・デザート'
-  | 'ドリンク・カクテル'
-  | 'クラフトビール'
   | 'コーヒー・カフェ'
+  | 'クラフトビール'
+  | 'パン・スイーツ'
+  | 'カレー・インド料理'
+  | 'アジア料理'
+  | '和食・定食'
+  | 'ドリンク'
+  | 'クラフト・工芸'
+  | 'ファッション'
+  | '本・音楽・アート'
   | 'その他';
 
 export type AllergenTag =
@@ -139,8 +137,6 @@ export interface ArtistFilterState {
 export interface FoodFilterState {
   query: string;
   categories: FoodCategory[];
-  allergens: AllergenTag[];
-  priceRange: PriceRange | null;
   areas: string[];
 }
 

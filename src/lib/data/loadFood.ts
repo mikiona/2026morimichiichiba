@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio';
-import type { FoodVendor, FoodCategory, AllergenTag, PriceRange } from '@/types';
+import type { FoodVendor, PriceRange } from '@/types';
 
 const BASE_URL   = 'https://morimichiichiba.jp';
 const MARKET_URL = `${BASE_URL}/market/`;
@@ -14,31 +14,26 @@ function slugify(s: string): string {
 }
 function stripHtml(h: string) { return h.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim(); }
 
-function guessCategory(t: string): FoodCategory[] {
-  const c: FoodCategory[] = [];
-  if (/カレー|curry/i.test(t)) c.push('カレー');
-  if (/ケバブ|シャワルマ|中東|トルコ|kebab/i.test(t)) c.push('ケバブ・中東料理');
-  if (/バインミー|ベトナム/i.test(t)) c.push('ベトナム料理');
-  if (/ラーメン|麺|うどん|そば/i.test(t)) c.push('ラーメン・麺類');
-  if (/バーガー|ハンバーガー|サンドイッチ/i.test(t)) c.push('バーガー・サンドイッチ');
-  if (/スイーツ|デザート|ケーキ|アイス|菓子/i.test(t)) c.push('スイーツ・デザート');
-  if (/コーヒー|カフェ|珈琲/i.test(t)) c.push('コーヒー・カフェ');
-  if (/クラフトビール|craft.?beer/i.test(t)) c.push('クラフトビール');
-  if (/ドリンク|カクテル|ジュース/i.test(t)) c.push('ドリンク・カクテル');
-  if (/タイ|インド|アジア/i.test(t)) c.push('アジア料理');
-  if (/焼き|定食|丼|和食|おにぎり/i.test(t)) c.push('和食');
-  if (/ピザ|パスタ|イタリア/i.test(t)) c.push('洋食');
-  return c.length ? c : ['その他'];
-}
-
-function guessAllergens(t: string): AllergenTag[] {
-  const a: AllergenTag[] = [];
-  if (/ヴィーガン|vegan/i.test(t)) a.push('ヴィーガン');
-  if (/ベジタリアン|vegetarian/i.test(t)) a.push('ベジタリアン');
-  if (/グルテンフリー|gluten.?free/i.test(t)) a.push('グルテンフリー');
-  if (/乳製品不使用|dairy.?free/i.test(t)) a.push('乳製品不使用');
-  if (/ハラール|halal/i.test(t)) a.push('ハラール');
-  return a;
+// カテゴリ判定（scripts/utils/guessCategory.ts と同一ロジック）
+function guessCategory(text: string) {
+  type Cat = FoodVendor['categories'][number];
+  const RULES: Array<[Cat, RegExp]> = [
+    ['コーヒー・カフェ',   /coffee|café|カフェ|珈琲|コーヒー|喫茶|roast(?:ery)?/i],
+    ['クラフトビール',    /brew(?:ing|ery)?|beer|ビール|hazy|craft.?beer/i],
+    ['パン・スイーツ',    /boulangerie|ブーランジェリー|bake(?:ry)?|パン|patisserie|パティスリー|sweets|muffin|アイスクリーム|ice.?cream|菓子|おやつ|wagashi|nut.?butter|ナッツ/i],
+    ['カレー・インド料理',  /ビリヤニ|biryani|chapati|チャパティ|curry|カレー|インド/i],
+    ['アジア料理',       /ベトナム|タイ|ラオス|中東|エスニック|ethnic|sabaisabai|サバイサバイ/i],
+    ['和食・定食',       /食堂|定食|丼|おにぎり|ごはん|玄米|発酵|和食|酒場|居酒屋|炊|もち|そば|うどん|ラーメン|麺/i],
+    ['ドリンク',        /chai|チャイ|latte|milk.?tea|ミルクティー|juice|ジュース|tea(?!m)|rum.?chai/i],
+    ['クラフト・工芸',    /pottery|ceramics|陶|工房|工芸|手仕事|テキスタイル|textile|weav/i],
+    ['ファッション',     /supply|ranch|apparel|clothing|hat|帽子/i],
+    ['本・音楽・アート',  /book|zine|record|music|本屋|画廊|art(?!isan)|gallery|photo|写真/i],
+  ];
+  const result: Cat[] = [];
+  for (const [cat, re] of RULES) {
+    if (re.test(text)) result.push(cat);
+  }
+  return result.length ? result : (['その他'] as Cat[]);
 }
 
 // ─── HTML パース ─────────────────────────────────────────────
@@ -90,7 +85,7 @@ function parsePageVendors(html: string, pageUrl: string) {
       categories: guessCategory(name + ' ' + kana),
       menuItems: [],
       priceRange: '¥500〜¥1,000',
-      allergenTags: guessAllergens(name),
+      allergenTags: [],
       imageUrl: imgSrc || undefined,
       days: ['05-22', '05-23', '05-24'],
       description: kana ? `よみ: ${kana}` : undefined,
@@ -140,7 +135,7 @@ async function tryWpApiAll(): Promise<FoodVendor[] | null> {
         areaId: p._embedded?.['wp:term']?.[0]?.[0]?.slug ?? 'market',
         categories: guessCategory(stripHtml(p.content?.rendered ?? '') + ' ' + stripHtml(p.title?.rendered ?? '')),
         menuItems: [], priceRange: '¥500〜¥1,000' as PriceRange,
-        allergenTags: guessAllergens(stripHtml(p.content?.rendered ?? '')),
+        allergenTags: [],
         imageUrl: p._embedded?.['wp:featuredmedia']?.[0]?.source_url,
         days: ['05-22', '05-23', '05-24'] as const,
         description: stripHtml(p.excerpt?.rendered ?? '').slice(0, 200) || undefined,
