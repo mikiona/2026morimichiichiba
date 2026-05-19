@@ -9,9 +9,9 @@ export const metadata = {
 };
 
 const SOURCE_LABELS = {
-  api:   { label: 'ライブ取得 (API)',  color: 'bg-emerald-100 text-emerald-800' },
-  html:  { label: 'ライブ取得 (HTML)', color: 'bg-sky-100 text-sky-800' },
-  cache: { label: 'キャッシュデータ',  color: 'bg-amber-100 text-amber-800' },
+  json: { label: 'スクレイプ済みデータ', color: 'bg-emerald-100 text-emerald-800' },
+  html: { label: 'ライブ取得 (HTML)',    color: 'bg-sky-100 text-sky-800' },
+  api:  { label: 'ライブ取得 (API)',     color: 'bg-amber-100 text-amber-800' },
 };
 
 export default async function FoodPage() {

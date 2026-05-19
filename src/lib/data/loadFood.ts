@@ -170,15 +170,20 @@ async function tryHtmlScrapeAll(): Promise<FoodVendor[] | null> {
 
 // ─── エクスポート ────────────────────────────────────────────
 
-export type FoodSource = 'api' | 'html' | 'cache';
+export type FoodSource = 'json' | 'html' | 'api';
 
 export async function loadFood(): Promise<{ items: FoodVendor[]; source: FoodSource }> {
-  const apiItems = await tryWpApiAll();
-  if (apiItems && apiItems.length > 0) return { items: apiItems, source: 'api' };
+  // food.json（npm run scrape:food で生成）を最優先で使う
+  const { default: foodJson } = await import('@/data/food.json');
+  const cached = foodJson as FoodVendor[];
+  if (cached.length > 0) return { items: cached, source: 'json' };
 
+  // food.json が空のときのみライブ取得を試みる
   const htmlItems = await tryHtmlScrapeAll();
   if (htmlItems && htmlItems.length > 0) return { items: htmlItems, source: 'html' };
 
-  const { default: foodJson } = await import('@/data/food.json');
-  return { items: foodJson as FoodVendor[], source: 'cache' };
+  const apiItems = await tryWpApiAll();
+  if (apiItems && apiItems.length > 0) return { items: apiItems, source: 'api' };
+
+  return { items: [], source: 'json' };
 }
