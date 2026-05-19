@@ -24,8 +24,19 @@ const QUESTION_RE = /メニューや商品が(?:ならぶ|並ぶ)/;
 function extractMenuText(html: string): string {
   const $ = cheerio.load(html);
 
-  // 戦略1: dt/dd ペア
+  // 戦略0: div.sub_title02 + div.ans (morimichiichiba.jp 実際の構造)
   let found = '';
+  $('.sub_title02').each((_, el) => {
+    const q = $(el).text().trim();
+    if (QUESTION_RE.test(q)) {
+      found = $(el).next('.ans').text().trim();
+      if (!found) found = $(el).nextAll('.ans').first().text().trim();
+      if (found) return false;
+    }
+  });
+  if (found) return found;
+
+  // 戦略1: dt/dd ペア
   $('dt').each((_, el) => {
     const q = $(el).text().trim();
     if (QUESTION_RE.test(q)) {
@@ -153,14 +164,16 @@ async function main() {
       samples.push(`${v.name}\n  → ${menuText.slice(0, 200)}`);
     }
 
-    // 既存のかな読み（description "よみ: ..."）を残しつつ、メニュー情報を追加
-    const kana = v.description?.startsWith('よみ:') ? v.description : '';
+    // 既存のかな読みのみ取得（再実行時の重複防止：" / " 以前の部分のみ）
+    const kana = v.description?.startsWith('よみ:')
+      ? (v.description.split(' / ')[0] ?? '')
+      : '';
     const newDescription = [kana, menuText.slice(0, 400)].filter(Boolean).join(' / ');
 
     return {
       ...v,
-      // 名前 + かな + メニュー全文でカテゴリを再判定
-      categories: guessCategory(`${v.name} ${kana} ${menuText} ${extras.description ?? ''}`),
+      // 名前 + かな + メニュー全文でカテゴリを再判定（meta descはサイト共通なので除外）
+      categories: guessCategory(`${v.name} ${kana} ${menuText}`),
       area:       extras.area || v.area,
       areaId:     extras.area ? extras.area.toLowerCase().replace(/\s+/g, '-') : v.areaId,
       description: newDescription,
