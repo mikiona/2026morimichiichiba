@@ -1,6 +1,6 @@
 /**
  * 公式サイト https://morimichiichiba.jp/market/ から
- * フード出店情報を取得して src/data/food.json に保存するスクリプト
+ * フード出店情報を全ページ取得して src/data/food.json に保存するスクリプト
  *
  * 実行: npm run scrape:food
  */
@@ -10,67 +10,56 @@ import * as path from 'path';
 import { fetchPageSafe } from './utils/fetchPage';
 import type { FoodVendor, FoodCategory, AllergenTag, PriceRange, MenuItem } from '../src/types';
 
-const BASE_URL  = 'https://morimichiichiba.jp';
+const BASE_URL   = 'https://morimichiichiba.jp';
 const MARKET_URL = `${BASE_URL}/market/`;
-// WP REST API: カスタム投稿タイプを複数試す
-const WP_API_CANDIDATES = [
-  `${BASE_URL}/wp-json/wp/v2/market?per_page=100&_embed`,
-  `${BASE_URL}/wp-json/wp/v2/vendor?per_page=100&_embed`,
-  `${BASE_URL}/wp-json/wp/v2/commune?per_page=100&_embed`,
-  `${BASE_URL}/wp-json/wp/v2/food?per_page=100&_embed`,
-  `${BASE_URL}/wp-json/wp/v2/shop?per_page=100&_embed`,
-];
-const OUT_PATH = path.join(process.cwd(), 'src/data/food.json');
+const OUT_PATH   = path.join(process.cwd(), 'src/data/food.json');
+const MAX_PAGES  = 100; // 無限ループ防止
 
-// ─── テキスト解析ユーティリティ ───────────────────────────────
+// ─── ユーティリティ ───────────────────────────────────────────
 
-function slugify(name: string): string {
-  return name
+function slugify(s: string): string {
+  return s
     .toLowerCase()
     .replace(/[\s　]+/g, '-')
     .replace(/[^\w\-]/g, '')
     .replace(/-+/g, '-')
-    .replace(/^-|-$/g, '');
+    .replace(/^-|-$/g, '') || String(Date.now());
 }
 
-function stripHtml(html: string): string {
-  return html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+function stripHtml(h: string): string {
+  return h.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
 }
 
-function guessCategory(text: string): FoodCategory[] {
-  const t = text;
-  const cats: FoodCategory[] = [];
-  if (/カレー|curry/i.test(t)) cats.push('カレー');
-  if (/ケバブ|シャワルマ|中東|トルコ|kebab/i.test(t)) cats.push('ケバブ・中東料理');
-  if (/バインミー|ベトナム|vietnamese/i.test(t)) cats.push('ベトナム料理');
-  if (/ラーメン|麺|うどん|そば|noodle/i.test(t)) cats.push('ラーメン・麺類');
-  if (/バーガー|ハンバーガー|サンドイッチ|burger|sandwich/i.test(t)) cats.push('バーガー・サンドイッチ');
-  if (/スイーツ|デザート|ケーキ|アイス|チョコ|菓子|sweet|dessert/i.test(t)) cats.push('スイーツ・デザート');
-  if (/コーヒー|カフェ|エスプレッソ|ラテ|珈琲|coffee|cafe/i.test(t)) cats.push('コーヒー・カフェ');
-  if (/クラフトビール|craft.*beer|beer.*craft/i.test(t)) cats.push('クラフトビール');
-  if (/ドリンク|カクテル|cocktail|drink|juice|ジュース/i.test(t)) cats.push('ドリンク・カクテル');
-  if (/タイ|インド|アジア|thai|indian|asian/i.test(t)) cats.push('アジア料理');
-  if (/焼き|定食|丼|和食|寿司|天ぷら/i.test(t)) cats.push('和食');
-  if (/ピザ|パスタ|イタリア|フレンチ|pizza|pasta|italian/i.test(t)) cats.push('洋食');
-  if (cats.length === 0) cats.push('その他');
-  return cats;
+function guessCategory(t: string): FoodCategory[] {
+  const c: FoodCategory[] = [];
+  if (/カレー|curry/i.test(t)) c.push('カレー');
+  if (/ケバブ|シャワルマ|中東|トルコ|kebab/i.test(t)) c.push('ケバブ・中東料理');
+  if (/バインミー|ベトナム/i.test(t)) c.push('ベトナム料理');
+  if (/ラーメン|麺|うどん|そば/i.test(t)) c.push('ラーメン・麺類');
+  if (/バーガー|ハンバーガー|サンドイッチ/i.test(t)) c.push('バーガー・サンドイッチ');
+  if (/スイーツ|デザート|ケーキ|アイス|菓子|わたあめ|チョコ/i.test(t)) c.push('スイーツ・デザート');
+  if (/コーヒー|カフェ|珈琲/i.test(t)) c.push('コーヒー・カフェ');
+  if (/クラフトビール|craft.?beer/i.test(t)) c.push('クラフトビール');
+  if (/ドリンク|カクテル|ジュース|cocktail/i.test(t)) c.push('ドリンク・カクテル');
+  if (/タイ|インド|アジア/i.test(t)) c.push('アジア料理');
+  if (/焼き|定食|丼|和食|寿司|天ぷら|おにぎり/i.test(t)) c.push('和食');
+  if (/ピザ|パスタ|イタリア|フレンチ/i.test(t)) c.push('洋食');
+  return c.length ? c : ['その他'];
 }
 
-function guessAllergens(text: string): AllergenTag[] {
-  const t = text;
-  const tags: AllergenTag[] = [];
-  if (/ヴィーガン|vegan/i.test(t)) tags.push('ヴィーガン');
-  if (/ベジタリアン|vegetarian/i.test(t)) tags.push('ベジタリアン');
-  if (/グルテンフリー|gluten.?free/i.test(t)) tags.push('グルテンフリー');
-  if (/乳製品不使用|dairy.?free|ノンデイリー/i.test(t)) tags.push('乳製品不使用');
-  if (/卵不使用|egg.?free/i.test(t)) tags.push('卵不使用');
-  if (/ハラール|halal/i.test(t)) tags.push('ハラール');
-  return tags;
+function guessAllergens(t: string): AllergenTag[] {
+  const a: AllergenTag[] = [];
+  if (/ヴィーガン|vegan/i.test(t)) a.push('ヴィーガン');
+  if (/ベジタリアン|vegetarian/i.test(t)) a.push('ベジタリアン');
+  if (/グルテンフリー|gluten.?free/i.test(t)) a.push('グルテンフリー');
+  if (/乳製品不使用|dairy.?free/i.test(t)) a.push('乳製品不使用');
+  if (/ハラール|halal/i.test(t)) a.push('ハラール');
+  return a;
 }
 
 function calcPriceRange(items: MenuItem[]): PriceRange {
   const prices = items.map(i => i.price).filter((p): p is number => p !== undefined);
-  if (prices.length === 0) return '¥500〜¥1,000';
+  if (!prices.length) return '¥500〜¥1,000';
   const avg = prices.reduce((a, b) => a + b, 0) / prices.length;
   if (avg < 500)  return '〜¥500';
   if (avg < 1000) return '¥500〜¥1,000';
@@ -78,52 +67,222 @@ function calcPriceRange(items: MenuItem[]): PriceRange {
   return '¥1,500〜';
 }
 
-// ─── メニューアイテムのパース ─────────────────────────────────
+// ─── 1ページ分のHTMLから店舗を抽出 ──────────────────────────
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function parseMenuItems($el: any): MenuItem[] {
-  const items: MenuItem[] = [];
+function parseVendorsFromPage(html: string, pageUrl: string, currentArea: string, currentAreaId: string): {
+  vendors: FoodVendor[];
+  area: string;
+  areaId: string;
+} {
+  const $ = cheerio.load(html);
+  const vendors: FoodVendor[] = [];
   const seen = new Set<string>();
 
-  // テキスト全体から価格付きアイテムを正規表現で抽出
-  const fullText: string = $el.text();
-  const lines = fullText.split(/[\n・。,、\/\|｜]+/).map((s: string) => s.trim()).filter((s: string) => s.length > 1);
+  // ── エリア見出しを探す ──
+  const findArea = (el: cheerio.Element): { area: string; areaId: string } => {
+    const $el = $(el);
+    // 直前・直近の見出しをエリアとして使う
+    const prevH = $el.prevAll('h1,h2,h3,.area-title,.section-title,.commune-title').first().text().trim();
+    if (prevH && prevH.length < 40) {
+      return { area: prevH, areaId: slugify(prevH) };
+    }
+    // 親要素の見出し
+    const parentH = $el.closest('section,div').find('h1,h2,h3').first().text().trim();
+    if (parentH && parentH.length < 40) {
+      return { area: parentH, areaId: slugify(parentH) };
+    }
+    return { area: currentArea, areaId: currentAreaId };
+  };
 
-  for (const line of lines) {
-    const priceMatch = line.match(/[¥￥](\d{3,5})/);
-    const price = priceMatch ? parseInt(priceMatch[1], 10) : undefined;
-    const name = line.replace(/[¥￥]\d{3,5}/g, '').replace(/^\d+\.\s*/, '').trim().slice(0, 60);
-    if (name.length > 1 && name.length < 50 && !seen.has(name)) {
-      seen.add(name);
-      items.push({
-        name,
-        price,
-        priceLabel: priceMatch ? `¥${priceMatch[1]}` : undefined,
-        allergens: guessAllergens(line),
-      });
+  // ── 店舗ブロックのセレクタ候補 (優先順) ──
+  const BLOCK_CANDIDATES = [
+    // WordPress 典型
+    'article.post', 'article.type-post', '.post-item',
+    // カスタム
+    '.shop', '.shop-item', '.store', '.store-item',
+    '.vendor', '.vendor-item', '.market-item', '.commune-item',
+    '.entry-item', '.grid-item', '.card',
+    // Gutenberg blocks
+    '.wp-block-group', '.wp-block-column',
+    // 汎用
+    'li.item', 'div.item',
+  ];
+
+  let $items = $('__none__');
+  for (const sel of BLOCK_CANDIDATES) {
+    const found = $(sel);
+    if (found.length >= 2) {
+      $items = found;
+      console.log(`  → セレクタ "${sel}" で ${found.length} 件マッチ`);
+      break;
     }
   }
-  return items.slice(0, 10); // 1店舗最大10アイテム
+
+  // セレクタで見つからなければ dl/dt/dd パターンを試す
+  if ($items.length === 0 && $('dl').length > 0) {
+    $('dt').each((_, dt) => {
+      const name = $(dt).text().trim();
+      const desc = $(dt).next('dd').text().trim().slice(0, 200);
+      if (!name || name.length > 80 || seen.has(name)) return;
+      const allText = name + ' ' + desc;
+      seen.add(name);
+      vendors.push({
+        id: slugify(name), name,
+        area: currentArea, areaId: currentAreaId,
+        categories: guessCategory(allText), menuItems: [],
+        priceRange: '¥500〜¥1,000', allergenTags: guessAllergens(allText),
+        days: ['05-22', '05-23', '05-24'],
+        description: desc || undefined,
+        sourceUrl: pageUrl, scrapedAt: new Date().toISOString(),
+      });
+    });
+    return { vendors, area: currentArea, areaId: currentAreaId };
+  }
+
+  $items.each((_, el) => {
+    const $el = $(el);
+
+    // エリア判定
+    const areaInfo = findArea(el);
+    const area    = areaInfo.area;
+    const areaId  = areaInfo.areaId;
+
+    // 店舗名: 見出し系タグ優先
+    const name = (
+      $el.find('h1,h2,h3,h4,h5,.title,.name,.shop-name,.store-name,strong').first().text()
+      || $el.find('a').first().text()
+    ).trim().replace(/\s+/g, ' ');
+
+    if (!name || name.length > 100 || name.length < 2 || seen.has(name)) return;
+    // ナビゲーションっぽい要素を除外
+    if (/^(前へ|次へ|prev|next|more|›|‹|\d+)$/i.test(name)) return;
+
+    const allText  = $el.text().replace(/\s+/g, ' ');
+    const imgSrc   = $el.find('img').first().attr('src');
+    const desc     = $el.find('p,.description,.excerpt').first().text().trim().slice(0, 200) || undefined;
+
+    // メニューアイテム抽出 (価格パターン)
+    const menuItems: MenuItem[] = [];
+    const mSeen = new Set<string>();
+    allText.split(/[・\n,、\/]/).forEach(line => {
+      const m = line.match(/[¥￥](\d{3,5})/);
+      const mName = line.replace(/[¥￥]\d{3,5}/g, '').trim().slice(0, 60);
+      if (mName.length > 1 && mName.length < 50 && !mSeen.has(mName)) {
+        mSeen.add(mName);
+        menuItems.push({
+          name: mName,
+          price: m ? parseInt(m[1], 10) : undefined,
+          priceLabel: m ? `¥${m[1]}` : undefined,
+          allergens: guessAllergens(line),
+        });
+      }
+    });
+
+    seen.add(name);
+    vendors.push({
+      id: slugify(name), name, area, areaId,
+      categories: guessCategory(allText),
+      menuItems: menuItems.slice(0, 10),
+      priceRange: calcPriceRange(menuItems),
+      allergenTags: guessAllergens(allText),
+      imageUrl: imgSrc,
+      days: ['05-22', '05-23', '05-24'],
+      description: desc,
+      sourceUrl: pageUrl,
+      scrapedAt: new Date().toISOString(),
+    });
+  });
+
+  // フォールバック: h3+隣接p のシンプルな構造
+  if (vendors.length === 0) {
+    const $main = $('main, #main, .content, .entry-content').first();
+    ($main.length ? $main : $('body')).find('h3,h4').each((_, el) => {
+      const name = $(el).text().trim();
+      if (!name || name.length > 80 || name.length < 2 || seen.has(name)) return;
+      const desc = $(el).next('p').text().trim().slice(0, 200) || undefined;
+      seen.add(name);
+      vendors.push({
+        id: slugify(name), name,
+        area: currentArea, areaId: currentAreaId,
+        categories: guessCategory(name + (desc ?? '')),
+        menuItems: [], priceRange: '¥500〜¥1,000',
+        allergenTags: guessAllergens(desc ?? ''),
+        days: ['05-22', '05-23', '05-24'],
+        description: desc,
+        sourceUrl: pageUrl, scrapedAt: new Date().toISOString(),
+      });
+    });
+  }
+
+  // ページ内エリア見出しの最後のものを次ページへ引き継ぐ
+  const lastH = $('h1,h2,h3,.area-title').last().text().trim();
+  const nextArea   = (lastH && lastH.length < 40) ? lastH : currentArea;
+  const nextAreaId = (lastH && lastH.length < 40) ? slugify(lastH) : currentAreaId;
+
+  return { vendors, area: nextArea, areaId: nextAreaId };
 }
 
-// ─── WP REST API 試行 ─────────────────────────────────────────
+// ─── "次へ" リンクを取得 ──────────────────────────────────────
 
-async function tryWpApi(): Promise<FoodVendor[] | null> {
+function getNextPageUrl(html: string, currentUrl: string): string | null {
+  const $ = cheerio.load(html);
+
+  // WordPress 標準ページネーション
+  const NEXT_SELECTORS = [
+    'a.next.page-numbers',
+    'a[rel="next"]',
+    '.pagination a.next',
+    '.nav-links a.next',
+    '.wp-pagenavi a.nextpostslink',
+    'a:contains("次へ")',
+    'a:contains("Next")',
+    'a:contains("›")',
+    'a:contains("»")',
+    '.next a',
+    'a.pagination-next',
+  ];
+
+  for (const sel of NEXT_SELECTORS) {
+    const href = $(sel).first().attr('href');
+    if (href) {
+      // 絶対URLに変換
+      if (href.startsWith('http')) return href;
+      if (href.startsWith('/')) return `${BASE_URL}${href}`;
+      return new URL(href, currentUrl).toString();
+    }
+  }
+  return null;
+}
+
+// ─── WP REST API 全ページ取得 ────────────────────────────────
+
+async function tryWpApiAll(): Promise<FoodVendor[] | null> {
   const { default: axios } = await import('axios');
+  const POST_TYPE_CANDIDATES = ['market', 'vendor', 'commune', 'food', 'shop', 'posts'];
 
-  for (const apiUrl of WP_API_CANDIDATES) {
+  for (const postType of POST_TYPE_CANDIDATES) {
+    const firstUrl = `${BASE_URL}/wp-json/wp/v2/${postType}?per_page=100&page=1&_embed`;
     try {
-      const res = await axios.get(apiUrl, {
-        timeout: 10000,
+      const firstRes = await axios.get(firstUrl, {
+        timeout: 15000,
         headers: { 'User-Agent': 'Mozilla/5.0 (compatible; Morimichi Fan Site)' },
       });
-      const posts = res.data;
-      if (!Array.isArray(posts) || posts.length === 0) continue;
+      const total     = parseInt(firstRes.headers['x-wp-total'] ?? '0', 10);
+      const totalPages = parseInt(firstRes.headers['x-wp-totalpages'] ?? '1', 10);
 
-      console.log(`[scrape-food] WP API (${apiUrl}): ${posts.length} 件`);
-      return posts.map((p: {
-        id: number;
-        slug: string;
+      if (!Array.isArray(firstRes.data) || firstRes.data.length === 0) continue;
+      console.log(`[WP API] /${postType}: 全${total}件, ${totalPages}ページ`);
+
+      const allPosts = [...firstRes.data];
+      for (let page = 2; page <= totalPages && page <= MAX_PAGES; page++) {
+        const pageUrl = `${BASE_URL}/wp-json/wp/v2/${postType}?per_page=100&page=${page}&_embed`;
+        const res = await axios.get(pageUrl, { timeout: 15000, headers: { 'User-Agent': 'Mozilla/5.0 (compatible; Morimichi Fan Site)' } });
+        allPosts.push(...res.data);
+        console.log(`[WP API]   page ${page}/${totalPages}: +${res.data.length}件 (計${allPosts.length})`);
+      }
+
+      return allPosts.map((p: {
+        id: number; slug: string;
         title: { rendered: string };
         content: { rendered: string };
         excerpt: { rendered: string };
@@ -134,24 +293,18 @@ async function tryWpApi(): Promise<FoodVendor[] | null> {
         };
       }) => {
         const content = stripHtml(p.content?.rendered ?? '');
-        const name = stripHtml(p.title?.rendered ?? '');
-        const area = p._embedded?.['wp:term']?.[0]?.[0]?.name ?? 'マーケット';
-        const areaId = p._embedded?.['wp:term']?.[0]?.[0]?.slug ?? 'market';
-
+        const name    = stripHtml(p.title?.rendered ?? '');
+        const area    = p._embedded?.['wp:term']?.[0]?.[0]?.name ?? 'マーケット';
+        const areaId  = p._embedded?.['wp:term']?.[0]?.[0]?.slug ?? 'market';
         return {
-          id: p.slug || slugify(name),
-          name,
-          area,
-          areaId,
+          id: p.slug || slugify(name), name, area, areaId,
           categories: guessCategory(content + ' ' + name),
-          menuItems: [],
-          priceRange: '¥500〜¥1,000' as PriceRange,
+          menuItems: [], priceRange: '¥500〜¥1,000' as PriceRange,
           allergenTags: guessAllergens(content),
           imageUrl: p._embedded?.['wp:featuredmedia']?.[0]?.source_url,
           days: ['05-22', '05-23', '05-24'] as const,
           description: stripHtml(p.excerpt?.rendered ?? '').slice(0, 200) || undefined,
-          sourceUrl: p.link,
-          scrapedAt: new Date().toISOString(),
+          sourceUrl: p.link, scrapedAt: new Date().toISOString(),
         } satisfies FoodVendor;
       });
     } catch {
@@ -161,191 +314,67 @@ async function tryWpApi(): Promise<FoodVendor[] | null> {
   return null;
 }
 
-// ─── HTML パース: /market/ ページ全体 ────────────────────────
+// ─── HTML 全ページスクレイピング ──────────────────────────────
 
-function parseMarketHtml(html: string, sourceUrl: string): FoodVendor[] {
-  const $ = cheerio.load(html);
-  const vendors: FoodVendor[] = [];
-  const seen = new Set<string>();
+async function scrapeAllPages(): Promise<FoodVendor[]> {
+  const allVendors: FoodVendor[] = [];
+  const allSeen   = new Set<string>();
+  let currentUrl  = MARKET_URL;
+  let pageNum     = 1;
+  let area        = 'マーケット';
+  let areaId      = 'market';
 
-  // エリアヘッダーを追跡して各ベンダーのエリアを判定
-  let currentArea = 'マーケット';
-  let currentAreaId = 'market';
+  while (currentUrl && pageNum <= MAX_PAGES) {
+    console.log(`[scrape-food] ページ ${pageNum}: ${currentUrl}`);
 
-  // 全要素を走査してエリア見出しと店舗ブロックを識別
-  const AREA_HEADING_SEL = 'h2, h3, .area-title, .section-title, .commune-title';
-  const VENDOR_BLOCK_SEL = [
-    '.shop', '.store', '.vendor', '.market-item', '.commune-item',
-    '.wp-block-group', 'article', '.post',
-    '.entry', '.item',
-  ].join(', ');
-
-  // 方法1: 明示的な店舗ブロックがある場合
-  let $blocks = $(VENDOR_BLOCK_SEL).filter((_, el) => {
-    const text = $(el).text().trim();
-    return text.length > 10 && text.length < 1000;
-  });
-
-  if ($blocks.length >= 2) {
-    console.log(`[scrape-food] ブロックセレクタで ${$blocks.length} 件検出`);
-
-    // エリア区切りを抽出
-    const areaMap = new Map<string, string>();
-    $(AREA_HEADING_SEL).each((_, heading) => {
-      const text = $(heading).text().trim();
-      if (text.length > 1 && text.length < 40) {
-        areaMap.set(text, slugify(text));
-      }
-    });
-
-    $blocks.each((_, el) => {
-      const $el = $(el);
-
-      // エリアを親要素から特定
-      const areaEl = $el.closest('[class*="area"], [class*="section"], [class*="commune"]')
-        .find(AREA_HEADING_SEL).first();
-      if (areaEl.length) {
-        currentArea = areaEl.text().trim();
-        currentAreaId = slugify(currentArea);
-      }
-
-      // 名前: 最初の見出し or strong
-      const name = $el.find('h2, h3, h4, strong, .name, .title').first().text().trim()
-        .replace(/[\n\t]+/g, ' ').trim();
-      if (!name || name.length > 80 || seen.has(name)) return;
-
-      const allText = $el.text().replace(/\s+/g, ' ');
-      const description = $el.find('p').first().text().trim().slice(0, 200) || undefined;
-      const imageUrl = $el.find('img').first().attr('src');
-      const menuItems = parseMenuItems($el);
-
-      seen.add(name);
-      vendors.push({
-        id: slugify(name),
-        name,
-        area: currentArea,
-        areaId: currentAreaId,
-        categories: guessCategory(allText),
-        menuItems,
-        priceRange: calcPriceRange(menuItems),
-        allergenTags: guessAllergens(allText),
-        imageUrl,
-        days: ['05-22', '05-23', '05-24'],
-        description,
-        sourceUrl,
-        scrapedAt: new Date().toISOString(),
-      });
-    });
-  }
-
-  if (vendors.length > 0) return vendors;
-
-  // 方法2: テーブル形式
-  $('table').each((_, table) => {
-    $(table).find('tr').each((rowIdx, row) => {
-      if (rowIdx === 0) return; // ヘッダー行をスキップ
-      const cells = $(row).find('td');
-      if (cells.length < 2) return;
-      const name = cells.eq(0).text().trim();
-      const desc = cells.eq(1).text().trim();
-      if (!name || name.length > 80 || seen.has(name)) return;
-
-      seen.add(name);
-      vendors.push({
-        id: slugify(name),
-        name,
-        area: currentArea,
-        areaId: currentAreaId,
-        categories: guessCategory(name + ' ' + desc),
-        menuItems: [],
-        priceRange: '¥500〜¥1,000',
-        allergenTags: guessAllergens(desc),
-        days: ['05-22', '05-23', '05-24'],
-        description: desc.slice(0, 200) || undefined,
-        sourceUrl,
-        scrapedAt: new Date().toISOString(),
-      });
-    });
-  });
-
-  // 方法3: 見出し+段落のシンプルな構造
-  if (vendors.length === 0) {
-    $('h3, h4').each((_, el) => {
-      const $el = $(el);
-      const name = $el.text().trim();
-      if (!name || name.length > 60 || seen.has(name)) return;
-
-      // 直後の p 要素を説明として使用
-      const $next = $el.next('p');
-      const description = $next.text().trim().slice(0, 200) || undefined;
-      const allText = name + ' ' + (description ?? '');
-
-      seen.add(name);
-      vendors.push({
-        id: slugify(name),
-        name,
-        area: currentArea,
-        areaId: currentAreaId,
-        categories: guessCategory(allText),
-        menuItems: [],
-        priceRange: '¥500〜¥1,000',
-        allergenTags: guessAllergens(allText),
-        days: ['05-22', '05-23', '05-24'],
-        description,
-        sourceUrl,
-        scrapedAt: new Date().toISOString(),
-      });
-    });
-  }
-
-  return vendors;
-}
-
-// ─── サブページリンクの収集と取得 ───────────────────────────────
-
-async function scrapeSubpages(html: string): Promise<FoodVendor[]> {
-  const $ = cheerio.load(html);
-  const subLinks: Array<{ href: string; text: string }> = [];
-
-  // /market/ 配下のリンクを収集
-  $('a[href]').each((_, el) => {
-    const href = $(el).attr('href') ?? '';
-    const text = $(el).text().trim();
-    if (
-      (href.startsWith(`${BASE_URL}/market/`) || href.startsWith('/market/')) &&
-      href !== MARKET_URL &&
-      text.length > 0 &&
-      !href.endsWith('.jpg') && !href.endsWith('.png')
-    ) {
-      const fullHref = href.startsWith('http') ? href : `${BASE_URL}${href}`;
-      subLinks.push({ href: fullHref, text });
-    }
-  });
-
-  const uniqueLinks = [...new Map(subLinks.map(l => [l.href, l])).values()];
-  console.log(`[scrape-food] サブページ: ${uniqueLinks.length} 件`);
-
-  const vendors: FoodVendor[] = [];
-  for (const { href, text } of uniqueLinks) {
+    let html: string;
     try {
-      const subHtml = await fetchPageSafe(href);
-      const subVendors = parseMarketHtml(subHtml, href);
-
-      // サブページ名をエリアとして使用
-      const areaName = text.replace(/\n/g, '').trim();
-      const areaId = slugify(areaName);
-      subVendors.forEach(v => {
-        v.area = areaName;
-        v.areaId = areaId;
-      });
-
-      console.log(`[scrape-food]   └ ${areaName}: ${subVendors.length} 店舗`);
-      vendors.push(...subVendors);
+      html = await fetchPageSafe(currentUrl);
     } catch (err: unknown) {
-      console.warn(`[scrape-food]   └ ${href} 失敗:`, (err as Error).message);
+      console.error(`  → 取得失敗: ${(err as Error).message}`);
+      break;
     }
+
+    const { vendors, area: nextArea, areaId: nextAreaId } = parseVendorsFromPage(html, currentUrl, area, areaId);
+    area   = nextArea;
+    areaId = nextAreaId;
+
+    // 重複チェックして追加
+    let added = 0;
+    for (const v of vendors) {
+      if (!allSeen.has(v.id)) {
+        allSeen.add(v.id);
+        allVendors.push(v);
+        added++;
+      }
+    }
+    console.log(`  → ${vendors.length} 件取得 (新規 ${added} 件, 累計 ${allVendors.length} 件)`);
+
+    // 次ページURLを取得
+    const nextUrl = getNextPageUrl(html, currentUrl);
+
+    // デバッグ: ページネーション情報を出力
+    if (pageNum === 1) {
+      const { load } = await import('cheerio');
+      const $ = load(html);
+      const paginationHtml = $('.pagination, .wp-pagenavi, .nav-links, nav[class*="page"]').html();
+      if (paginationHtml) {
+        console.log(`  → ページネーションHTML: ${paginationHtml.slice(0, 300)}`);
+      } else {
+        console.log('  → ページネーション要素が見つかりませんでした');
+      }
+      console.log(`  → 次ページURL: ${nextUrl ?? 'なし'}`);
+    }
+
+    if (!nextUrl || nextUrl === currentUrl) break;
+    currentUrl = nextUrl;
+    pageNum++;
+
+    // レート制限対策 (1秒待機)
+    await new Promise(r => setTimeout(r, 1000));
   }
-  return vendors;
+
+  return allVendors;
 }
 
 // ─── メイン ───────────────────────────────────────────────────
@@ -356,26 +385,19 @@ async function main() {
 
   let vendors: FoodVendor[] = [];
 
-  // 1. WP REST API を試す
-  const apiVendors = await tryWpApi();
+  // 1. WP REST API (全ページ)
+  console.log('\n[scrape-food] WP REST API を試行...');
+  const apiVendors = await tryWpApiAll();
   if (apiVendors && apiVendors.length > 0) {
     vendors = apiVendors;
+    console.log(`[scrape-food] WP API: ${vendors.length} 件取得`);
   } else {
-    // 2. /market/ ページを HTML スクレイピング
-    console.log('[scrape-food] HTMLスクレイピング開始...');
-    const html = await fetchPageSafe(MARKET_URL);
-    vendors = parseMarketHtml(html, MARKET_URL);
-    console.log(`[scrape-food] /market/ から ${vendors.length} 店舗取得`);
-
-    // 3. サブページがあれば追加取得
-    if (vendors.length < 5) {
-      console.log('[scrape-food] サブページを探索...');
-      const subVendors = await scrapeSubpages(html);
-      vendors.push(...subVendors);
-    }
+    // 2. HTML全ページスクレイピング
+    console.log('\n[scrape-food] HTMLスクレイピング (全ページ走査)...');
+    vendors = await scrapeAllPages();
   }
 
-  // 重複排除
+  // 重複排除 (最終)
   const seen = new Set<string>();
   const unique = vendors.filter(v => {
     if (seen.has(v.id)) return false;
@@ -383,7 +405,13 @@ async function main() {
     return true;
   });
 
-  console.log(`[scrape-food] 合計 ${unique.length} 店舗を取得`);
+  console.log(`\n[scrape-food] 完了: 合計 ${unique.length} 件`);
+
+  if (unique.length === 0) {
+    console.error('[scrape-food] 店舗が取得できませんでした。HTMLのセレクタを確認してください。');
+    console.error('[scrape-food] デバッグ: npm run scrape:food 2>&1 | head -100 で詳細を確認してください');
+    process.exit(1);
+  }
 
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
   fs.writeFileSync(OUT_PATH, JSON.stringify(unique, null, 2), 'utf-8');
