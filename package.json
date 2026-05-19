@@ -1,0 +1,37 @@
+{
+  "name": "2026morimichiichiba",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "scrape": "tsx scripts/scrape-all.ts",
+    "scrape:news": "tsx scripts/scrape-news.ts",
+    "scrape:artists": "tsx scripts/scrape-artists.ts",
+    "scrape:timetable": "tsx scripts/scrape-timetable.ts",
+    "scrape:food": "tsx scripts/scrape-food.ts",
+    "seed": "tsx scripts/seed-manual.ts"
+  },
+  "dependencies": {
+    "axios": "^1.16.1",
+    "cheerio": "^1.2.0",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/cheerio": "^0.22.35",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "playwright": "^1.60.0",
+    "tailwindcss": "^4",
+    "tsx": "^4.22.2",
+    "typescript": "^5"
+  }
+}

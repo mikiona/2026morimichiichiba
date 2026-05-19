@@ -1,0 +1,255 @@
+[
+  {
+    "id": "toe",
+    "name": "toe",
+    "genre": [
+      "ロック",
+      "インディー"
+    ],
+    "days": [
+      "05-22",
+      "05-23"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "bloodthirsty-butchers",
+    "name": "bloodthirsty butchers",
+    "nameKana": "ブラッドサースティブッチャーズ",
+    "genre": [
+      "ロック"
+    ],
+    "days": [
+      "05-22"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "fishmans",
+    "name": "FISHMANS",
+    "nameKana": "フィッシュマンズ",
+    "genre": [
+      "ロック",
+      "その他"
+    ],
+    "days": [
+      "05-23"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "kirinji",
+    "name": "KIRINJI",
+    "nameKana": "キリンジ",
+    "genre": [
+      "ポップ",
+      "ジャズ・ソウル"
+    ],
+    "days": [
+      "05-23"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "bonobos",
+    "name": "bonobos",
+    "nameKana": "ボノボ",
+    "genre": [
+      "ポップ",
+      "ジャズ・ソウル"
+    ],
+    "days": [
+      "05-24"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "tujiko-noriko",
+    "name": "Tujiko Noriko",
+    "nameKana": "ツジコノリコ",
+    "genre": [
+      "エレクトロニック"
+    ],
+    "days": [
+      "05-22"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "rei",
+    "name": "REI",
+    "genre": [
+      "フォーク・アコースティック",
+      "ポップ"
+    ],
+    "days": [
+      "05-24"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "helme",
+    "name": "ヘルメ",
+    "nameKana": "ヘルメ",
+    "genre": [
+      "ポップ",
+      "インディー"
+    ],
+    "days": [
+      "05-22",
+      "05-23",
+      "05-24"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "lyrica",
+    "name": "lyrica",
+    "genre": [
+      "フォーク・アコースティック"
+    ],
+    "days": [
+      "05-23"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "taiko-super-kicks",
+    "name": "TAIKO SUPER KICKS",
+    "genre": [
+      "ロック",
+      "インディー"
+    ],
+    "days": [
+      "05-22"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "homecomings",
+    "name": "Homecomings",
+    "nameKana": "ホームカミングス",
+    "genre": [
+      "インディー",
+      "ポップ"
+    ],
+    "days": [
+      "05-23",
+      "05-24"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "lamp",
+    "name": "Lamp",
+    "nameKana": "ランプ",
+    "genre": [
+      "ポップ",
+      "フォーク・アコースティック"
+    ],
+    "days": [
+      "05-24"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "cicada",
+    "name": "CICADA",
+    "genre": [
+      "エレクトロニック",
+      "インディー"
+    ],
+    "days": [
+      "05-22"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "downy",
+    "name": "downy",
+    "genre": [
+      "ロック",
+      "その他"
+    ],
+    "days": [
+      "05-23"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "sakanaction",
+    "name": "サカナクション",
+    "nameKana": "サカナクション",
+    "genre": [
+      "ロック",
+      "エレクトロニック"
+    ],
+    "days": [
+      "05-24"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "the-novembers",
+    "name": "the telepathy",
+    "genre": [
+      "ロック",
+      "インディー"
+    ],
+    "days": [
+      "05-22",
+      "05-23"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "soutaiseiriron",
+    "name": "相対性理論",
+    "nameKana": "ソウタイセイリロン",
+    "genre": [
+      "インディー",
+      "ポップ"
+    ],
+    "days": [
+      "05-23"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "urawa-all-stars",
+    "name": "urawa all stars",
+    "genre": [
+      "ヒップホップ"
+    ],
+    "days": [
+      "05-22",
+      "05-24"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "imai",
+    "name": "今井亮太郎",
+    "nameKana": "イマイリョウタロウ",
+    "genre": [
+      "フォーク・アコースティック"
+    ],
+    "days": [
+      "05-22"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  },
+  {
+    "id": "oorutaichi",
+    "name": "Oorutaichi",
+    "nameKana": "オールタイチ",
+    "genre": [
+      "エレクトロニック",
+      "その他"
+    ],
+    "days": [
+      "05-23"
+    ],
+    "scrapedAt": "2026-05-18T22:26:22.454Z"
+  }
+]
