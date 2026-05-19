@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# scrape artifacts
+/data/shops/
+/data/shops.zip
+debug-market*.html
+debug-market*.png
