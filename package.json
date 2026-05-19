@@ -13,6 +13,8 @@
     "scrape:timetable": "tsx scripts/scrape-timetable.ts",
     "scrape:food": "tsx scripts/scrape-food.ts",
     "scrape:food:install": "playwright install chromium",
+    "scrape:shops": "tsx scripts/scrape-shop-details.ts",
+    "process:shops": "tsx scripts/process-shop-details.ts",
     "seed": "tsx scripts/seed-manual.ts",
     "debug:food": "tsx scripts/debug-food.ts"
   },

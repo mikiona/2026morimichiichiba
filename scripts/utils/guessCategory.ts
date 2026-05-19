@@ -6,7 +6,7 @@ const RULES: Array<[FoodCategory, RegExp]> = [
   ['パン・スイーツ',   /boulangerie|ブーランジェリー|bake(?:ry)?|パン|patisserie|パティスリー|sweets|muffin|アイスクリーム|ice.?cream|菓子|おやつ|wagashi|nut.?butter|ナッツ/i],
   ['カレー・インド料理', /ビリヤニ|biryani|chapati|チャパティ|curry|カレー|インド/i],
   ['アジア料理',      /ベトナム|タイ|ラオス|中東|エスニック|ethnic|sabaisabai|サバイサバイ/i],
-  ['和食・定食',      /食堂|定食|丼|おにぎり|ごはん|玄米|発酵|和食|酒場|居酒屋|炊|もち|そば|うどん|ラーメン|麺/i],
+  ['和食・定食',      /食堂|定食|丼|おにぎり|ごはん|玄米|発酵|和食|酒場|居酒屋|炊き|お?餅|もち米|そば|うどん|ラーメン|麺/i],
   ['ドリンク',       /chai|チャイ|latte|milk.?tea|ミルクティー|juice|ジュース|tea(?!m)|rum.?chai/i],
   ['クラフト・工芸',   /pottery|ceramics|陶|工房|工芸|手仕事|テキスタイル|textile|weav/i],
   ['ファッション',    /supply|ranch|apparel|clothing|hat|帽子/i],
