@@ -27,14 +27,15 @@ const SECTIONS = [
     iconBg: 'bg-emerald-100',
   },
   {
-    href: '/news',
+    href: 'https://morimichiichiba.jp/news/',
     emoji: '📰',
     title: '最新情報',
-    description: '公式サイトからの最新ニュース・アナウンスを表示',
+    description: '公式サイトの最新ニュース・アナウンス（外部リンク）',
     color: 'from-sky-50 to-blue-50 border-sky-200',
     iconBg: 'bg-sky-100',
+    external: true,
   },
-];
+] as { href: string; emoji: string; title: string; description: string; color: string; iconBg: string; external?: boolean }[];
 
 export default function HomePage() {
   return (
@@ -67,24 +68,28 @@ export default function HomePage() {
 
       {/* Section cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {SECTIONS.map(({ href, emoji, title, description, color, iconBg }) => (
-          <Link
-            key={href}
-            href={href}
-            className={`group relative bg-gradient-to-br ${color} border rounded-2xl p-6 hover:shadow-md transition-shadow`}
-          >
-            <div className={`w-12 h-12 ${iconBg} rounded-xl flex items-center justify-center text-2xl mb-4`}>
-              {emoji}
-            </div>
-            <h2 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-emerald-700 transition-colors">
-              {title}
-            </h2>
-            <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
-            <div className="absolute bottom-5 right-5 text-gray-300 group-hover:text-emerald-500 transition-colors text-lg">
-              →
-            </div>
-          </Link>
-        ))}
+        {SECTIONS.map(({ href, emoji, title, description, color, iconBg, external }) => {
+          const className = `group relative bg-gradient-to-br ${color} border rounded-2xl p-6 hover:shadow-md transition-shadow`;
+          const inner = (
+            <>
+              <div className={`w-12 h-12 ${iconBg} rounded-xl flex items-center justify-center text-2xl mb-4`}>
+                {emoji}
+              </div>
+              <h2 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-emerald-700 transition-colors">
+                {title}
+              </h2>
+              <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
+              <div className="absolute bottom-5 right-5 text-gray-300 group-hover:text-emerald-500 transition-colors text-lg">
+                →
+              </div>
+            </>
+          );
+          return external ? (
+            <a key={href} href={href} target="_blank" rel="noopener noreferrer" className={className}>{inner}</a>
+          ) : (
+            <Link key={href} href={href} className={className}>{inner}</Link>
+          );
+        })}
       </div>
 
       <p className="text-center text-xs text-gray-400 mt-10">
