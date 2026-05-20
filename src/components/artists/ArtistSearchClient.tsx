@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useMemo } from 'react';
-import type { Artist, ScheduleEntry, ArtistFilterState, ArtistGenre, StageName, FestivalDay } from '@/types';
+import type { Artist, ScheduleEntry, ArtistFilterState, StageName, FestivalDay } from '@/types';
 import { FESTIVAL_DAYS, DAY_LABELS } from '@/types';
 import { filterArtists } from '@/lib/filters/filterArtists';
 import { STAGES, STAGE_SHORT_NAMES } from '@/lib/constants';
@@ -8,11 +8,6 @@ import { SearchInput } from '@/components/ui/SearchInput';
 import { FilterChip } from '@/components/ui/FilterChip';
 import { EmptyState } from '@/components/ui/EmptyState';
 import { ArtistCard } from './ArtistCard';
-
-const GENRES: ArtistGenre[] = [
-  'ロック', 'ポップ', 'インディー', 'ヒップホップ',
-  'エレクトロニック', 'ジャズ・ソウル', 'フォーク・アコースティック', 'その他',
-];
 
 const INITIAL: ArtistFilterState = {
   query: '',
@@ -36,7 +31,7 @@ export function ArtistSearchClient({ artists, schedule }: ArtistSearchClientProp
 
   const results = useMemo(() => filterArtists(artists, schedule, filter), [artists, schedule, filter]);
 
-  const hasActiveFilters = filter.genres.length > 0 || filter.stages.length > 0 || filter.days.length > 0;
+  const hasActiveFilters = filter.stages.length > 0 || filter.days.length > 0;
 
   return (
     <div>
@@ -78,21 +73,6 @@ export function ArtistSearchClient({ artists, schedule }: ArtistSearchClientProp
                   label={DAY_LABELS[day]}
                   active={filter.days.includes(day)}
                   onClick={() => setFilter((f) => ({ ...f, days: toggle<FestivalDay>(f.days, day) }))}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Genre */}
-          <div>
-            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">ジャンル</h3>
-            <div className="flex flex-wrap gap-2">
-              {GENRES.map((g) => (
-                <FilterChip
-                  key={g}
-                  label={g}
-                  active={filter.genres.includes(g)}
-                  onClick={() => setFilter((f) => ({ ...f, genres: toggle<ArtistGenre>(f.genres, g) }))}
                 />
               ))}
             </div>

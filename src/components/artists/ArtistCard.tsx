@@ -1,19 +1,7 @@
 import React from 'react';
 import type { Artist, ScheduleEntry } from '@/types';
-import { Badge } from '@/components/ui/Badge';
 import { DAY_LABELS } from '@/types';
 import { STAGE_SHORT_NAMES, STAGE_COLORS } from '@/lib/constants';
-
-const GENRE_VARIANT: Record<string, 'green' | 'purple' | 'blue' | 'orange' | 'teal' | 'sky' | 'gray'> = {
-  'ロック': 'orange',
-  'ポップ': 'sky',
-  'インディー': 'purple',
-  'ヒップホップ': 'blue',
-  'エレクトロニック': 'teal',
-  'ジャズ・ソウル': 'green',
-  'フォーク・アコースティック': 'green',
-  'その他': 'gray',
-};
 
 interface ArtistCardProps {
   artist: Artist;
@@ -46,13 +34,6 @@ export function ArtistCard({ artist, schedules }: ArtistCardProps) {
         {artist.nameKana && (
           <p className="text-xs text-gray-400 mb-1">{artist.nameKana}</p>
         )}
-
-        {/* Genres */}
-        <div className="flex flex-wrap gap-1 mb-2">
-          {artist.genre.map((g) => (
-            <Badge key={g} variant={GENRE_VARIANT[g] ?? 'gray'}>{g}</Badge>
-          ))}
-        </div>
 
         {/* Schedule */}
         {schedules.length > 0 && (
