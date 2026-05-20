@@ -67,8 +67,7 @@ export interface ScheduleEntry {
 
 export type FoodCategory =
   | 'コーヒー・カフェ'
-  | 'クラフトビール'
-  | 'お酒・ワイン'
+  | 'お酒・ワイン・ビール'
   | 'パン・スイーツ'
   | 'カレー・インド料理'
   | 'アジア料理'

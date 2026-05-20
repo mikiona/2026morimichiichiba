@@ -2,8 +2,7 @@ import type { FoodCategory } from '../../src/types';
 
 const RULES: Array<[FoodCategory, RegExp]> = [
   ['コーヒー・カフェ',  /coffee|café|カフェ|珈琲|コーヒー|喫茶|roast(?:ery)?/i],
-  ['クラフトビール',   /brew(?:ing|ery)?|beer|ビール|hazy|craft.?beer/i],
-  ['お酒・ワイン',    /wine|ワイン|日本酒|sake(?! of)|ウイスキー|whisky|whiskey|gin(?!ger)|(?<!マガ|エン|チャン|ジャー)ジン(?!ジャ|ガー|グ)|焼酎|蒸留|distill(?:ery)?|梅酒|rum(?!.?chai)|ラム酒|シードル|cider|mead/i],
+  ['お酒・ワイン・ビール', /brew(?:ing|ery)?|beer|ビール|hazy|craft.?beer|wine|ワイン|日本酒|sake(?! of)|ウイスキー|whisky|whiskey|gin(?!ger)|(?<!マガ|エン|チャン|ジャー)ジン(?!ジャ|ガー|グ)|焼酎|蒸留|distill(?:ery)?|梅酒|rum(?!.?chai)|ラム酒|シードル|cider|mead/i],
   ['パン・スイーツ',   /boulangerie|ブーランジェリー|bake(?:ry)?|パン|patisserie|パティスリー|sweets|muffin|アイスクリーム|ice.?cream|菓子|おやつ|wagashi|nut.?butter|ナッツ|ケーキ|cake|チョコレート|chocolate|マカロン|タルト|クッキー|cookie|プリン|どら焼き|あんこ/i],
   ['カレー・インド料理', /ビリヤニ|biryani|chapati|チャパティ|curry|カレー|インド/i],
   ['アジア料理',      /ベトナム|タイ|ラオス|中東|エスニック|ethnic|sabaisabai|サバイサバイ|ケバブ|kebab|ピタ|pita|ガパオ|トムヤム|パクチー/i],

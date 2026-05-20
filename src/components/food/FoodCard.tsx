@@ -3,9 +3,8 @@ import type { FoodVendor } from '@/types';
 import { Badge } from '@/components/ui/Badge';
 
 const CATEGORY_EMOJI: Record<string, string> = {
-  'コーヒー・カフェ':   '☕',
-  'クラフトビール':    '🍺',
-  'お酒・ワイン':     '🍷',
+  'コーヒー・カフェ':      '☕',
+  'お酒・ワイン・ビール':   '🍻',
   'パン・スイーツ':    '🍞',
   'カレー・インド料理':  '🍛',
   'アジア料理':       '🥢',

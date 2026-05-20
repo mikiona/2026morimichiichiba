@@ -19,7 +19,7 @@ function guessCategory(text: string) {
   type Cat = FoodVendor['categories'][number];
   const RULES: Array<[Cat, RegExp]> = [
     ['コーヒー・カフェ',   /coffee|café|カフェ|珈琲|コーヒー|喫茶|roast(?:ery)?/i],
-    ['クラフトビール',    /brew(?:ing|ery)?|beer|ビール|hazy|craft.?beer/i],
+    ['お酒・ワイン・ビール', /brew(?:ing|ery)?|beer|ビール|hazy|craft.?beer|wine|ワイン|日本酒|焼酎|ウイスキー/i],
     ['パン・スイーツ',    /boulangerie|ブーランジェリー|bake(?:ry)?|パン|patisserie|パティスリー|sweets|muffin|アイスクリーム|ice.?cream|菓子|おやつ|wagashi|nut.?butter|ナッツ/i],
     ['カレー・インド料理',  /ビリヤニ|biryani|chapati|チャパティ|curry|カレー|インド/i],
     ['アジア料理',       /ベトナム|タイ|ラオス|中東|エスニック|ethnic|sabaisabai|サバイサバイ/i],

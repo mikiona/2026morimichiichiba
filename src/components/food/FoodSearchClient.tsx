@@ -8,9 +8,10 @@ import { EmptyState } from '@/components/ui/EmptyState';
 import { FoodCard } from './FoodCard';
 
 const CATEGORIES: FoodCategory[] = [
-  'コーヒー・カフェ', 'クラフトビール', 'パン・スイーツ',
+  'コーヒー・カフェ', 'お酒・ワイン・ビール', 'パン・スイーツ',
   'カレー・インド料理', 'アジア料理', '和食・定食', 'ドリンク',
-  'クラフト・工芸', 'ファッション', '本・音楽・アート', 'その他',
+  'クラフト・工芸', 'ファッション', '本・音楽・アート',
+  '雑貨・生活用品', '古着・ヴィンテージ', 'フラワー・グリーン', 'その他',
 ];
 
 const INITIAL: FoodFilterState = {
