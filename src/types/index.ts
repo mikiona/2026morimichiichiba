@@ -45,6 +45,7 @@ export interface Artist {
   genre: ArtistGenre[];
   imageUrl?: string;
   officialUrl?: string;
+  sourceUrl?: string;
   days: FestivalDay[];
   description?: string;
   scrapedAt: string;

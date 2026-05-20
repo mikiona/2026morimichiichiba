@@ -34,13 +34,14 @@ function extractArtists(html: string): Array<{
   nameKana?: string;
   imageUrl?: string;
   officialUrl?: string;
+  sourceUrl?: string;
 }> {
   const $ = cheerio.load(html);
-  const results: Array<{ name: string; nameKana?: string; imageUrl?: string; officialUrl?: string }> = [];
+  const results: Array<{ name: string; nameKana?: string; imageUrl?: string; officialUrl?: string; sourceUrl?: string }> = [];
   const seen = new Set<string>();
 
-  // 戦略1: .artist_list .column 系（market と同様の構造）
-  const colSels = ['.artist_list .column', '.artist-list .column', '.artists .column'];
+  // 戦略1: .column (morimichiichiba の実際の構造)
+  const colSels = ['.column', '.artist_list .column', '.artist-list .column', '.artists .column'];
   for (const sel of colSels) {
     const els = $(sel);
     if (els.length === 0) continue;
@@ -59,13 +60,16 @@ function extractArtists(html: string): Array<{
       const imgSrc = $el.find('img').first().attr('src');
       const imageUrl = spanBg || imgSrc || undefined;
 
+      // フェスティバルサイト内のアーティストページURL
+      const sourceUrl = $el.find('a[href*="/artist/"]').first().attr('href') || undefined;
+
       // 外部 URL
       const officialUrl = $el.find('a[href]').filter((_, a) => {
         const h = $(a).attr('href') ?? '';
         return /^https?:\/\//.test(h) && !h.includes('morimichiichiba');
       }).first().attr('href') || undefined;
 
-      results.push({ name, nameKana, imageUrl, officialUrl });
+      results.push({ name, nameKana, imageUrl, officialUrl, sourceUrl });
     });
     if (results.length > 0) break;
   }
@@ -112,7 +116,7 @@ async function main() {
   // Step 1: 全アーティスト一覧ページから名前・画像・URLを取得
   // ──────────────────────────────────────────────────────────
   const allHtmlPath = path.join(ARTISTS_DIR, 'artist-all.html');
-  let allArtists: Array<{ name: string; nameKana?: string; imageUrl?: string; officialUrl?: string }> = [];
+  let allArtists: Array<{ name: string; nameKana?: string; imageUrl?: string; officialUrl?: string; sourceUrl?: string }> = [];
 
   if (fs.existsSync(allHtmlPath)) {
     allArtists = extractArtists(fs.readFileSync(allHtmlPath, 'utf-8'));
@@ -168,8 +172,9 @@ async function main() {
       name:       a.name,
       nameKana:   prev?.nameKana ?? a.nameKana,
       genre:      prev?.genre   ?? (['その他'] as ArtistGenre[]),
-      imageUrl:   a.imageUrl    ?? prev?.imageUrl,
+      imageUrl:    a.imageUrl    ?? prev?.imageUrl,
       officialUrl: a.officialUrl ?? prev?.officialUrl,
+      sourceUrl:   a.sourceUrl   ?? prev?.sourceUrl,
       days,
       description: prev?.description,
       scrapedAt:  now,
