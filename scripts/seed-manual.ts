@@ -87,7 +87,7 @@ const food: FoodVendor[] = [
     id: 'morimichi-brewery',
     name: 'MORIMICHI BREWING',
     area: 'マーケット', areaId: 'market',
-    categories: ['クラフトビール'],
+    categories: ['お酒・ワイン・ビール'],
     menuItems: [], priceRange: '¥500〜¥1,000', allergenTags: [],
     days: ['05-22', '05-23', '05-24'],
     sourceUrl: 'https://morimichiichiba.jp/market/',

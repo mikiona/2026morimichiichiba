@@ -9,11 +9,12 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as cheerio from 'cheerio';
-import type { FoodVendor } from '../src/types';
+import type { FoodVendor, FoodCategory } from '../src/types';
 import { guessCategory } from './utils/guessCategory';
 
-const FOOD_JSON = path.join(process.cwd(), 'src/data/food.json');
-const SHOPS_DIR = path.join(process.cwd(), 'data/shops');
+const FOOD_JSON      = path.join(process.cwd(), 'src/data/food.json');
+const SHOPS_DIR      = path.join(process.cwd(), 'data/shops');
+const OVERRIDES_JSON = path.join(process.cwd(), 'src/data/shop-category-overrides.json');
 
 const QUESTION_RE = /メニューや商品が(?:ならぶ|並ぶ)/;
 
@@ -134,8 +135,12 @@ async function main() {
     process.exit(1);
   }
 
+  const overrides: Record<string, FoodCategory[]> = fs.existsSync(OVERRIDES_JSON)
+    ? JSON.parse(fs.readFileSync(OVERRIDES_JSON, 'utf-8'))
+    : {};
+
   const vendors: FoodVendor[] = JSON.parse(fs.readFileSync(FOOD_JSON, 'utf-8'));
-  console.log(`[process-shops] ${vendors.length} 件のショップを処理...`);
+  console.log(`[process-shops] ${vendors.length} 件のショップを処理... (手動オーバーライド: ${Object.keys(overrides).length} 件)`);
 
   let extractedCount = 0;
   let noFileCount   = 0;
@@ -172,8 +177,8 @@ async function main() {
 
     return {
       ...v,
-      // 名前 + かな + メニュー全文でカテゴリを再判定（meta descはサイト共通なので除外）
-      categories: guessCategory(`${v.name} ${kana} ${menuText}`),
+      // 手動オーバーライドがあればそちらを優先、なければ自動判定
+      categories: overrides[v.id] ?? guessCategory(`${v.name} ${kana} ${menuText}`),
       area:       extras.area || v.area,
       areaId:     extras.area ? extras.area.toLowerCase().replace(/\s+/g, '-') : v.areaId,
       description: newDescription,
