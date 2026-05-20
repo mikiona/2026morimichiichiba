@@ -20,7 +20,7 @@ interface ArtistCardProps {
   schedules: ScheduleEntry[];
 }
 
-function getInitials(name: string): string {
+function initials(name: string): string {
   return name.slice(0, 2).toUpperCase();
 }
 
@@ -35,18 +35,9 @@ export function ArtistCard({ artist, schedules }: ArtistCardProps) {
     >
       {/* Avatar */}
       <div className="flex-shrink-0">
-        {artist.imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={artist.imageUrl}
-            alt={artist.name}
-            className="w-16 h-16 rounded-xl object-cover"
-          />
-        ) : (
-          <div className="w-16 h-16 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold text-lg">
-            {getInitials(artist.name)}
-          </div>
-        )}
+        <div className="w-16 h-16 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold text-lg">
+          {initials(artist.name)}
+        </div>
       </div>
 
       {/* Info */}
