@@ -138,7 +138,7 @@ export function ArtistSearchClient({ artists, schedule }: ArtistSearchClientProp
             <ArtistCard
               key={a.id}
               artist={a}
-              schedules={schedule.filter((s) => s.artistId === a.id)}
+              schedules={schedule.filter((s) => s.artistId === a.id || s.artistName === a.name)}
             />
           ))}
         </div>
