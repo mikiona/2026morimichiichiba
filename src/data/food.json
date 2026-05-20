@@ -26,7 +26,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "本・音楽・アート"
+      "本・音楽・アート",
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -47,7 +48,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "フラワー・グリーン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -134,7 +135,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -177,7 +178,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -220,7 +221,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -241,7 +242,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "古着・ヴィンテージ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -263,7 +266,8 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
-      "和食・定食"
+      "和食・定食",
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -285,7 +289,8 @@
     "areaId": "market",
     "categories": [
       "カレー・インド料理",
-      "アジア料理"
+      "アジア料理",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -327,7 +332,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフト・工芸"
+      "クラフト・工芸",
+      "フラワー・グリーン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -348,7 +354,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -369,7 +376,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -411,7 +418,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -432,8 +439,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフト・工芸",
-      "ファッション"
+      "クラフト・工芸"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -498,7 +504,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -519,7 +525,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -562,7 +568,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -605,7 +611,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "アジア料理"
+      "アジア料理",
+      "和食・定食",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -647,7 +655,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "和食・定食"
+      "和食・定食",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -668,7 +677,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -732,7 +741,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -753,7 +762,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン",
+      "パン・スイーツ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -774,7 +784,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "コーヒー・カフェ"
+      "コーヒー・カフェ",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -816,7 +827,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -837,7 +849,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "コーヒー・カフェ"
+      "コーヒー・カフェ",
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -858,7 +872,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "アジア料理"
+      "アジア料理",
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -880,7 +895,8 @@
     "areaId": "market",
     "categories": [
       "コーヒー・カフェ",
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -901,7 +917,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "コーヒー・カフェ"
+      "コーヒー・カフェ",
+      "お酒・ワイン",
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -922,7 +940,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -943,7 +961,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -964,7 +982,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -985,7 +1003,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "カレー・インド料理"
+      "パン・スイーツ",
+      "カレー・インド料理",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1006,7 +1026,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "アジア料理"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1091,7 +1111,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1154,7 +1174,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1175,6 +1195,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "お酒・ワイン",
       "アジア料理",
       "和食・定食"
     ],
@@ -1262,7 +1283,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1283,7 +1304,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1325,7 +1346,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフト・工芸"
+      "クラフト・工芸",
+      "ファッション",
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1388,7 +1411,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1409,7 +1432,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1432,7 +1455,8 @@
     "categories": [
       "コーヒー・カフェ",
       "クラフトビール",
-      "和食・定食"
+      "和食・定食",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1453,7 +1477,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1474,7 +1498,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1516,7 +1540,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフトビール"
+      "クラフトビール",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1537,7 +1562,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1603,7 +1628,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "フラワー・グリーン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1646,7 +1671,8 @@
     "areaId": "market",
     "categories": [
       "パン・スイーツ",
-      "アジア料理"
+      "アジア料理",
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1667,7 +1693,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "古着・ヴィンテージ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1710,7 +1737,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "コーヒー・カフェ"
+      "コーヒー・カフェ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1731,7 +1759,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1752,7 +1781,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "アジア料理"
+      "アジア料理",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1773,7 +1803,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1794,7 +1825,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1815,7 +1846,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "古着・ヴィンテージ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1878,7 +1911,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "ファッション"
+      "その他"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1899,7 +1932,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1943,7 +1976,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1966,7 +1999,8 @@
     "categories": [
       "コーヒー・カフェ",
       "クラフトビール",
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -1987,7 +2021,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2008,7 +2042,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2051,6 +2085,7 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
+      "お酒・ワイン",
       "アジア料理",
       "和食・定食"
     ],
@@ -2074,8 +2109,10 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
+      "和食・定食",
       "ドリンク",
-      "ファッション"
+      "ファッション",
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2096,7 +2133,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2139,7 +2176,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2203,7 +2241,8 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
-      "アジア料理"
+      "アジア料理",
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2224,7 +2263,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2245,6 +2284,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "ファッション",
       "本・音楽・アート"
     ],
     "menuItems": [],
@@ -2308,7 +2348,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2329,7 +2370,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2350,7 +2391,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2371,6 +2412,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "お酒・ワイン",
       "カレー・インド料理"
     ],
     "menuItems": [],
@@ -2455,7 +2497,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "ファッション"
+      "ファッション",
+      "本・音楽・アート",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2477,8 +2521,11 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
+      "お酒・ワイン",
       "パン・スイーツ",
-      "和食・定食"
+      "和食・定食",
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2499,7 +2546,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2520,7 +2567,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "パン・スイーツ",
+      "古着・ヴィンテージ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2563,6 +2612,7 @@
     "areaId": "market",
     "categories": [
       "パン・スイーツ",
+      "和食・定食",
       "クラフト・工芸"
     ],
     "menuItems": [],
@@ -2584,7 +2634,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "パン・スイーツ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2605,7 +2655,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2626,7 +2676,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "古着・ヴィンテージ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2647,7 +2698,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "パン・スイーツ",
+      "ファッション",
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2711,7 +2764,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "古着・ヴィンテージ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2753,7 +2807,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "コーヒー・カフェ"
+      "コーヒー・カフェ",
+      "パン・スイーツ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2774,7 +2829,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフト・工芸"
+      "クラフト・工芸",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2795,7 +2851,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2816,7 +2872,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2922,7 +2978,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -2985,7 +3042,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3135,7 +3193,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフト・工芸"
+      "クラフト・工芸",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3156,7 +3215,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "アジア料理"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3198,7 +3257,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3219,7 +3278,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3282,6 +3341,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "お酒・ワイン",
       "和食・定食"
     ],
     "menuItems": [],
@@ -3303,7 +3363,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3368,7 +3428,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3389,7 +3449,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3431,7 +3491,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3452,7 +3512,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3473,7 +3533,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3494,7 +3554,10 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "本・音楽・アート"
+      "ファッション",
+      "本・音楽・アート",
+      "古着・ヴィンテージ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3536,7 +3599,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3557,7 +3620,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3599,7 +3662,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3641,7 +3704,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "フラワー・グリーン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3662,7 +3725,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3683,7 +3746,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "コーヒー・カフェ"
+      "コーヒー・カフェ",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3704,7 +3768,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3725,7 +3790,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3746,7 +3811,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3767,7 +3832,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3789,6 +3854,7 @@
     "areaId": "market",
     "categories": [
       "コーヒー・カフェ",
+      "ファッション",
       "本・音楽・アート"
     ],
     "menuItems": [],
@@ -3810,6 +3876,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "お酒・ワイン",
       "和食・定食"
     ],
     "menuItems": [],
@@ -3852,7 +3919,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3894,7 +3961,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフトビール"
+      "クラフトビール",
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -3937,7 +4005,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフトビール"
+      "クラフトビール",
+      "和食・定食",
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4042,7 +4112,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4063,7 +4134,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "パン・スイーツ",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4128,7 +4200,8 @@
     "areaId": "market",
     "categories": [
       "パン・スイーツ",
-      "和食・定食"
+      "和食・定食",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4212,7 +4285,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4255,7 +4328,9 @@
     "areaId": "market",
     "categories": [
       "コーヒー・カフェ",
-      "ドリンク"
+      "お酒・ワイン",
+      "ドリンク",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4276,7 +4351,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4341,7 +4416,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4362,7 +4437,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "コーヒー・カフェ"
+      "コーヒー・カフェ",
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4468,7 +4545,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "ファッション"
+      "ファッション",
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4553,7 +4631,8 @@
     "areaId": "market",
     "categories": [
       "アジア料理",
-      "クラフト・工芸"
+      "クラフト・工芸",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4574,7 +4653,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4682,7 +4761,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフトビール"
+      "クラフトビール",
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4809,7 +4889,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4830,7 +4911,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4872,7 +4954,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4893,7 +4975,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -4957,7 +5040,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -5020,7 +5103,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "アジア料理"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -5041,7 +5124,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "ドリンク"
+      "ドリンク",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -5062,7 +5146,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -5104,6 +5188,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "お酒・ワイン",
       "和食・定食"
     ],
     "menuItems": [],
@@ -5251,6 +5336,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "お酒・ワイン",
       "和食・定食"
     ],
     "menuItems": [],
@@ -5272,7 +5358,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "パン・スイーツ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -5356,7 +5442,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -5419,7 +5505,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -5462,7 +5548,9 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "和食・定食",
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -5526,6 +5614,7 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
+      "お酒・ワイン",
       "アジア料理"
     ],
     "menuItems": [],
@@ -5569,6 +5658,7 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
+      "お酒・ワイン",
       "和食・定食",
       "ドリンク"
     ],
@@ -5676,7 +5766,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -5761,6 +5851,7 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
+      "お酒・ワイン",
       "ドリンク"
     ],
     "menuItems": [],
@@ -5824,7 +5915,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -5845,6 +5936,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "お酒・ワイン",
       "ドリンク"
     ],
     "menuItems": [],
@@ -5930,7 +6022,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -5951,7 +6043,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "フラワー・グリーン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -5972,7 +6065,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -5993,7 +6086,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6036,7 +6129,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6078,7 +6171,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6099,7 +6193,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6162,7 +6256,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6204,7 +6298,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6225,7 +6319,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "アジア料理"
+      "アジア料理",
+      "ファッション",
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6247,7 +6343,8 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
-      "ファッション"
+      "ファッション",
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6333,7 +6430,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6418,7 +6515,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6439,7 +6536,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6503,7 +6600,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフト・工芸"
+      "クラフト・工芸",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6524,7 +6622,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6545,7 +6644,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6736,7 +6835,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "古着・ヴィンテージ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6757,7 +6858,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6778,7 +6879,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "本・音楽・アート",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6820,7 +6923,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6841,7 +6944,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "古着・ヴィンテージ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6862,7 +6966,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6947,7 +7052,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン",
+      "パン・スイーツ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -6968,7 +7074,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7055,7 +7161,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7076,7 +7183,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7118,7 +7225,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "ドリンク"
+      "ドリンク",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7202,7 +7310,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "本・音楽・アート"
+      "本・音楽・アート",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7244,7 +7353,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7328,7 +7437,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7349,6 +7458,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "ファッション",
       "本・音楽・アート"
     ],
     "menuItems": [],
@@ -7370,7 +7480,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7391,7 +7501,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7412,7 +7522,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7475,7 +7585,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7560,7 +7670,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7623,7 +7733,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7644,7 +7754,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7687,7 +7798,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7709,7 +7821,8 @@
     "areaId": "market",
     "categories": [
       "パン・スイーツ",
-      "カレー・インド料理"
+      "カレー・インド料理",
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7815,7 +7928,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7857,7 +7970,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "コーヒー・カフェ"
+      "コーヒー・カフェ",
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7878,7 +7992,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "コーヒー・カフェ"
+      "コーヒー・カフェ",
+      "パン・スイーツ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7899,7 +8014,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "パン・スイーツ",
+      "ファッション",
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7920,7 +8037,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7941,7 +8059,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "パン・スイーツ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7962,7 +8080,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -7984,6 +8102,7 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
+      "お酒・ワイン",
       "アジア料理"
     ],
     "menuItems": [],
@@ -8005,6 +8124,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "ファッション",
       "本・音楽・アート"
     ],
     "menuItems": [],
@@ -8026,7 +8146,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8047,7 +8167,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8068,7 +8188,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8089,7 +8210,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8112,7 +8233,9 @@
     "categories": [
       "コーヒー・カフェ",
       "クラフトビール",
+      "お酒・ワイン",
       "和食・定食",
+      "ファッション",
       "本・音楽・アート"
     ],
     "menuItems": [],
@@ -8134,7 +8257,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフトビール"
+      "クラフトビール",
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8155,7 +8279,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8197,7 +8321,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8221,7 +8346,8 @@
       "コーヒー・カフェ",
       "カレー・インド料理",
       "和食・定食",
-      "ドリンク"
+      "ドリンク",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8263,7 +8389,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8306,6 +8432,7 @@
     "areaId": "market",
     "categories": [
       "コーヒー・カフェ",
+      "お酒・ワイン",
       "パン・スイーツ"
     ],
     "menuItems": [],
@@ -8327,7 +8454,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8390,7 +8517,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "パン・スイーツ",
+      "本・音楽・アート",
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8411,7 +8540,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8432,7 +8562,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8454,6 +8584,7 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
+      "お酒・ワイン",
       "カレー・インド料理"
     ],
     "menuItems": [],
@@ -8497,7 +8628,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8518,7 +8649,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8539,7 +8671,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "コーヒー・カフェ"
+      "コーヒー・カフェ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8560,7 +8693,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8647,7 +8780,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "パン・スイーツ",
+      "和食・定食",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8711,7 +8846,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8732,7 +8867,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "カレー・インド料理"
+      "カレー・インド料理",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8774,7 +8910,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "本・音楽・アート",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8816,6 +8954,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "お酒・ワイン",
       "和食・定食",
       "ドリンク"
     ],
@@ -8840,7 +8979,8 @@
     "categories": [
       "クラフトビール",
       "カレー・インド料理",
-      "アジア料理"
+      "アジア料理",
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8861,7 +9001,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "ファッション"
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8903,7 +9044,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "フラワー・グリーン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8924,7 +9065,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8945,7 +9086,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "古着・ヴィンテージ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8966,7 +9108,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -8987,7 +9129,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9029,7 +9171,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "本・音楽・アート"
+      "ファッション",
+      "本・音楽・アート",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9071,7 +9215,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9092,7 +9236,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9113,7 +9257,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9134,7 +9278,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9155,7 +9300,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9197,7 +9342,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "和食・定食"
+      "アジア料理",
+      "和食・定食",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9239,7 +9386,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン",
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9261,6 +9410,7 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
+      "お酒・ワイン",
       "パン・スイーツ",
       "ドリンク"
     ],
@@ -9304,7 +9454,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9367,7 +9517,10 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "アジア料理"
+      "アジア料理",
+      "ファッション",
+      "古着・ヴィンテージ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9388,7 +9541,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9452,6 +9606,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "ファッション",
       "本・音楽・アート"
     ],
     "menuItems": [],
@@ -9623,7 +9778,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9665,7 +9820,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフトビール"
+      "クラフトビール",
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9751,6 +9907,7 @@
     "areaId": "market",
     "categories": [
       "コーヒー・カフェ",
+      "お酒・ワイン",
       "パン・スイーツ"
     ],
     "menuItems": [],
@@ -9772,7 +9929,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9793,7 +9950,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9835,7 +9993,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9857,7 +10015,8 @@
     "areaId": "market",
     "categories": [
       "コーヒー・カフェ",
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9922,7 +10081,10 @@
     "categories": [
       "コーヒー・カフェ",
       "クラフトビール",
-      "アジア料理"
+      "パン・スイーツ",
+      "アジア料理",
+      "和食・定食",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9985,7 +10147,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10006,7 +10168,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフト・工芸"
+      "クラフト・工芸",
+      "フラワー・グリーン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10091,6 +10254,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "ファッション",
       "本・音楽・アート"
     ],
     "menuItems": [],
@@ -10177,7 +10341,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン",
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10240,7 +10405,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフトビール"
+      "クラフトビール",
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10324,7 +10490,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10409,7 +10575,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10473,7 +10639,8 @@
     "areaId": "market",
     "categories": [
       "コーヒー・カフェ",
-      "クラフトビール"
+      "クラフトビール",
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10494,7 +10661,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフト・工芸"
+      "クラフト・工芸",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10536,7 +10704,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "古着・ヴィンテージ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10599,7 +10769,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10620,7 +10790,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフト・工芸"
+      "クラフト・工芸",
+      "フラワー・グリーン",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10664,7 +10836,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10685,7 +10857,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10706,7 +10879,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "パン・スイーツ"
+      "お酒・ワイン",
+      "パン・スイーツ",
+      "和食・定食"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10748,7 +10923,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "古着・ヴィンテージ",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10769,7 +10946,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "本・音楽・アート",
+      "古着・ヴィンテージ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10790,7 +10969,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "クラフトビール"
+      "クラフトビール",
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10811,7 +10991,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10832,7 +11012,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "パン・スイーツ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10853,7 +11033,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "ファッション",
+      "本・音楽・アート"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10874,7 +11056,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "ファッション"
+      "ファッション",
+      "雑貨・生活用品"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10895,6 +11078,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "ファッション",
       "本・音楽・アート"
     ],
     "menuItems": [],
@@ -10916,7 +11100,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -10937,6 +11121,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "パン・スイーツ",
       "和食・定食",
       "ドリンク"
     ],
@@ -10959,6 +11144,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
+      "ファッション",
       "本・音楽・アート"
     ],
     "menuItems": [],
@@ -11001,7 +11187,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -11022,7 +11208,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "ファッション",
+      "フラワー・グリーン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -11108,6 +11295,7 @@
     "areaId": "market",
     "categories": [
       "パン・スイーツ",
+      "ファッション",
       "本・音楽・アート"
     ],
     "menuItems": [],
@@ -11129,7 +11317,8 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "コーヒー・カフェ"
+      "コーヒー・カフェ",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -11151,6 +11340,7 @@
     "areaId": "market",
     "categories": [
       "クラフトビール",
+      "お酒・ワイン",
       "和食・定食"
     ],
     "menuItems": [],
@@ -11214,7 +11404,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "お酒・ワイン"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -11236,7 +11426,8 @@
     "areaId": "market",
     "categories": [
       "コーヒー・カフェ",
-      "パン・スイーツ"
+      "パン・スイーツ",
+      "ファッション"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",

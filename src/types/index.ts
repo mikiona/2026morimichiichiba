@@ -68,6 +68,7 @@ export interface ScheduleEntry {
 export type FoodCategory =
   | 'コーヒー・カフェ'
   | 'クラフトビール'
+  | 'お酒・ワイン'
   | 'パン・スイーツ'
   | 'カレー・インド料理'
   | 'アジア料理'
@@ -76,6 +77,9 @@ export type FoodCategory =
   | 'クラフト・工芸'
   | 'ファッション'
   | '本・音楽・アート'
+  | '雑貨・生活用品'
+  | '古着・ヴィンテージ'
+  | 'フラワー・グリーン'
   | 'その他';
 
 export type AllergenTag =
