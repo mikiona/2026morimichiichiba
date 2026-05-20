@@ -8,7 +8,6 @@ const NAV_ITEMS = [
   { href: '/food',      label: 'ショップ' },
   { href: '/artists',   label: 'アーティスト' },
   { href: '/timetable', label: 'タイムテーブル' },
-  { href: '/news',      label: 'ニュース' },
 ];
 
 export function Header() {
