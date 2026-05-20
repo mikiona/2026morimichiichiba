@@ -17,6 +17,7 @@
     "process:shops": "tsx scripts/process-shop-details.ts",
     "scrape:artist-pages": "tsx scripts/scrape-artist-pages.ts",
     "process:artists": "tsx scripts/process-artist-pages.ts",
+    "scrape:timetable-pages": "tsx scripts/scrape-timetable-pages.ts",
     "seed": "tsx scripts/seed-manual.ts",
     "debug:food": "tsx scripts/debug-food.ts"
   },
