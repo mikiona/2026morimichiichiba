@@ -6765,7 +6765,7 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "アジア料理"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
@@ -9140,7 +9140,9 @@
     "area": "マーケット",
     "areaId": "market",
     "categories": [
-      "その他"
+      "パン・スイーツ",
+      "ドリンク",
+      "コーヒー・カフェ"
     ],
     "menuItems": [],
     "priceRange": "¥500〜¥1,000",
