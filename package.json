@@ -15,8 +15,10 @@
     "scrape:food:install": "playwright install chromium",
     "scrape:shops": "tsx scripts/scrape-shop-details.ts",
     "process:shops": "tsx scripts/process-shop-details.ts",
-    "seed": "tsx scripts/seed-manual.ts",
-    "debug:food": "tsx scripts/debug-food.ts"
+    "scrape:artist-pages": "tsx scripts/scrape-artist-pages.ts",
+    "process:artists": "tsx scripts/process-artist-pages.ts",
+    "scrape:timetable-pages": "tsx scripts/scrape-timetable-pages.ts",
+"debug:food": "tsx scripts/debug-food.ts"
   },
   "dependencies": {
     "axios": "^1.16.1",

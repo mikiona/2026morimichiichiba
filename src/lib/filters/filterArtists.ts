@@ -23,7 +23,7 @@ export function filterArtists(
     }
 
     if (filter.stages.length > 0) {
-      const artistSchedule = schedule.filter((s) => s.artistId === a.id);
+      const artistSchedule = schedule.filter((s) => s.artistId === a.id || s.artistName === a.name);
       if (!artistSchedule.some((s) => filter.stages.includes(s.stage))) return false;
     }
 

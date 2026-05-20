@@ -43,5 +43,9 @@ next-env.d.ts
 # scrape artifacts
 /data/shops/
 /data/shops.zip
+/data/artists/
+/data/artists.zip
+/data/timetable/
+/data/timetable.zip
 debug-market*.html
 debug-market*.png

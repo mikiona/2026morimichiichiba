@@ -11,12 +11,15 @@ export const DAY_LABELS: Record<FestivalDay, string> = {
 };
 
 export type StageName =
+  | 'GRASS STAGE'
+  | 'SAND STAGE'
+  | 'HILL STAGE'
+  | '影響亜細亜 STAGE'
+  | 'EATBEAT! STAGE'
+  | '遊園地 STAGE'
+  | 'MORI.MICHI. DISCO.STAGE'
   | 'MORI.MICHI. ART THEATER'
-  | 'MORI.MICHI. BEACH STAGE'
-  | 'MORI.MICHI. GARDEN STAGE'
-  | 'MORI.MICHI. FOREST STAGE'
-  | 'MORI.MICHI. SEA STAGE'
-  | 'MORI.MICHI. DISCO STAGE';
+  | 'LVRRY X BLH STAGE';
 
 export type StageArea = '遊園地エリア' | '海エリア';
 
@@ -45,6 +48,7 @@ export interface Artist {
   genre: ArtistGenre[];
   imageUrl?: string;
   officialUrl?: string;
+  sourceUrl?: string;
   days: FestivalDay[];
   description?: string;
   scrapedAt: string;
