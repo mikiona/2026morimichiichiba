@@ -25,8 +25,14 @@ function getInitials(name: string): string {
 }
 
 export function ArtistCard({ artist, schedules }: ArtistCardProps) {
+  const href = artist.sourceUrl ?? artist.officialUrl;
   return (
-    <div className="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md transition-shadow flex gap-4">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md hover:border-emerald-300 transition-all flex gap-4"
+    >
       {/* Avatar */}
       <div className="flex-shrink-0">
         {artist.imageUrl ? (
@@ -74,6 +80,6 @@ export function ArtistCard({ artist, schedules }: ArtistCardProps) {
           </div>
         )}
       </div>
-    </div>
+    </a>
   );
 }
