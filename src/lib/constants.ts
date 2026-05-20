@@ -9,30 +9,39 @@ export const FESTIVAL_DATES: Record<FestivalDay, { label: string; dayOfWeek: str
 };
 
 export const STAGES: Stage[] = [
-  { id: 'art-theater',  name: 'MORI.MICHI. ART THEATER',  area: '遊園地エリア' },
-  { id: 'disco-stage',  name: 'MORI.MICHI. DISCO STAGE',   area: '遊園地エリア' },
-  { id: 'garden-stage', name: 'MORI.MICHI. GARDEN STAGE',  area: '遊園地エリア' },
-  { id: 'forest-stage', name: 'MORI.MICHI. FOREST STAGE',  area: '海エリア' },
-  { id: 'beach-stage',  name: 'MORI.MICHI. BEACH STAGE',   area: '海エリア' },
-  { id: 'sea-stage',    name: 'MORI.MICHI. SEA STAGE',     area: '海エリア' },
+  { id: 'grass-stage',   name: 'GRASS STAGE',              area: '海エリア' },
+  { id: 'sand-stage',    name: 'SAND STAGE',               area: '海エリア' },
+  { id: 'hill-stage',    name: 'HILL STAGE',               area: '海エリア' },
+  { id: 'eikyo-stage',   name: '影響亜細亜 STAGE',          area: '海エリア' },
+  { id: 'eatbeat-stage', name: 'EATBEAT! STAGE',           area: '海エリア' },
+  { id: 'yuenchi-stage', name: '遊園地 STAGE',              area: '遊園地エリア' },
+  { id: 'disco-stage',   name: 'MORI.MICHI. DISCO.STAGE',  area: '遊園地エリア' },
+  { id: 'art-theater',   name: 'MORI.MICHI. ART THEATER',  area: '遊園地エリア' },
+  { id: 'lvrry-stage',   name: 'LVRRY X BLH STAGE',        area: '遊園地エリア' },
 ];
 
 export const STAGE_SHORT_NAMES: Record<StageName, string> = {
+  'GRASS STAGE':              'GRASS',
+  'SAND STAGE':               'SAND',
+  'HILL STAGE':               'HILL',
+  '影響亜細亜 STAGE':          '影響亜細亜',
+  'EATBEAT! STAGE':           'EATBEAT!',
+  '遊園地 STAGE':              '遊園地',
+  'MORI.MICHI. DISCO.STAGE':  'DISCO',
   'MORI.MICHI. ART THEATER':  'ART THEATER',
-  'MORI.MICHI. DISCO STAGE':  'DISCO STAGE',
-  'MORI.MICHI. GARDEN STAGE': 'GARDEN STAGE',
-  'MORI.MICHI. FOREST STAGE': 'FOREST STAGE',
-  'MORI.MICHI. BEACH STAGE':  'BEACH STAGE',
-  'MORI.MICHI. SEA STAGE':    'SEA STAGE',
+  'LVRRY X BLH STAGE':        'LVRRY X BLH',
 };
 
 export const STAGE_COLORS: Record<StageName, string> = {
+  'GRASS STAGE':              'bg-green-600',
+  'SAND STAGE':               'bg-amber-600',
+  'HILL STAGE':               'bg-lime-700',
+  '影響亜細亜 STAGE':          'bg-orange-600',
+  'EATBEAT! STAGE':           'bg-red-500',
+  '遊園地 STAGE':              'bg-pink-600',
+  'MORI.MICHI. DISCO.STAGE':  'bg-purple-600',
   'MORI.MICHI. ART THEATER':  'bg-emerald-600',
-  'MORI.MICHI. DISCO STAGE':  'bg-purple-600',
-  'MORI.MICHI. GARDEN STAGE': 'bg-lime-600',
-  'MORI.MICHI. FOREST STAGE': 'bg-teal-600',
-  'MORI.MICHI. BEACH STAGE':  'bg-sky-600',
-  'MORI.MICHI. SEA STAGE':    'bg-blue-600',
+  'LVRRY X BLH STAGE':        'bg-blue-700',
 };
 
 export const AREA_COLORS: Record<StageArea, string> = {
