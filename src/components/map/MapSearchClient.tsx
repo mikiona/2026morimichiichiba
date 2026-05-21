@@ -1,16 +1,15 @@
 'use client';
 import { useState, useMemo } from 'react';
-import type { FoodVendor, StageName } from '@/types';
+import type { FoodVendor } from '@/types';
 import { SearchInput } from '@/components/ui/SearchInput';
 import { VenueMap } from './VenueMap';
 
 interface MapSearchClientProps {
   vendors: FoodVendor[];
-  highlightStage?: StageName;
   initialQuery?: string;
 }
 
-export function MapSearchClient({ vendors, highlightStage, initialQuery = '' }: MapSearchClientProps) {
+export function MapSearchClient({ vendors, initialQuery = '' }: MapSearchClientProps) {
   const [query, setQuery] = useState(initialQuery);
   const [selectedVendor, setSelectedVendor] = useState<FoodVendor | null>(() =>
     initialQuery ? vendors.find((v) => v.name === initialQuery) ?? null : null
@@ -25,8 +24,6 @@ export function MapSearchClient({ vendors, highlightStage, initialQuery = '' }: 
         (v.description ?? '').toLowerCase().includes(q)
     ).slice(0, 20);
   }, [query, vendors]);
-
-  const showMarket = selectedVendor !== null;
 
   return (
     <div className="space-y-3">
@@ -82,7 +79,7 @@ export function MapSearchClient({ vendors, highlightStage, initialQuery = '' }: 
         </div>
       )}
 
-      <VenueMap highlightStage={highlightStage} highlightMarket={showMarket} />
+      <VenueMap />
     </div>
   );
 }
