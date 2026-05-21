@@ -37,7 +37,7 @@ export function VenueMap({ highlightStage, highlightMarket }: VenueMapProps) {
 
           <div className="overflow-hidden rounded-xl border border-gray-200 bg-gray-100 touch-none">
             <TransformComponent wrapperStyle={{ width: '100%' }} contentStyle={{ width: '100%' }}>
-              <div className="relative w-full" style={{ aspectRatio: '3042/4300' }}>
+              <div className="relative w-full" style={{ aspectRatio: '4056/5733' }}>
                 <Image
                   src="/venue-map.jpg"
                   alt="森道市場2026 会場マップ"
