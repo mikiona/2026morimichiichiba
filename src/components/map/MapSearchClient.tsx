@@ -45,10 +45,15 @@ export function MapSearchClient({ vendors, highlightStage, initialQuery = '' }: 
                 onClick={() => setSelectedVendor(v)}
                 className="w-full text-left px-4 py-2.5 hover:bg-emerald-50 border-b border-gray-100 last:border-0"
               >
-                <span className="font-medium text-gray-900 text-sm">{v.name}</span>
-                {v.categories[0] && (
-                  <span className="ml-2 text-xs text-gray-400">{v.categories[0]}</span>
-                )}
+                <div className="font-medium text-gray-900 text-sm">{v.name}</div>
+                <div className="text-xs mt-0.5 flex items-center gap-2 flex-wrap">
+                  {v.areaId !== 'market' && (
+                    <span className="text-amber-600">📍 {v.area}</span>
+                  )}
+                  {v.categories[0] && (
+                    <span className="text-gray-400">{v.categories[0]}</span>
+                  )}
+                </div>
               </button>
             ))}
           </div>
@@ -60,7 +65,7 @@ export function MapSearchClient({ vendors, highlightStage, initialQuery = '' }: 
           <div>
             <p className="font-bold text-gray-900 text-sm">{selectedVendor.name}</p>
             <p className="text-xs text-amber-700 mt-0.5">
-              📍 MORI MARKET エリアにあります。地図を拡大してお探しください。
+              📍 {selectedVendor.areaId !== 'market' ? selectedVendor.area : 'MORI MARKET'} エリアにあります。地図を拡大してお探しください。
             </p>
           </div>
           <button

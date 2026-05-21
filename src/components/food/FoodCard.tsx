@@ -41,6 +41,10 @@ export function FoodCard({ vendor }: FoodCardProps) {
           <span className="text-2xl flex-shrink-0" aria-label={primaryCategory}>{emoji}</span>
         </div>
 
+        {vendor.areaId !== 'market' && (
+          <p className="text-xs text-amber-700 mb-2">📍 {vendor.area}</p>
+        )}
+
         <div className="flex flex-wrap gap-1">
           {vendor.categories.filter((c) => c !== 'その他').slice(0, 3).map((c) => (
             <Badge key={c} variant="green">{c}</Badge>
