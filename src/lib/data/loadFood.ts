@@ -171,13 +171,13 @@ export type FoodSource = 'json' | 'html' | 'api';
 
 function applyShopAreas(vendors: FoodVendor[]): FoodVendor[] {
   const areaById = new Map(shopAreas.areas.map((a) => [a.id, a]));
-  const index = shopAreas.shopAreaIndex as Record<string, string>;
+  const index = shopAreas.shopAreaIndex as Record<string, { areaId: string; slot: number }>;
   return vendors.map((v) => {
-    const areaId = index[normalizeShopName(v.name)];
-    if (!areaId) return v;
-    const area = areaById.get(areaId);
+    const entry = index[normalizeShopName(v.name)];
+    if (!entry) return v;
+    const area = areaById.get(entry.areaId);
     if (!area) return v;
-    return { ...v, area: area.name, areaId };
+    return { ...v, area: area.name, areaId: entry.areaId, areaSlot: entry.slot };
   });
 }
 

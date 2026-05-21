@@ -42,7 +42,10 @@ export function FoodCard({ vendor }: FoodCardProps) {
         </div>
 
         {vendor.areaId !== 'market' && (
-          <p className="text-xs text-amber-700 mb-2">📍 {vendor.area}</p>
+          <p className="text-xs text-amber-700 mb-2">
+            📍 {vendor.area}
+            {vendor.areaSlot ? ` #${vendor.areaSlot}` : ''}
+          </p>
         )}
 
         <div className="flex flex-wrap gap-1">

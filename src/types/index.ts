@@ -108,6 +108,7 @@ export interface FoodVendor {
   name: string;
   area: string;
   areaId: string;
+  areaSlot?: number;
   categories: FoodCategory[];
   menuItems: MenuItem[];
   priceRange: PriceRange;
