@@ -1,0 +1,2294 @@
+{
+  "areas": [
+    {
+      "id": "liverary",
+      "name": "LIVERARY pre. LVRRY X BLH"
+    },
+    {
+      "id": "tane-tabi",
+      "name": "種と旅と"
+    },
+    {
+      "id": "splash-market",
+      "name": "SPLASH MARKET"
+    },
+    {
+      "id": "morimichi-shokudo-disco",
+      "name": "森道食堂（DISCO支店）"
+    },
+    {
+      "id": "yuenchi-market",
+      "name": "遊園地MARKET"
+    },
+    {
+      "id": "river-market",
+      "name": "RIVER MARKET"
+    },
+    {
+      "id": "venture-onward",
+      "name": "VENTURE ONWARD by Purveyors"
+    },
+    {
+      "id": "ukiuki-dori",
+      "name": "味な盛り場 ウキウキ通り"
+    },
+    {
+      "id": "kaigan-1",
+      "name": "海岸通り一丁目"
+    },
+    {
+      "id": "kaigan-2",
+      "name": "海岸通り二丁目"
+    },
+    {
+      "id": "kaigan-6",
+      "name": "海岸通り六丁目"
+    },
+    {
+      "id": "eatbeat-10",
+      "name": "EATBEAT!10"
+    },
+    {
+      "id": "kaigan-5",
+      "name": "海岸通り五丁目"
+    },
+    {
+      "id": "kaigan-3",
+      "name": "海岸通り三丁目"
+    },
+    {
+      "id": "kaigan-4",
+      "name": "海岸通り四丁目"
+    },
+    {
+      "id": "morimichi-center",
+      "name": "森道センター街"
+    },
+    {
+      "id": "east-caravan",
+      "name": "EAST CARAVAN"
+    },
+    {
+      "id": "naganonano",
+      "name": "ながのなの"
+    },
+    {
+      "id": "play-market",
+      "name": "PLAY MARKET"
+    },
+    {
+      "id": "shimanami",
+      "name": "しまなみやまなみバイブス県"
+    },
+    {
+      "id": "little-okinawa",
+      "name": "リトルオキナワ"
+    },
+    {
+      "id": "morimichi-shokudo-umi",
+      "name": "森道食堂（海支店）"
+    },
+    {
+      "id": "fantastic-market",
+      "name": "ファンタスティックマーケット"
+    },
+    {
+      "id": "shibafu",
+      "name": "森道芝生広場"
+    }
+  ],
+  "shopAreaIndex": {
+    "burgerstandhaveagoodtimexdaybyday": {
+      "areaId": "liverary",
+      "slot": 13
+    },
+    "baselayerhotel": {
+      "areaId": "liverary",
+      "slot": 3
+    },
+    "chowchow": {
+      "areaId": "liverary",
+      "slot": 3
+    },
+    "suekkolions©": {
+      "areaId": "liverary",
+      "slot": 32
+    },
+    "saperlipopetteさっぺりぽぺっと": {
+      "areaId": "splash-market",
+      "slot": 5
+    },
+    "patisserierare": {
+      "areaId": "tane-tabi",
+      "slot": 10
+    },
+    "yokaxonepotwonder": {
+      "areaId": "venture-onward",
+      "slot": 14
+    },
+    "paddlerscoffee": {
+      "areaId": "ukiuki-dori",
+      "slot": 23
+    },
+    "lou": {
+      "areaId": "ukiuki-dori",
+      "slot": 23
+    },
+    "orangutan": {
+      "areaId": "ukiuki-dori",
+      "slot": 23
+    },
+    "toowood": {
+      "areaId": "ukiuki-dori",
+      "slot": 23
+    },
+    "lapitademaisoncinquantecinq": {
+      "areaId": "shimanami",
+      "slot": 20
+    },
+    "imaginecofeee": {
+      "areaId": "shimanami",
+      "slot": 4
+    },
+    "山窩旅とてしごと": {
+      "areaId": "shimanami",
+      "slot": 7
+    },
+    "スラックラインコミュニティシーモンキーズ": {
+      "areaId": "kaigan-6",
+      "slot": 9
+    },
+    "normal": {
+      "areaId": "liverary",
+      "slot": 1
+    },
+    "zeze": {
+      "areaId": "liverary",
+      "slot": 2
+    },
+    "baselayerhotelchowchow": {
+      "areaId": "liverary",
+      "slot": 3
+    },
+    "citydiningmacys": {
+      "areaId": "liverary",
+      "slot": 4
+    },
+    "カロリー軒": {
+      "areaId": "liverary",
+      "slot": 5
+    },
+    "社交酒場イム": {
+      "areaId": "liverary",
+      "slot": 5
+    },
+    "ひねもすのたりとsundaywineclab": {
+      "areaId": "liverary",
+      "slot": 6
+    },
+    "tresol": {
+      "areaId": "liverary",
+      "slot": 7
+    },
+    "and": {
+      "areaId": "liverary",
+      "slot": 8
+    },
+    "スパイスアワー": {
+      "areaId": "liverary",
+      "slot": 9
+    },
+    "カレーショップらんびー": {
+      "areaId": "liverary",
+      "slot": 10
+    },
+    "barkanata": {
+      "areaId": "liverary",
+      "slot": 11
+    },
+    "スパイスカレーと無国籍料理maai間合い": {
+      "areaId": "liverary",
+      "slot": 12
+    },
+    "burgerstand": {
+      "areaId": "liverary",
+      "slot": 13
+    },
+    "haveagoodtimexdaybyday": {
+      "areaId": "liverary",
+      "slot": 13
+    },
+    "jirri": {
+      "areaId": "liverary",
+      "slot": 14
+    },
+    "シヤチル": {
+      "areaId": "liverary",
+      "slot": 15
+    },
+    "coffeesupreme": {
+      "areaId": "liverary",
+      "slot": 16
+    },
+    "ブロッケン": {
+      "areaId": "liverary",
+      "slot": 17
+    },
+    "炊々": {
+      "areaId": "liverary",
+      "slot": 18
+    },
+    "幸福館": {
+      "areaId": "liverary",
+      "slot": 19
+    },
+    "ネグラ妄想インドカレーと越境庶民料理店": {
+      "areaId": "liverary",
+      "slot": 20
+    },
+    "offtherecord": {
+      "areaId": "liverary",
+      "slot": 21
+    },
+    "チーム銘々": {
+      "areaId": "liverary",
+      "slot": 22
+    },
+    "opere": {
+      "areaId": "liverary",
+      "slot": 23
+    },
+    "kuretal百貨センター": {
+      "areaId": "liverary",
+      "slot": 24
+    },
+    "鋤田収集事務所": {
+      "areaId": "liverary",
+      "slot": 25
+    },
+    "延命ランド": {
+      "areaId": "liverary",
+      "slot": 26
+    },
+    "kiosco": {
+      "areaId": "liverary",
+      "slot": 27
+    },
+    "jyuku": {
+      "areaId": "liverary",
+      "slot": 28
+    },
+    "nothing": {
+      "areaId": "liverary",
+      "slot": 29
+    },
+    "moloch": {
+      "areaId": "liverary",
+      "slot": 30
+    },
+    "にしこはりこ": {
+      "areaId": "liverary",
+      "slot": 31
+    },
+    "suekko": {
+      "areaId": "liverary",
+      "slot": 32
+    },
+    "lions©": {
+      "areaId": "liverary",
+      "slot": 32
+    },
+    "namomerryyarn": {
+      "areaId": "liverary",
+      "slot": 33
+    },
+    "チェルプ": {
+      "areaId": "liverary",
+      "slot": 34
+    },
+    "スペースたのしい": {
+      "areaId": "liverary",
+      "slot": 35
+    },
+    "diorama&panorama": {
+      "areaId": "liverary",
+      "slot": 36
+    },
+    "relaxoriginal®": {
+      "areaId": "liverary",
+      "slot": 37
+    },
+    "madboxxx": {
+      "areaId": "liverary",
+      "slot": 38
+    },
+    "canecane": {
+      "areaId": "liverary",
+      "slot": 39
+    },
+    "yuichirotamaki": {
+      "areaId": "liverary",
+      "slot": 40
+    },
+    "boy": {
+      "areaId": "liverary",
+      "slot": 41
+    },
+    "yamastore": {
+      "areaId": "liverary",
+      "slot": 42
+    },
+    "awabyukuuproject": {
+      "areaId": "liverary",
+      "slot": 43
+    },
+    "jiajia": {
+      "areaId": "liverary",
+      "slot": 44
+    },
+    "matoobjectsstore": {
+      "areaId": "liverary",
+      "slot": 45
+    },
+    "kan": {
+      "areaId": "liverary",
+      "slot": 46
+    },
+    "canbuyrecords": {
+      "areaId": "liverary",
+      "slot": 47
+    },
+    "nutriah": {
+      "areaId": "liverary",
+      "slot": 48
+    },
+    "deli": {
+      "areaId": "liverary",
+      "slot": 49
+    },
+    "rim": {
+      "areaId": "liverary",
+      "slot": 50
+    },
+    "新町ビル山の花地想": {
+      "areaId": "liverary",
+      "slot": 51
+    },
+    "インターチェンジbygoodbrokencharm": {
+      "areaId": "liverary",
+      "slot": 52
+    },
+    "makedoobyhiraparr": {
+      "areaId": "liverary",
+      "slot": 53
+    },
+    "chachachabooks&cafe": {
+      "areaId": "liverary",
+      "slot": 54
+    },
+    "liveraryextra": {
+      "areaId": "liverary",
+      "slot": 55
+    },
+    "大橋裕之の似顔絵屋": {
+      "areaId": "liverary",
+      "slot": 56
+    },
+    "jamとスロメ": {
+      "areaId": "liverary",
+      "slot": 57
+    },
+    "molefactory": {
+      "areaId": "liverary",
+      "slot": 58
+    },
+    "光郷城畑懐": {
+      "areaId": "tane-tabi",
+      "slot": 1
+    },
+    "野母崎樺島製塩所": {
+      "areaId": "tane-tabi",
+      "slot": 2
+    },
+    "minäperhonen": {
+      "areaId": "tane-tabi",
+      "slot": 3
+    },
+    "appartementcoffee": {
+      "areaId": "tane-tabi",
+      "slot": 4
+    },
+    "akitocoffee": {
+      "areaId": "tane-tabi",
+      "slot": 4
+    },
+    "nai": {
+      "areaId": "tane-tabi",
+      "slot": 4
+    },
+    "winebaralpes": {
+      "areaId": "tane-tabi",
+      "slot": 5
+    },
+    "howene": {
+      "areaId": "tane-tabi",
+      "slot": 5
+    },
+    "wineshopflow": {
+      "areaId": "tane-tabi",
+      "slot": 5
+    },
+    "久米桜三輪智成": {
+      "areaId": "tane-tabi",
+      "slot": 6
+    },
+    "sunpedalサンペダル": {
+      "areaId": "tane-tabi",
+      "slot": 7
+    },
+    "伊藤渉": {
+      "areaId": "tane-tabi",
+      "slot": 7
+    },
+    "湯宿蒸気家featyusukekashima": {
+      "areaId": "tane-tabi",
+      "slot": 7
+    },
+    "igora": {
+      "areaId": "tane-tabi",
+      "slot": 7
+    },
+    "自然派料理店糧": {
+      "areaId": "tane-tabi",
+      "slot": 7
+    },
+    "sagoggio": {
+      "areaId": "tane-tabi",
+      "slot": 7
+    },
+    "ひのめ": {
+      "areaId": "tane-tabi",
+      "slot": 7
+    },
+    "ワイン食堂トキワ": {
+      "areaId": "tane-tabi",
+      "slot": 7
+    },
+    "aloアロ": {
+      "areaId": "tane-tabi",
+      "slot": 8
+    },
+    "bèe": {
+      "areaId": "tane-tabi",
+      "slot": 8
+    },
+    "boat": {
+      "areaId": "tane-tabi",
+      "slot": 8
+    },
+    "ethnictamneutral": {
+      "areaId": "tane-tabi",
+      "slot": 8
+    },
+    "お酒と料理えいよう": {
+      "areaId": "tane-tabi",
+      "slot": 8
+    },
+    "csew": {
+      "areaId": "tane-tabi",
+      "slot": 8
+    },
+    "peg": {
+      "areaId": "tane-tabi",
+      "slot": 8
+    },
+    "tearoomalpes": {
+      "areaId": "tane-tabi",
+      "slot": 9
+    },
+    "ryoheitakamatsu": {
+      "areaId": "tane-tabi",
+      "slot": 9
+    },
+    "sundaysfood": {
+      "areaId": "tane-tabi",
+      "slot": 9
+    },
+    "mube": {
+      "areaId": "tane-tabi",
+      "slot": 9
+    },
+    "月とピエロ": {
+      "areaId": "tane-tabi",
+      "slot": 9
+    },
+    "arbolicecream": {
+      "areaId": "tane-tabi",
+      "slot": 10
+    },
+    "ラブーランジェリードハリマヤ": {
+      "areaId": "tane-tabi",
+      "slot": 10
+    },
+    "樹和堂": {
+      "areaId": "tane-tabi",
+      "slot": 10
+    },
+    "sundaybakeshop": {
+      "areaId": "tane-tabi",
+      "slot": 10
+    },
+    "薪火野": {
+      "areaId": "tane-tabi",
+      "slot": 10
+    },
+    "pâtisserierareパティスリーラール": {
+      "areaId": "tane-tabi",
+      "slot": 10
+    },
+    "カルパ": {
+      "areaId": "tane-tabi",
+      "slot": 10
+    },
+    "チェスト": {
+      "areaId": "tane-tabi",
+      "slot": 10
+    },
+    "パーラー江古田": {
+      "areaId": "tane-tabi",
+      "slot": 10
+    },
+    "hnn": {
+      "areaId": "tane-tabi",
+      "slot": 10
+    },
+    "パン屋塩見": {
+      "areaId": "tane-tabi",
+      "slot": 10
+    },
+    "ルヴァン甲田幹夫": {
+      "areaId": "tane-tabi",
+      "slot": 10
+    },
+    "大衆食堂飯具": {
+      "areaId": "splash-market",
+      "slot": 1
+    },
+    "鮨場まる": {
+      "areaId": "splash-market",
+      "slot": 2
+    },
+    "arcfarm": {
+      "areaId": "splash-market",
+      "slot": 3
+    },
+    "thetinyseedbasilclub": {
+      "areaId": "splash-market",
+      "slot": 4
+    },
+    "saperlipopette": {
+      "areaId": "splash-market",
+      "slot": 5
+    },
+    "さっぺりぽぺっと": {
+      "areaId": "splash-market",
+      "slot": 5
+    },
+    "13倉庫yeti": {
+      "areaId": "splash-market",
+      "slot": 6
+    },
+    "森林食堂": {
+      "areaId": "splash-market",
+      "slot": 7
+    },
+    "o2": {
+      "areaId": "splash-market",
+      "slot": 7
+    },
+    "イチトサンブンノイチ": {
+      "areaId": "splash-market",
+      "slot": 8
+    },
+    "lamp:thesauna": {
+      "areaId": "splash-market",
+      "slot": 9
+    },
+    "sundayspice": {
+      "areaId": "morimichi-shokudo-disco",
+      "slot": 1
+    },
+    "喫茶hiraya": {
+      "areaId": "morimichi-shokudo-disco",
+      "slot": 2
+    },
+    "そのとうり": {
+      "areaId": "morimichi-shokudo-disco",
+      "slot": 3
+    },
+    "燦々sansan": {
+      "areaId": "morimichi-shokudo-disco",
+      "slot": 4
+    },
+    "narusoba": {
+      "areaId": "morimichi-shokudo-disco",
+      "slot": 5
+    },
+    "だし麺未蕾": {
+      "areaId": "morimichi-shokudo-disco",
+      "slot": 6
+    },
+    "kcoffee": {
+      "areaId": "yuenchi-market",
+      "slot": 1
+    },
+    "catsissueと森道大作戦!~うさぎを探せ~": {
+      "areaId": "yuenchi-market",
+      "slot": 2
+    },
+    "enjoysaunabysaunacamp": {
+      "areaId": "yuenchi-market",
+      "slot": 3
+    },
+    "insects": {
+      "areaId": "yuenchi-market",
+      "slot": 4
+    },
+    "tigermountain": {
+      "areaId": "yuenchi-market",
+      "slot": 5
+    },
+    "ホホホ座浄土寺店": {
+      "areaId": "yuenchi-market",
+      "slot": 6
+    },
+    "みじカルコレクション": {
+      "areaId": "yuenchi-market",
+      "slot": 7
+    },
+    "porco": {
+      "areaId": "yuenchi-market",
+      "slot": 8
+    },
+    "ponchice": {
+      "areaId": "yuenchi-market",
+      "slot": 9
+    },
+    "vint": {
+      "areaId": "yuenchi-market",
+      "slot": 10
+    },
+    "musicaprintworks": {
+      "areaId": "yuenchi-market",
+      "slot": 11
+    },
+    "accessoriesmau大岡弘晃andmore": {
+      "areaId": "yuenchi-market",
+      "slot": 12
+    },
+    "morocco": {
+      "areaId": "yuenchi-market",
+      "slot": 13
+    },
+    "aindahing": {
+      "areaId": "yuenchi-market",
+      "slot": 14
+    },
+    "まめちゃ": {
+      "areaId": "yuenchi-market",
+      "slot": 15
+    },
+    "deli&teakäwäsemi": {
+      "areaId": "yuenchi-market",
+      "slot": 15
+    },
+    "ヒトトキ人と木": {
+      "areaId": "yuenchi-market",
+      "slot": 15
+    },
+    "posto": {
+      "areaId": "yuenchi-market",
+      "slot": 16
+    },
+    "円居": {
+      "areaId": "yuenchi-market",
+      "slot": 17
+    },
+    "feltcoffee": {
+      "areaId": "yuenchi-market",
+      "slot": 17
+    },
+    "uneclef": {
+      "areaId": "yuenchi-market",
+      "slot": 17
+    },
+    "madocafe": {
+      "areaId": "yuenchi-market",
+      "slot": 18
+    },
+    "喫茶toi": {
+      "areaId": "yuenchi-market",
+      "slot": 19
+    },
+    "space": {
+      "areaId": "yuenchi-market",
+      "slot": 19
+    },
+    "スコーン家haru": {
+      "areaId": "yuenchi-market",
+      "slot": 20
+    },
+    "oyatsupokke": {
+      "areaId": "yuenchi-market",
+      "slot": 20
+    },
+    "sheep": {
+      "areaId": "river-market",
+      "slot": 1
+    },
+    "山のふもと": {
+      "areaId": "river-market",
+      "slot": 2
+    },
+    "島と山nicethings&actibase": {
+      "areaId": "river-market",
+      "slot": 3
+    },
+    "kentachujo": {
+      "areaId": "river-market",
+      "slot": 4
+    },
+    "naokohataceramics": {
+      "areaId": "river-market",
+      "slot": 5
+    },
+    "san": {
+      "areaId": "river-market",
+      "slot": 6
+    },
+    "chappo": {
+      "areaId": "river-market",
+      "slot": 7
+    },
+    "mazurka": {
+      "areaId": "river-market",
+      "slot": 8
+    },
+    "abundantism岡崎ぎゃざ": {
+      "areaId": "river-market",
+      "slot": 9
+    },
+    "thegoggoザゴゴー": {
+      "areaId": "river-market",
+      "slot": 10
+    },
+    "quarkgrenier": {
+      "areaId": "river-market",
+      "slot": 11
+    },
+    "アポロコーヒーワークス": {
+      "areaId": "river-market",
+      "slot": 12
+    },
+    "hankachibeauty": {
+      "areaId": "river-market",
+      "slot": 13
+    },
+    "大澤哲哉hikarimasuda": {
+      "areaId": "river-market",
+      "slot": 14
+    },
+    "bakerydryriver": {
+      "areaId": "river-market",
+      "slot": 15
+    },
+    "小菅くみそで山かほ子": {
+      "areaId": "river-market",
+      "slot": 16
+    },
+    "ペットの絵描きます金森青葉": {
+      "areaId": "river-market",
+      "slot": 17
+    },
+    "世界文庫世界文庫アカデミー": {
+      "areaId": "river-market",
+      "slot": 18
+    },
+    "きびす堂": {
+      "areaId": "river-market",
+      "slot": 19
+    },
+    "instars": {
+      "areaId": "river-market",
+      "slot": 20
+    },
+    "ituka": {
+      "areaId": "river-market",
+      "slot": 21
+    },
+    "米粉sweetskinun": {
+      "areaId": "river-market",
+      "slot": 22
+    },
+    "チーズケーキtentonテントン": {
+      "areaId": "river-market",
+      "slot": 23
+    },
+    "topeinformation": {
+      "areaId": "river-market",
+      "slot": 24
+    },
+    "graph": {
+      "areaId": "river-market",
+      "slot": 25
+    },
+    "cafesnug": {
+      "areaId": "river-market",
+      "slot": 26
+    },
+    "雑貨屋孵": {
+      "areaId": "river-market",
+      "slot": 27
+    },
+    "凸凹ことのは舎": {
+      "areaId": "river-market",
+      "slot": 28
+    },
+    "四匹": {
+      "areaId": "river-market",
+      "slot": 29
+    },
+    "septemberpoetry": {
+      "areaId": "river-market",
+      "slot": 30
+    },
+    "鈴木友紀": {
+      "areaId": "river-market",
+      "slot": 31
+    },
+    "yoheinoguchi": {
+      "areaId": "river-market",
+      "slot": 32
+    },
+    "松本寛司": {
+      "areaId": "river-market",
+      "slot": 33
+    },
+    "平野日奈子": {
+      "areaId": "river-market",
+      "slot": 34
+    },
+    "ヤマネギターズ": {
+      "areaId": "river-market",
+      "slot": 35
+    },
+    "茨木伸恵": {
+      "areaId": "river-market",
+      "slot": 36
+    },
+    "farcrybrewingとnumb&hazy": {
+      "areaId": "venture-onward",
+      "slot": 1
+    },
+    "eyl": {
+      "areaId": "venture-onward",
+      "slot": 2
+    },
+    "アトリエブルーボトル": {
+      "areaId": "venture-onward",
+      "slot": 2
+    },
+    "一二": {
+      "areaId": "venture-onward",
+      "slot": 2
+    },
+    "bring": {
+      "areaId": "venture-onward",
+      "slot": 2
+    },
+    "alexanderleechang": {
+      "areaId": "venture-onward",
+      "slot": 3
+    },
+    "purveyors": {
+      "areaId": "venture-onward",
+      "slot": 3
+    },
+    "wonderworks": {
+      "areaId": "venture-onward",
+      "slot": 3
+    },
+    "lue": {
+      "areaId": "venture-onward",
+      "slot": 4
+    },
+    "hihihi": {
+      "areaId": "venture-onward",
+      "slot": 4
+    },
+    "mörk": {
+      "areaId": "venture-onward",
+      "slot": 4
+    },
+    "plusbeat月のうらがわ": {
+      "areaId": "venture-onward",
+      "slot": 4
+    },
+    "oldmountain": {
+      "areaId": "venture-onward",
+      "slot": 5
+    },
+    "haccobacraftsakebrewery": {
+      "areaId": "venture-onward",
+      "slot": 6
+    },
+    "ココファームワイナリー": {
+      "areaId": "venture-onward",
+      "slot": 6
+    },
+    "ぷくぷく醸造": {
+      "areaId": "venture-onward",
+      "slot": 6
+    },
+    "稲とアガベ": {
+      "areaId": "venture-onward",
+      "slot": 6
+    },
+    "芙蓉酒造": {
+      "areaId": "venture-onward",
+      "slot": 6
+    },
+    "移動帽子屋aura": {
+      "areaId": "venture-onward",
+      "slot": 7
+    },
+    "atelierdehors": {
+      "areaId": "venture-onward",
+      "slot": 8
+    },
+    "duckrowdepart": {
+      "areaId": "venture-onward",
+      "slot": 9
+    },
+    "&nut": {
+      "areaId": "venture-onward",
+      "slot": 10
+    },
+    "haida": {
+      "areaId": "venture-onward",
+      "slot": 11
+    },
+    "honopottery": {
+      "areaId": "venture-onward",
+      "slot": 12
+    },
+    "hakumountainsupply": {
+      "areaId": "venture-onward",
+      "slot": 13
+    },
+    "yokaonepotwonder": {
+      "areaId": "venture-onward",
+      "slot": 14
+    },
+    "234shokudo": {
+      "areaId": "venture-onward",
+      "slot": 15
+    },
+    "nerudesignworks": {
+      "areaId": "venture-onward",
+      "slot": 16
+    },
+    "halocommodity": {
+      "areaId": "venture-onward",
+      "slot": 17
+    },
+    "dverg": {
+      "areaId": "venture-onward",
+      "slot": 18
+    },
+    "ashitabi": {
+      "areaId": "venture-onward",
+      "slot": 19
+    },
+    "caya": {
+      "areaId": "venture-onward",
+      "slot": 20
+    },
+    "mameritsuko": {
+      "areaId": "venture-onward",
+      "slot": 21
+    },
+    "fons": {
+      "areaId": "venture-onward",
+      "slot": 22
+    },
+    "中囿義光": {
+      "areaId": "venture-onward",
+      "slot": 23
+    },
+    "ttoo": {
+      "areaId": "venture-onward",
+      "slot": 24
+    },
+    "manika": {
+      "areaId": "venture-onward",
+      "slot": 25
+    },
+    "sipilica": {
+      "areaId": "venture-onward",
+      "slot": 26
+    },
+    "rigfootwear": {
+      "areaId": "venture-onward",
+      "slot": 27
+    },
+    "100mermaidsand100beasts": {
+      "areaId": "venture-onward",
+      "slot": 28
+    },
+    "stability": {
+      "areaId": "venture-onward",
+      "slot": 29
+    },
+    "神山隆二": {
+      "areaId": "venture-onward",
+      "slot": 30
+    },
+    "tempragarage&marquezshop": {
+      "areaId": "venture-onward",
+      "slot": 31
+    },
+    "halftrackproducts": {
+      "areaId": "venture-onward",
+      "slot": 32
+    },
+    "neverwastedhandsongrip": {
+      "areaId": "venture-onward",
+      "slot": 33
+    },
+    "わたしローチョコレート": {
+      "areaId": "venture-onward",
+      "slot": 34
+    },
+    "サンキューバナナ": {
+      "areaId": "venture-onward",
+      "slot": 35
+    },
+    "味噌湯志なだ": {
+      "areaId": "venture-onward",
+      "slot": 36
+    },
+    "発酵惑星": {
+      "areaId": "venture-onward",
+      "slot": 37
+    },
+    "burgermania": {
+      "areaId": "ukiuki-dori",
+      "slot": 1
+    },
+    "スープカレーよつば": {
+      "areaId": "ukiuki-dori",
+      "slot": 2
+    },
+    "繁邦": {
+      "areaId": "ukiuki-dori",
+      "slot": 3
+    },
+    "vaat": {
+      "areaId": "ukiuki-dori",
+      "slot": 4
+    },
+    "enme": {
+      "areaId": "ukiuki-dori",
+      "slot": 4
+    },
+    "takbeans": {
+      "areaId": "ukiuki-dori",
+      "slot": 5
+    },
+    "餃子スラッピー": {
+      "areaId": "ukiuki-dori",
+      "slot": 6
+    },
+    "milkteaservice": {
+      "areaId": "ukiuki-dori",
+      "slot": 7
+    },
+    "ラーメンやんぐ": {
+      "areaId": "ukiuki-dori",
+      "slot": 8
+    },
+    "かかん": {
+      "areaId": "ukiuki-dori",
+      "slot": 9
+    },
+    "newrose": {
+      "areaId": "ukiuki-dori",
+      "slot": 10
+    },
+    "pomponcakes": {
+      "areaId": "ukiuki-dori",
+      "slot": 11
+    },
+    "tsolinc": {
+      "areaId": "ukiuki-dori",
+      "slot": 12
+    },
+    "kikinaturalicecream": {
+      "areaId": "ukiuki-dori",
+      "slot": 13
+    },
+    "青果ミコト屋": {
+      "areaId": "ukiuki-dori",
+      "slot": 14
+    },
+    "tinyn": {
+      "areaId": "ukiuki-dori",
+      "slot": 15
+    },
+    "fragranceyes": {
+      "areaId": "ukiuki-dori",
+      "slot": 16
+    },
+    "wuy": {
+      "areaId": "ukiuki-dori",
+      "slot": 17
+    },
+    "八方美米八方美菜": {
+      "areaId": "ukiuki-dori",
+      "slot": 18
+    },
+    "山城果樹園": {
+      "areaId": "ukiuki-dori",
+      "slot": 18
+    },
+    "tanukiappetizing": {
+      "areaId": "ukiuki-dori",
+      "slot": 19
+    },
+    "kiso": {
+      "areaId": "ukiuki-dori",
+      "slot": 19
+    },
+    "blancatokyo": {
+      "areaId": "ukiuki-dori",
+      "slot": 20
+    },
+    "slō": {
+      "areaId": "ukiuki-dori",
+      "slot": 20
+    },
+    "山角や": {
+      "areaId": "ukiuki-dori",
+      "slot": 21
+    },
+    "kikiwineclub": {
+      "areaId": "ukiuki-dori",
+      "slot": 22
+    },
+    "paddlerscoffeelouorangutantoowood": {
+      "areaId": "ukiuki-dori",
+      "slot": 23
+    },
+    "石窯pizza屋台boccheno": {
+      "areaId": "kaigan-1",
+      "slot": 1
+    },
+    "ぞうめし屋": {
+      "areaId": "kaigan-1",
+      "slot": 2
+    },
+    "goingcafe": {
+      "areaId": "kaigan-1",
+      "slot": 3
+    },
+    "kspit": {
+      "areaId": "kaigan-1",
+      "slot": 4
+    },
+    "aow": {
+      "areaId": "kaigan-1",
+      "slot": 5
+    },
+    "コジゴロ": {
+      "areaId": "kaigan-1",
+      "slot": 6
+    },
+    "kannon_plus": {
+      "areaId": "kaigan-1",
+      "slot": 7
+    },
+    "paperskystore": {
+      "areaId": "kaigan-2",
+      "slot": 1
+    },
+    "サークルズサイクルクローク": {
+      "areaId": "kaigan-2",
+      "slot": 2
+    },
+    "chaorasチャオラス": {
+      "areaId": "kaigan-2",
+      "slot": 3
+    },
+    "onenova": {
+      "areaId": "kaigan-2",
+      "slot": 4
+    },
+    "サークルズpfmcerch": {
+      "areaId": "kaigan-2",
+      "slot": 5
+    },
+    "かかし": {
+      "areaId": "kaigan-2",
+      "slot": 6
+    },
+    "tumbleweed": {
+      "areaId": "kaigan-2",
+      "slot": 7
+    },
+    "potequipmentstore": {
+      "areaId": "kaigan-2",
+      "slot": 8
+    },
+    "torayaequipment": {
+      "areaId": "kaigan-2",
+      "slot": 8
+    },
+    "tacomafujirecords": {
+      "areaId": "kaigan-2",
+      "slot": 9
+    },
+    "バーリカーズ": {
+      "areaId": "kaigan-2",
+      "slot": 10
+    },
+    "selectbystand": {
+      "areaId": "kaigan-2",
+      "slot": 11
+    },
+    "yellowvintagestore": {
+      "areaId": "kaigan-2",
+      "slot": 12
+    },
+    "eanbe": {
+      "areaId": "kaigan-2",
+      "slot": 13
+    },
+    "caravan": {
+      "areaId": "kaigan-2",
+      "slot": 14
+    },
+    "お楽しみモール": {
+      "areaId": "kaigan-6",
+      "slot": 1
+    },
+    "全日本棍棒協会": {
+      "areaId": "kaigan-6",
+      "slot": 2
+    },
+    "寄道ハトバ": {
+      "areaId": "kaigan-6",
+      "slot": 3
+    },
+    "cyaarvo": {
+      "areaId": "kaigan-6",
+      "slot": 4
+    },
+    "epinaそうま農園": {
+      "areaId": "kaigan-6",
+      "slot": 5
+    },
+    "那須の大きな食卓bychus": {
+      "areaId": "kaigan-6",
+      "slot": 6
+    },
+    "pileitonami": {
+      "areaId": "kaigan-6",
+      "slot": 7
+    },
+    "クライミングスペースbold": {
+      "areaId": "kaigan-6",
+      "slot": 8
+    },
+    "スラックラインコミュニティ": {
+      "areaId": "kaigan-6",
+      "slot": 9
+    },
+    "シーモンキーズ": {
+      "areaId": "kaigan-6",
+      "slot": 9
+    },
+    "旅するパエリア": {
+      "areaId": "eatbeat-10",
+      "slot": 1
+    },
+    "thebasket": {
+      "areaId": "eatbeat-10",
+      "slot": 2
+    },
+    "菓子ヒナゲシ": {
+      "areaId": "eatbeat-10",
+      "slot": 3
+    },
+    "雑踏": {
+      "areaId": "eatbeat-10",
+      "slot": 4
+    },
+    "初耳の台湾": {
+      "areaId": "eatbeat-10",
+      "slot": 5
+    },
+    "怪談商店おばけ座": {
+      "areaId": "eatbeat-10",
+      "slot": 6
+    },
+    "coffeehousepunkt": {
+      "areaId": "eatbeat-10",
+      "slot": 7
+    },
+    "岩田商店": {
+      "areaId": "eatbeat-10",
+      "slot": 7
+    },
+    "tanji": {
+      "areaId": "eatbeat-10",
+      "slot": 8
+    },
+    "planetarymuffin": {
+      "areaId": "eatbeat-10",
+      "slot": 9
+    },
+    "ahsoakaヅカデン": {
+      "areaId": "eatbeat-10",
+      "slot": 10
+    },
+    "niente": {
+      "areaId": "eatbeat-10",
+      "slot": 11
+    },
+    "luzesombra": {
+      "areaId": "eatbeat-10",
+      "slot": 12
+    },
+    "fishbowlcook": {
+      "areaId": "eatbeat-10",
+      "slot": 13
+    },
+    "thesourcediner": {
+      "areaId": "eatbeat-10",
+      "slot": 14
+    },
+    "riceおにぎり": {
+      "areaId": "eatbeat-10",
+      "slot": 15
+    },
+    "スヌーザー静岡": {
+      "areaId": "eatbeat-10",
+      "slot": 16
+    },
+    "eenybreakfast&shop": {
+      "areaId": "eatbeat-10",
+      "slot": 17
+    },
+    "pochaおじさん&noby": {
+      "areaId": "eatbeat-10",
+      "slot": 18
+    },
+    "vivobarefoot": {
+      "areaId": "eatbeat-10",
+      "slot": 19
+    },
+    "monk": {
+      "areaId": "eatbeat-10",
+      "slot": 20
+    },
+    "anytee": {
+      "areaId": "eatbeat-10",
+      "slot": 21
+    },
+    "仁井田本家": {
+      "areaId": "eatbeat-10",
+      "slot": 22
+    },
+    "奈良醸造": {
+      "areaId": "eatbeat-10",
+      "slot": 23
+    },
+    "そば爺よしみ": {
+      "areaId": "kaigan-5",
+      "slot": 1
+    },
+    "森道結婚式&海岸美容院": {
+      "areaId": "kaigan-5",
+      "slot": 1
+    },
+    "サキアテジョーグー": {
+      "areaId": "kaigan-5",
+      "slot": 2
+    },
+    "dan": {
+      "areaId": "kaigan-5",
+      "slot": 3
+    },
+    "農豊賛nopposan": {
+      "areaId": "kaigan-5",
+      "slot": 4
+    },
+    "yoknel": {
+      "areaId": "kaigan-5",
+      "slot": 5
+    },
+    "立呑み海と花束": {
+      "areaId": "kaigan-5",
+      "slot": 6
+    },
+    "旅する占いパーム": {
+      "areaId": "kaigan-5",
+      "slot": 7
+    },
+    "旅する珈琲屋sweetmemoriescoffee": {
+      "areaId": "kaigan-5",
+      "slot": 8
+    },
+    "cafuneとreefknotcoffee": {
+      "areaId": "kaigan-5",
+      "slot": 9
+    },
+    "omiyage": {
+      "areaId": "kaigan-5",
+      "slot": 10
+    },
+    "おみごとスナック御美娘&聖母呑俗夢ドリームコラボ": {
+      "areaId": "kaigan-5",
+      "slot": 11
+    },
+    "twochapati": {
+      "areaId": "kaigan-5",
+      "slot": 12
+    },
+    "chocobanashi": {
+      "areaId": "kaigan-5",
+      "slot": 13
+    },
+    "発酵玄米三拍子featアワイ": {
+      "areaId": "kaigan-5",
+      "slot": 14
+    },
+    "sava!store": {
+      "areaId": "kaigan-3",
+      "slot": 1
+    },
+    "naot": {
+      "areaId": "kaigan-3",
+      "slot": 2
+    },
+    "スパイスカリー大陸": {
+      "areaId": "kaigan-3",
+      "slot": 3
+    },
+    "遠藤マサヒロ": {
+      "areaId": "kaigan-3",
+      "slot": 4
+    },
+    "竹沢むつみ": {
+      "areaId": "kaigan-3",
+      "slot": 5
+    },
+    "affordanceonawa": {
+      "areaId": "kaigan-3",
+      "slot": 6
+    },
+    "jacousuolo": {
+      "areaId": "kaigan-3",
+      "slot": 7
+    },
+    "snowshoveling": {
+      "areaId": "kaigan-3",
+      "slot": 8
+    },
+    "booktruck": {
+      "areaId": "kaigan-3",
+      "slot": 9
+    },
+    "magoforni": {
+      "areaId": "kaigan-4",
+      "slot": 1
+    },
+    "稲垣腸詰店": {
+      "areaId": "kaigan-4",
+      "slot": 2
+    },
+    "quietvillagecaliforniaparlor": {
+      "areaId": "kaigan-4",
+      "slot": 3
+    },
+    "cafeopen": {
+      "areaId": "kaigan-4",
+      "slot": 4
+    },
+    "heritageranchsaloon": {
+      "areaId": "kaigan-4",
+      "slot": 5
+    },
+    "chè333": {
+      "areaId": "morimichi-center",
+      "slot": 1
+    },
+    "originstore": {
+      "areaId": "morimichi-center",
+      "slot": 2
+    },
+    "homeeconomicsexperiment": {
+      "areaId": "morimichi-center",
+      "slot": 3
+    },
+    "sneaksbykakuozanlarder&earlybirdsbreakfast": {
+      "areaId": "morimichi-center",
+      "slot": 4
+    },
+    "tento": {
+      "areaId": "morimichi-center",
+      "slot": 5
+    },
+    "ヤンガオ": {
+      "areaId": "morimichi-center",
+      "slot": 6
+    },
+    "再来": {
+      "areaId": "morimichi-center",
+      "slot": 7
+    },
+    "pho321noodlebar": {
+      "areaId": "morimichi-center",
+      "slot": 8
+    },
+    "hey&ho": {
+      "areaId": "morimichi-center",
+      "slot": 9
+    },
+    "maramaxhifihq": {
+      "areaId": "morimichi-center",
+      "slot": 10
+    },
+    "tokyocultuartbybeams": {
+      "areaId": "morimichi-center",
+      "slot": 10
+    },
+    "クリンスイ": {
+      "areaId": "morimichi-center",
+      "slot": 11
+    },
+    "travelingcowbookspageclimber": {
+      "areaId": "morimichi-center",
+      "slot": 12
+    },
+    "quietspacetool&furniture": {
+      "areaId": "morimichi-center",
+      "slot": 13
+    },
+    "omsabaisabai": {
+      "areaId": "morimichi-center",
+      "slot": 14
+    },
+    "digawel": {
+      "areaId": "morimichi-center",
+      "slot": 15
+    },
+    "mountainresearch": {
+      "areaId": "morimichi-center",
+      "slot": 16
+    },
+    "mmf": {
+      "areaId": "morimichi-center",
+      "slot": 17
+    },
+    "kakubarhythmtest&tiny": {
+      "areaId": "morimichi-center",
+      "slot": 18
+    },
+    "highway南国灰道倶楽部": {
+      "areaId": "morimichi-center",
+      "slot": 19
+    },
+    "beagoodneighborcoffeekiosk": {
+      "areaId": "morimichi-center",
+      "slot": 20
+    },
+    "24pillars": {
+      "areaId": "morimichi-center",
+      "slot": 21
+    },
+    "senkiyaomochiclub": {
+      "areaId": "east-caravan",
+      "slot": 1
+    },
+    "tsukimobazaar": {
+      "areaId": "east-caravan",
+      "slot": 2
+    },
+    "てがみと文字flukeフルーク": {
+      "areaId": "east-caravan",
+      "slot": 3
+    },
+    "ノックの帽子屋": {
+      "areaId": "east-caravan",
+      "slot": 4
+    },
+    "ripa": {
+      "areaId": "east-caravan",
+      "slot": 5
+    },
+    "運麺park": {
+      "areaId": "east-caravan",
+      "slot": 6
+    },
+    "電気湯": {
+      "areaId": "east-caravan",
+      "slot": 7
+    },
+    "どすこいドーナツ休日場所": {
+      "areaId": "east-caravan",
+      "slot": 8
+    },
+    "poppoppop": {
+      "areaId": "east-caravan",
+      "slot": 9
+    },
+    "旅するよしえのにがおえ屋さん": {
+      "areaId": "east-caravan",
+      "slot": 10
+    },
+    "ぺぺぺ似顔絵店": {
+      "areaId": "east-caravan",
+      "slot": 11
+    },
+    "jamboree": {
+      "areaId": "east-caravan",
+      "slot": 12
+    },
+    "canakoinoue": {
+      "areaId": "east-caravan",
+      "slot": 13
+    },
+    "yurtao": {
+      "areaId": "east-caravan",
+      "slot": 14
+    },
+    "ottomo": {
+      "areaId": "east-caravan",
+      "slot": 15
+    },
+    "hitohacoffee&granola": {
+      "areaId": "east-caravan",
+      "slot": 16
+    },
+    "ilukamakuraゆげ": {
+      "areaId": "east-caravan",
+      "slot": 17
+    },
+    "tpmbrewing": {
+      "areaId": "east-caravan",
+      "slot": 18
+    },
+    "ヘブンズテーブル": {
+      "areaId": "east-caravan",
+      "slot": 19
+    },
+    "笹塚ビールスタンドbymasumotoya": {
+      "areaId": "east-caravan",
+      "slot": 20
+    },
+    "kenichikondo": {
+      "areaId": "east-caravan",
+      "slot": 21
+    },
+    "チプカとプクチカ": {
+      "areaId": "naganonano",
+      "slot": 1
+    },
+    "takuramakan": {
+      "areaId": "naganonano",
+      "slot": 2
+    },
+    "naturalanchors": {
+      "areaId": "naganonano",
+      "slot": 3
+    },
+    "重澤珈琲": {
+      "areaId": "naganonano",
+      "slot": 4
+    },
+    "taiko": {
+      "areaId": "naganonano",
+      "slot": 5
+    },
+    "umineue": {
+      "areaId": "naganonano",
+      "slot": 6
+    },
+    "fika": {
+      "areaId": "naganonano",
+      "slot": 7
+    },
+    "饅頭verymuch": {
+      "areaId": "naganonano",
+      "slot": 8
+    },
+    "風景とみつめるタロット": {
+      "areaId": "naganonano",
+      "slot": 9
+    },
+    "ojaspurerawchocolate": {
+      "areaId": "naganonano",
+      "slot": 10
+    },
+    "phd": {
+      "areaId": "naganonano",
+      "slot": 11
+    },
+    "bowks": {
+      "areaId": "naganonano",
+      "slot": 12
+    },
+    "家具屋利右衛門": {
+      "areaId": "naganonano",
+      "slot": 13
+    },
+    "watsonpotterystudio": {
+      "areaId": "naganonano",
+      "slot": 14
+    },
+    "runatsukobayashi": {
+      "areaId": "naganonano",
+      "slot": 15
+    },
+    "石合昌史": {
+      "areaId": "naganonano",
+      "slot": 16
+    },
+    "poolsidestore": {
+      "areaId": "naganonano",
+      "slot": 17
+    },
+    "amijoknorthsoutheastwest": {
+      "areaId": "naganonano",
+      "slot": 18
+    },
+    "nobarahomesteadbrewery": {
+      "areaId": "naganonano",
+      "slot": 19
+    },
+    "宮下果樹園": {
+      "areaId": "naganonano",
+      "slot": 20
+    },
+    "chipakoya": {
+      "areaId": "play-market",
+      "slot": 1
+    },
+    "人々": {
+      "areaId": "play-market",
+      "slot": 2
+    },
+    "tokiirocoffee&pomomaison": {
+      "areaId": "play-market",
+      "slot": 3
+    },
+    "maturehaateliershop": {
+      "areaId": "play-market",
+      "slot": 4
+    },
+    "ざデイリーズ": {
+      "areaId": "play-market",
+      "slot": 5
+    },
+    "メルヘン大蔵のスゲ細工": {
+      "areaId": "play-market",
+      "slot": 6
+    },
+    "queserasera": {
+      "areaId": "play-market",
+      "slot": 7
+    },
+    "25ris": {
+      "areaId": "play-market",
+      "slot": 8
+    },
+    "古道具holo": {
+      "areaId": "play-market",
+      "slot": 9
+    },
+    "にゃーにゃーごろごろパラダイス": {
+      "areaId": "play-market",
+      "slot": 10
+    },
+    "freckle": {
+      "areaId": "play-market",
+      "slot": 10
+    },
+    "hacu": {
+      "areaId": "play-market",
+      "slot": 10
+    },
+    "whw!": {
+      "areaId": "shimanami",
+      "slot": 1
+    },
+    "kougame": {
+      "areaId": "shimanami",
+      "slot": 2
+    },
+    "自然食コタン": {
+      "areaId": "shimanami",
+      "slot": 3
+    },
+    "imaginecoffee": {
+      "areaId": "shimanami",
+      "slot": 4
+    },
+    "ジークマンストア": {
+      "areaId": "shimanami",
+      "slot": 5
+    },
+    "float": {
+      "areaId": "shimanami",
+      "slot": 6
+    },
+    "山窩~旅とてしごと~": {
+      "areaId": "shimanami",
+      "slot": 7
+    },
+    "がふ": {
+      "areaId": "shimanami",
+      "slot": 8
+    },
+    "フベン": {
+      "areaId": "shimanami",
+      "slot": 9
+    },
+    "nuttsponchon": {
+      "areaId": "shimanami",
+      "slot": 10
+    },
+    "bailer": {
+      "areaId": "shimanami",
+      "slot": 11
+    },
+    "newhelloshop": {
+      "areaId": "shimanami",
+      "slot": 12
+    },
+    "鈴木裕之の似顔絵屋さん": {
+      "areaId": "shimanami",
+      "slot": 13
+    },
+    "wineshop&standslowcave": {
+      "areaId": "shimanami",
+      "slot": 14
+    },
+    "ドットコミュ": {
+      "areaId": "shimanami",
+      "slot": 15
+    },
+    "エスニックスタンドメイクワンツー": {
+      "areaId": "shimanami",
+      "slot": 17
+    },
+    "passificbrewing": {
+      "areaId": "shimanami",
+      "slot": 18
+    },
+    "tysonpizza": {
+      "areaId": "shimanami",
+      "slot": 19
+    },
+    "lapitademaison": {
+      "areaId": "shimanami",
+      "slot": 20
+    },
+    "cinquantecinq": {
+      "areaId": "shimanami",
+      "slot": 20
+    },
+    "goffo": {
+      "areaId": "shimanami",
+      "slot": 21
+    },
+    "ヤンフーイワサトミキ": {
+      "areaId": "shimanami",
+      "slot": 22
+    },
+    "テルツォテンポ": {
+      "areaId": "shimanami",
+      "slot": 23
+    },
+    "dadanutsbutter": {
+      "areaId": "shimanami",
+      "slot": 24
+    },
+    "コウボパン小さじいち": {
+      "areaId": "shimanami",
+      "slot": 25
+    },
+    "ミルク工房そら": {
+      "areaId": "shimanami",
+      "slot": 26
+    },
+    "tanigaki": {
+      "areaId": "shimanami",
+      "slot": 27
+    },
+    "off": {
+      "areaId": "shimanami",
+      "slot": 28
+    },
+    "流しのビリヤニ": {
+      "areaId": "shimanami",
+      "slot": 29
+    },
+    "kamera": {
+      "areaId": "shimanami",
+      "slot": 30
+    },
+    "ヌノモノワークス": {
+      "areaId": "little-okinawa",
+      "slot": 1
+    },
+    "ateliersou": {
+      "areaId": "little-okinawa",
+      "slot": 2
+    },
+    "others": {
+      "areaId": "little-okinawa",
+      "slot": 3
+    },
+    "石垣アパートメント": {
+      "areaId": "little-okinawa",
+      "slot": 4
+    },
+    "nantouyaki南島焼": {
+      "areaId": "little-okinawa",
+      "slot": 5
+    },
+    "てすさび": {
+      "areaId": "little-okinawa",
+      "slot": 6
+    },
+    "イチグスクモード": {
+      "areaId": "little-okinawa",
+      "slot": 7
+    },
+    "島の装いstore": {
+      "areaId": "little-okinawa",
+      "slot": 8
+    },
+    "commons": {
+      "areaId": "little-okinawa",
+      "slot": 9
+    },
+    "羊羊yoyoanfactory": {
+      "areaId": "little-okinawa",
+      "slot": 10
+    },
+    "gozza&megu": {
+      "areaId": "little-okinawa",
+      "slot": 11
+    },
+    "hey&haretakara": {
+      "areaId": "little-okinawa",
+      "slot": 12
+    },
+    "aボールスタンドby小桜小梅": {
+      "areaId": "little-okinawa",
+      "slot": 13
+    },
+    "東京台湾": {
+      "areaId": "morimichi-shokudo-umi",
+      "slot": 1
+    },
+    "ricemealsfotan": {
+      "areaId": "morimichi-shokudo-umi",
+      "slot": 2
+    },
+    "littlenapcoffeestand": {
+      "areaId": "morimichi-shokudo-umi",
+      "slot": 3
+    },
+    "麺の樹ぼだい": {
+      "areaId": "morimichi-shokudo-umi",
+      "slot": 4
+    },
+    "蜜香屋と豆んと森珈琲": {
+      "areaId": "fantastic-market",
+      "slot": 1
+    },
+    "さやかのおむすびと堕楽暮": {
+      "areaId": "fantastic-market",
+      "slot": 2
+    },
+    "foodorchestraxsan": {
+      "areaId": "fantastic-market",
+      "slot": 3
+    },
+    "七穀ベーカリー": {
+      "areaId": "fantastic-market",
+      "slot": 4
+    },
+    "お菓子あずき": {
+      "areaId": "fantastic-market",
+      "slot": 5
+    },
+    "woostenginemealskitsutsuki": {
+      "areaId": "fantastic-market",
+      "slot": 6
+    },
+    "timobagels": {
+      "areaId": "fantastic-market",
+      "slot": 7
+    },
+    "cochicafe": {
+      "areaId": "fantastic-market",
+      "slot": 8
+    },
+    "かわにし農園": {
+      "areaId": "fantastic-market",
+      "slot": 9
+    },
+    "さんかくの食卓": {
+      "areaId": "fantastic-market",
+      "slot": 10
+    },
+    "野菜居酒屋いたぎ家": {
+      "areaId": "fantastic-market",
+      "slot": 11
+    },
+    "grafkitchen": {
+      "areaId": "fantastic-market",
+      "slot": 12
+    },
+    "ダイヤメゾン": {
+      "areaId": "fantastic-market",
+      "slot": 13
+    },
+    "ダルマワークス": {
+      "areaId": "fantastic-market",
+      "slot": 14
+    },
+    "obrarte": {
+      "areaId": "fantastic-market",
+      "slot": 15
+    },
+    "teteaandeating": {
+      "areaId": "fantastic-market",
+      "slot": 16
+    },
+    "rise&winbrewingcokamikatzbeer": {
+      "areaId": "fantastic-market",
+      "slot": 17
+    },
+    "101010トトト": {
+      "areaId": "fantastic-market",
+      "slot": 18
+    },
+    "hei": {
+      "areaId": "fantastic-market",
+      "slot": 19
+    },
+    "hashimotonaoko": {
+      "areaId": "fantastic-market",
+      "slot": 20
+    },
+    "lifeisajourney!ihatov": {
+      "areaId": "fantastic-market",
+      "slot": 21
+    },
+    "カシューナッツ専門店豆仁": {
+      "areaId": "fantastic-market",
+      "slot": 22
+    },
+    "lacico": {
+      "areaId": "fantastic-market",
+      "slot": 23
+    },
+    "tubu": {
+      "areaId": "fantastic-market",
+      "slot": 24
+    },
+    "yamyamstore": {
+      "areaId": "fantastic-market",
+      "slot": 25
+    },
+    "unetable": {
+      "areaId": "fantastic-market",
+      "slot": 26
+    },
+    "rainbowfam": {
+      "areaId": "fantastic-market",
+      "slot": 27
+    },
+    "rumchai": {
+      "areaId": "fantastic-market",
+      "slot": 28
+    },
+    "lovecycle": {
+      "areaId": "fantastic-market",
+      "slot": 29
+    },
+    "澤邑直美": {
+      "areaId": "fantastic-market",
+      "slot": 30
+    },
+    "saredoされど": {
+      "areaId": "fantastic-market",
+      "slot": 31
+    },
+    "okapi": {
+      "areaId": "fantastic-market",
+      "slot": 32
+    },
+    "泉州と堺の糸へん": {
+      "areaId": "fantastic-market",
+      "slot": 33
+    },
+    "奥谷農園": {
+      "areaId": "fantastic-market",
+      "slot": 34
+    },
+    "maemukisuit!": {
+      "areaId": "fantastic-market",
+      "slot": 35
+    },
+    "ぐびっと淡路島!": {
+      "areaId": "fantastic-market",
+      "slot": 36
+    },
+    "puroプーロ": {
+      "areaId": "fantastic-market",
+      "slot": 37
+    },
+    "源次郎商店": {
+      "areaId": "shibafu",
+      "slot": 1
+    },
+    "和歌山酒場": {
+      "areaId": "shibafu",
+      "slot": 1
+    },
+    "kamogo": {
+      "areaId": "shibafu",
+      "slot": 2
+    },
+    "宗像堂": {
+      "areaId": "shibafu",
+      "slot": 3
+    },
+    "goodmorningfarm": {
+      "areaId": "shibafu",
+      "slot": 4
+    },
+    "wrongmarket": {
+      "areaId": "shibafu",
+      "slot": 5
+    },
+    "タイモンゴル武者修行商会": {
+      "areaId": "shibafu",
+      "slot": 6
+    },
+    "ラオス料理タマサート": {
+      "areaId": "shibafu",
+      "slot": 7
+    },
+    "wattechai": {
+      "areaId": "shibafu",
+      "slot": 8
+    },
+    "bnd": {
+      "areaId": "shibafu",
+      "slot": 9
+    },
+    "sumi": {
+      "areaId": "shibafu",
+      "slot": 10
+    },
+    "subakyoto": {
+      "areaId": "shibafu",
+      "slot": 11
+    },
+    "hara": {
+      "areaId": "shibafu",
+      "slot": 12
+    },
+    "nowhereman": {
+      "areaId": "shibafu",
+      "slot": 12
+    },
+    "méton": {
+      "areaId": "shibafu",
+      "slot": 12
+    },
+    "3みっつ": {
+      "areaId": "shibafu",
+      "slot": 13
+    },
+    "四月の魚": {
+      "areaId": "shibafu",
+      "slot": 14
+    },
+    "magicroom": {
+      "areaId": "shibafu",
+      "slot": 15
+    },
+    "パルメラ": {
+      "areaId": "shibafu",
+      "slot": 16
+    },
+    "モンゴルパン": {
+      "areaId": "shibafu",
+      "slot": 17
+    },
+    "hozubag": {
+      "areaId": "shibafu",
+      "slot": 18
+    },
+    "りんご": {
+      "areaId": "shibafu",
+      "slot": 19
+    },
+    "小林酒店": {
+      "areaId": "shibafu",
+      "slot": 20
+    },
+    "sakeworld": {
+      "areaId": "shibafu",
+      "slot": 21
+    },
+    "baum": {
+      "areaId": "shibafu",
+      "slot": 22
+    },
+    "鴨庭": {
+      "areaId": "shibafu",
+      "slot": 23
+    },
+    "tarelとcam": {
+      "areaId": "shibafu",
+      "slot": 24
+    },
+    "山ねこ": {
+      "areaId": "shibafu",
+      "slot": 25
+    },
+    "タコとケンタロー": {
+      "areaId": "shibafu",
+      "slot": 26
+    },
+    "vou棒": {
+      "areaId": "shibafu",
+      "slot": 27
+    },
+    "ゆとなみ社": {
+      "areaId": "shibafu",
+      "slot": 28
+    }
+  }
+}

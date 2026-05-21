@@ -1,5 +1,7 @@
 import * as cheerio from 'cheerio';
 import type { FoodVendor, PriceRange } from '@/types';
+import shopAreas from '@/data/shop-areas.json';
+import { normalizeShopName } from '@/lib/normalize';
 
 const BASE_URL   = 'https://morimichiichiba.jp';
 const MARKET_URL = `${BASE_URL}/market/`;
@@ -167,18 +169,30 @@ async function tryHtmlScrapeAll(): Promise<FoodVendor[] | null> {
 
 export type FoodSource = 'json' | 'html' | 'api';
 
+function applyShopAreas(vendors: FoodVendor[]): FoodVendor[] {
+  const areaById = new Map(shopAreas.areas.map((a) => [a.id, a]));
+  const index = shopAreas.shopAreaIndex as Record<string, { areaId: string; slot: number }>;
+  return vendors.map((v) => {
+    const entry = index[normalizeShopName(v.name)];
+    if (!entry) return v;
+    const area = areaById.get(entry.areaId);
+    if (!area) return v;
+    return { ...v, area: area.name, areaId: entry.areaId, areaSlot: entry.slot };
+  });
+}
+
 export async function loadFood(): Promise<{ items: FoodVendor[]; source: FoodSource }> {
   // food.json（npm run scrape:food で生成）を最優先で使う
   const { default: foodJson } = await import('@/data/food.json');
   const cached = foodJson as FoodVendor[];
-  if (cached.length > 0) return { items: cached, source: 'json' };
+  if (cached.length > 0) return { items: applyShopAreas(cached), source: 'json' };
 
   // food.json が空のときのみライブ取得を試みる
   const htmlItems = await tryHtmlScrapeAll();
-  if (htmlItems && htmlItems.length > 0) return { items: htmlItems, source: 'html' };
+  if (htmlItems && htmlItems.length > 0) return { items: applyShopAreas(htmlItems), source: 'html' };
 
   const apiItems = await tryWpApiAll();
-  if (apiItems && apiItems.length > 0) return { items: apiItems, source: 'api' };
+  if (apiItems && apiItems.length > 0) return { items: applyShopAreas(apiItems), source: 'api' };
 
   return { items: [], source: 'json' };
 }
