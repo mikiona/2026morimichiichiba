@@ -41,7 +41,7 @@ export function ArtistCard({ artist, schedules }: ArtistCardProps) {
             {schedules.map((s) => (
               <div key={s.id} className="flex items-center gap-1 text-xs text-gray-600">
                 <span className="text-gray-400">{DAY_LABELS[s.day]}</span>
-                <span className="font-medium">{s.startTime}〜{s.endTime}</span>
+
                 <span
                   className={`px-1.5 py-0.5 rounded text-white text-xs ${STAGE_COLORS[s.stage]}`}
                 >
