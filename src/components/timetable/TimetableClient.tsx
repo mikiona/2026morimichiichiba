@@ -219,7 +219,7 @@ export function TimetableClient({ schedule }: TimetableClientProps) {
                 title={`${entry.artistName} ${entry.startTime}〜${entry.endTime}`}
               >
                 <div className="text-xs font-bold leading-tight truncate">{entry.artistName}</div>
-                <div className="text-xs opacity-80 leading-tight">{entry.startTime}〜{entry.endTime}</div>
+
                 {status === 'now-playing' && (
                   <div className="flex items-center gap-0.5 mt-0.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
