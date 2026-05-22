@@ -116,7 +116,7 @@ export function ArtistSearchClient({ artists, schedule }: ArtistSearchClientProp
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {results.map((a) => (
             <ArtistCard
-              key={a.id}
+              key={a.name}
               artist={a}
               schedules={schedule.filter((s) => s.artistId === a.id || s.artistName === a.name)}
             />
