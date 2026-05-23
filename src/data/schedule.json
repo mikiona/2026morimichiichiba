@@ -1069,8 +1069,8 @@
     "day": "05-24",
     "stage": "GRASS STAGE",
     "stageArea": "海エリア",
-    "startTime": "13:00",
-    "endTime": "14:00"
+    "startTime": "12:45",
+    "endTime": "13:30"
   },
   {
     "id": "0524-grass-きゃりーぱみゅぱみゅ-109",
@@ -1079,8 +1079,8 @@
     "day": "05-24",
     "stage": "GRASS STAGE",
     "stageArea": "海エリア",
-    "startTime": "15:00",
-    "endTime": "16:00"
+    "startTime": "14:45",
+    "endTime": "15:30"
   },
   {
     "id": "0524-grass-キタニタツヤ-110",
@@ -1089,8 +1089,8 @@
     "day": "05-24",
     "stage": "GRASS STAGE",
     "stageArea": "海エリア",
-    "startTime": "17:00",
-    "endTime": "18:00"
+    "startTime": "16:45",
+    "endTime": "17:30"
   },
   {
     "id": "0524-grass-never-young-beach-111",
@@ -1099,8 +1099,8 @@
     "day": "05-24",
     "stage": "GRASS STAGE",
     "stageArea": "海エリア",
-    "startTime": "19:00",
-    "endTime": "20:00"
+    "startTime": "18:45",
+    "endTime": "19:45"
   },
   {
     "id": "0524-sand-奇妙礼太郎band-112",
@@ -1109,8 +1109,8 @@
     "day": "05-24",
     "stage": "SAND STAGE",
     "stageArea": "海エリア",
-    "startTime": "12:00",
-    "endTime": "13:00"
+    "startTime": "11:45",
+    "endTime": "12:30"
   },
   {
     "id": "0524-sand-galileo-galilei-113",
@@ -1119,8 +1119,8 @@
     "day": "05-24",
     "stage": "SAND STAGE",
     "stageArea": "海エリア",
-    "startTime": "14:00",
-    "endTime": "15:00"
+    "startTime": "13:45",
+    "endTime": "14:30"
   },
   {
     "id": "0524-sand-tade-dust-114",
@@ -1129,8 +1129,8 @@
     "day": "05-24",
     "stage": "SAND STAGE",
     "stageArea": "海エリア",
-    "startTime": "16:00",
-    "endTime": "17:00"
+    "startTime": "15:45",
+    "endTime": "16:30"
   },
   {
     "id": "0524-sand-jinmenusagi-115",
@@ -1139,8 +1139,8 @@
     "day": "05-24",
     "stage": "SAND STAGE",
     "stageArea": "海エリア",
-    "startTime": "18:00",
-    "endTime": "19:00"
+    "startTime": "17:45",
+    "endTime": "18:30"
   },
   {
     "id": "0524-hill-mom-116",
@@ -1149,8 +1149,8 @@
     "day": "05-24",
     "stage": "HILL STAGE",
     "stageArea": "海エリア",
-    "startTime": "12:00",
-    "endTime": "13:00"
+    "startTime": "11:30",
+    "endTime": "12:15"
   },
   {
     "id": "0524-hill-シャッポ-117",
@@ -1159,8 +1159,8 @@
     "day": "05-24",
     "stage": "HILL STAGE",
     "stageArea": "海エリア",
-    "startTime": "14:00",
-    "endTime": "15:00"
+    "startTime": "13:30",
+    "endTime": "14:10"
   },
   {
     "id": "0524-hill-oddre-118",
@@ -1169,8 +1169,8 @@
     "day": "05-24",
     "stage": "HILL STAGE",
     "stageArea": "海エリア",
-    "startTime": "16:00",
-    "endTime": "17:00"
+    "startTime": "15:30",
+    "endTime": "16:10"
   },
   {
     "id": "0524-hill-さとうもかtrio-set-119",
@@ -1179,8 +1179,8 @@
     "day": "05-24",
     "stage": "HILL STAGE",
     "stageArea": "海エリア",
-    "startTime": "18:00",
-    "endTime": "19:00"
+    "startTime": "17:30",
+    "endTime": "18:10"
   },
   {
     "id": "0524-eikyo-yanggao-sunday-fleamarket-900--120",
@@ -1209,8 +1209,8 @@
     "day": "05-24",
     "stage": "影響亜細亜 STAGE",
     "stageArea": "海エリア",
-    "startTime": "14:00",
-    "endTime": "15:00"
+    "startTime": "13:30",
+    "endTime": "14:30"
   },
   {
     "id": "0524-eikyo-影響-disco-dj-jun-jxjx-saito-you-123",
@@ -1219,8 +1219,8 @@
     "day": "05-24",
     "stage": "影響亜細亜 STAGE",
     "stageArea": "海エリア",
-    "startTime": "16:00",
-    "endTime": "17:00"
+    "startTime": "15:30",
+    "endTime": "16:30"
   },
   {
     "id": "0524-eikyo-live-yonlapa-from-thailand-124",
@@ -1229,18 +1229,8 @@
     "day": "05-24",
     "stage": "影響亜細亜 STAGE",
     "stageArea": "海エリア",
-    "startTime": "18:00",
-    "endTime": "19:00"
-  },
-  {
-    "id": "0524-eikyo-dj-takashi-chiyoda-125",
-    "artistId": "dj-takashi-chiyoda",
-    "artistName": "[DJ] Takashi Chiyoda",
-    "day": "05-24",
-    "stage": "影響亜細亜 STAGE",
-    "stageArea": "海エリア",
-    "startTime": "19:30",
-    "endTime": "20:30"
+    "startTime": "17:30",
+    "endTime": "18:30"
   },
   {
     "id": "0524-eatbeat-dj-dj-ツカゴロウ-126",
@@ -1249,8 +1239,8 @@
     "day": "05-24",
     "stage": "EATBEAT! STAGE",
     "stageArea": "海エリア",
-    "startTime": "11:00",
-    "endTime": "12:00"
+    "startTime": "10:30",
+    "endTime": "11:30"
   },
   {
     "id": "0524-eatbeat-trfリフレッシュダンス-etsu-chiharu-from-127",
@@ -1259,8 +1249,8 @@
     "day": "05-24",
     "stage": "EATBEAT! STAGE",
     "stageArea": "海エリア",
-    "startTime": "12:30",
-    "endTime": "13:30"
+    "startTime": "12:20",
+    "endTime": "13:00"
   },
   {
     "id": "0524-eatbeat-爆笑そっくり森道ものまね歌合戦-128",
@@ -1279,7 +1269,7 @@
     "day": "05-24",
     "stage": "EATBEAT! STAGE",
     "stageArea": "海エリア",
-    "startTime": "15:00",
+    "startTime": "14:30",
     "endTime": "15:30"
   },
   {
@@ -1290,7 +1280,7 @@
     "stage": "EATBEAT! STAGE",
     "stageArea": "海エリア",
     "startTime": "15:30",
-    "endTime": "16:30"
+    "endTime": "16:10"
   },
   {
     "id": "0524-eatbeat-dj-dai-tamai-monk-131",
@@ -1299,8 +1289,8 @@
     "day": "05-24",
     "stage": "EATBEAT! STAGE",
     "stageArea": "海エリア",
-    "startTime": "17:00",
-    "endTime": "18:00"
+    "startTime": "16:30",
+    "endTime": "17:10"
   },
   {
     "id": "0524-eatbeat-eatbeat10収穫する-132",
@@ -1309,7 +1299,7 @@
     "day": "05-24",
     "stage": "EATBEAT! STAGE",
     "stageArea": "海エリア",
-    "startTime": "18:00",
+    "startTime": "17:30",
     "endTime": "19:00"
   },
   {
@@ -1320,7 +1310,17 @@
     "stage": "EATBEAT! STAGE",
     "stageArea": "海エリア",
     "startTime": "19:00",
-    "endTime": "19:30"
+    "endTime": "19:20"
+  },
+  {
+    "id": "0524-eikyo-dj-takashi-chiyoda-125",
+    "artistId": "dj-takashi-chiyoda",
+    "artistName": "[DJ] Takashi Chiyoda",
+    "day": "05-24",
+    "stage": "EATBEAT! STAGE",
+    "stageArea": "海エリア",
+    "startTime": "19:20",
+    "endTime": "20:00"
   },
   {
     "id": "0524-yuenchi-tetora-134",
@@ -1329,8 +1329,8 @@
     "day": "05-24",
     "stage": "遊園地 STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "12:00",
-    "endTime": "13:00"
+    "startTime": "11:50",
+    "endTime": "13:40"
   },
   {
     "id": "0524-yuenchi-柴田聡子band-set-135",
@@ -1339,8 +1339,8 @@
     "day": "05-24",
     "stage": "遊園地 STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "14:00",
-    "endTime": "15:00"
+    "startTime": "13:10",
+    "endTime": "14:10"
   },
   {
     "id": "0524-yuenchi-思い出野郎aチーム-136",
@@ -1349,8 +1349,8 @@
     "day": "05-24",
     "stage": "遊園地 STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "15:00",
-    "endTime": "16:00"
+    "startTime": "15:10",
+    "endTime": "15:50"
   },
   {
     "id": "0524-yuenchi-fco-137",
@@ -1359,8 +1359,8 @@
     "day": "05-24",
     "stage": "遊園地 STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "17:00",
-    "endTime": "18:00"
+    "startTime": "16:45",
+    "endTime": "17:30"
   },
   {
     "id": "0524-yuenchi-hump-back-138",
@@ -1369,8 +1369,8 @@
     "day": "05-24",
     "stage": "遊園地 STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "18:30",
-    "endTime": "19:30"
+    "startTime": "18:20",
+    "endTime": "19:10"
   },
   {
     "id": "0524-disco-坂田律子-139",
@@ -1379,8 +1379,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. DISCO.STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "10:30",
-    "endTime": "11:30"
+    "startTime": "10:00",
+    "endTime": "11:10"
   },
   {
     "id": "0524-disco-feline-140",
@@ -1389,8 +1389,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. DISCO.STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "11:30",
-    "endTime": "12:30"
+    "startTime": "11:10",
+    "endTime": "12:20"
   },
   {
     "id": "0524-disco-vq-141",
@@ -1399,8 +1399,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. DISCO.STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "12:30",
-    "endTime": "13:30"
+    "startTime": "12:20",
+    "endTime": "13:10"
   },
   {
     "id": "0524-disco-lilbesh-ramko-142",
@@ -1409,8 +1409,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. DISCO.STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "13:30",
-    "endTime": "14:00"
+    "startTime": "13:10",
+    "endTime": "13:45"
   },
   {
     "id": "0524-disco-peterparker69-143",
@@ -1419,18 +1419,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. DISCO.STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "14:00",
-    "endTime": "15:00"
-  },
-  {
-    "id": "0524-disco-yagiが森の道の市場へ2026-144",
-    "artistId": "yagiが森の道の市場へ2026",
-    "artistName": "YAGIが森の道の市場へ2026",
-    "day": "05-24",
-    "stage": "MORI.MICHI. DISCO.STAGE",
-    "stageArea": "遊園地エリア",
-    "startTime": "15:00",
-    "endTime": "15:30"
+    "startTime": "13:50",
+    "endTime": "14:30"
   },
   {
     "id": "0524-disco-5windows-freak-dj-set-145",
@@ -1439,8 +1429,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. DISCO.STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "15:00",
-    "endTime": "15:30"
+    "startTime": "14:45",
+    "endTime": "15:15"
   },
   {
     "id": "0524-disco-byora-146",
@@ -1449,8 +1439,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. DISCO.STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "15:30",
-    "endTime": "16:00"
+    "startTime": "15:15",
+    "endTime": "15:30"
   },
   {
     "id": "0524-disco-shoma-frdambosound-147",
@@ -1459,8 +1449,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. DISCO.STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "16:00",
-    "endTime": "16:30"
+    "startTime": "15:15",
+    "endTime": "16:00"
   },
   {
     "id": "0524-disco-ecec-yagi-yoyo-team-148",
@@ -1469,8 +1459,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. DISCO.STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "16:30",
-    "endTime": "17:00"
+    "startTime": "16:00",
+    "endTime": "16:30"
   },
   {
     "id": "0524-disco-オカモトレイジokamotos-yagi-yoyo-team-149",
@@ -1479,8 +1469,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. DISCO.STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "17:00",
-    "endTime": "17:30"
+    "startTime": "16:30",
+    "endTime": "17:00"
   },
   {
     "id": "0524-disco-robbinlost-150",
@@ -1489,18 +1479,18 @@
     "day": "05-24",
     "stage": "MORI.MICHI. DISCO.STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "17:30",
-    "endTime": "18:00"
+    "startTime": "17:00",
+    "endTime": "17:15"
   },
   {
     "id": "0524-disco-n²-rui-aisho-nakajima-151",
     "artistId": "n²-rui-aisho-nakajima",
-    "artistName": "N² × rui × Aisho Nakajima",
+    "artistName": "N² x rui x Aisho Nakajima",
     "day": "05-24",
     "stage": "MORI.MICHI. DISCO.STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "18:00",
-    "endTime": "19:00"
+    "startTime": "17:15",
+    "endTime": "18:30"
   },
   {
     "id": "0524-disco-frog-3-152",
@@ -1509,7 +1499,7 @@
     "day": "05-24",
     "stage": "MORI.MICHI. DISCO.STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "19:00",
+    "startTime": "18:30",
     "endTime": "19:30"
   },
   {
@@ -1525,21 +1515,21 @@
   {
     "id": "0524-art-theater-laugh-spoiler-ランジャタイ-154",
     "artistId": "laugh-spoiler-ランジャタイ",
-    "artistName": "LAUGH SPOILER ランジャタイ",
+    "artistName": "ランジャタイ",
     "day": "05-24",
     "stage": "MORI.MICHI. ART THEATER",
     "stageArea": "遊園地エリア",
     "startTime": "11:00",
-    "endTime": "12:00"
+    "endTime": "11:30"
   },
   {
     "id": "0524-art-theater-laugh-spoiler-とろサーモン久保田-155",
     "artistId": "laugh-spoiler-とろサーモン久保田",
-    "artistName": "LAUGH SPOILER とろサーモン久保田",
+    "artistName": "とろサーモン久保田",
     "day": "05-24",
     "stage": "MORI.MICHI. ART THEATER",
     "stageArea": "遊園地エリア",
-    "startTime": "12:00",
+    "startTime": "12:30",
     "endTime": "13:00"
   },
   {
@@ -1549,8 +1539,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. ART THEATER",
     "stageArea": "遊園地エリア",
-    "startTime": "14:30",
-    "endTime": "15:30"
+    "startTime": "14:15",
+    "endTime": "14:50"
   },
   {
     "id": "0524-art-theater-長瀬有花-157",
@@ -1559,8 +1549,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. ART THEATER",
     "stageArea": "遊園地エリア",
-    "startTime": "16:00",
-    "endTime": "17:00"
+    "startTime": "15:50",
+    "endTime": "16:40"
   },
   {
     "id": "0524-art-theater-ヒカシュー-158",
@@ -1569,8 +1559,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. ART THEATER",
     "stageArea": "遊園地エリア",
-    "startTime": "18:00",
-    "endTime": "19:00"
+    "startTime": "17:40",
+    "endTime": "18:15"
   },
   {
     "id": "0524-art-theater-billyrrom-159",
@@ -1579,8 +1569,8 @@
     "day": "05-24",
     "stage": "MORI.MICHI. ART THEATER",
     "stageArea": "遊園地エリア",
-    "startTime": "19:00",
-    "endTime": "20:00"
+    "startTime": "19:15",
+    "endTime": "19:50"
   },
   {
     "id": "0524-lvrry-itou-160",
@@ -1589,8 +1579,8 @@
     "day": "05-24",
     "stage": "LVRRY X BLH STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "12:00",
-    "endTime": "13:00"
+    "startTime": "11:30",
+    "endTime": "12:30"
   },
   {
     "id": "0524-lvrry-timo-161",
@@ -1599,8 +1589,8 @@
     "day": "05-24",
     "stage": "LVRRY X BLH STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "13:30",
-    "endTime": "14:30"
+    "startTime": "13:00",
+    "endTime": "14:15"
   },
   {
     "id": "0524-lvrry-eou-162",
@@ -1610,7 +1600,7 @@
     "stage": "LVRRY X BLH STAGE",
     "stageArea": "遊園地エリア",
     "startTime": "15:00",
-    "endTime": "16:00"
+    "endTime": "15:50"
   },
   {
     "id": "0524-lvrry-luca-163",
@@ -1619,8 +1609,8 @@
     "day": "05-24",
     "stage": "LVRRY X BLH STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "17:00",
-    "endTime": "18:00"
+    "startTime": "16:40",
+    "endTime": "17:40"
   },
   {
     "id": "0524-lvrry-kotsu-cyk-164",
@@ -1629,7 +1619,7 @@
     "day": "05-24",
     "stage": "LVRRY X BLH STAGE",
     "stageArea": "遊園地エリア",
-    "startTime": "18:30",
-    "endTime": "19:30"
+    "startTime": "18:15",
+    "endTime": "19:15"
   }
 ]
