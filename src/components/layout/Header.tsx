@@ -9,6 +9,8 @@ const NAV_ITEMS = [
   { href: '/artists',   label: 'アーティスト' },
   { href: '/timetable', label: 'タイムテーブル' },
   { href: '/map',       label: 'マップ' },
+  { href: '/my',        label: 'マイプラン' },
+  { href: '/info',      label: 'インフォ' },
 ];
 
 export function Header() {

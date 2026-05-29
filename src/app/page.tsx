@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { FESTIVAL_DATES, VENUE_NAME, VENUE_ADDRESS, OFFICIAL_SITE_URL } from '@/lib/constants';
+import { loadSchedule } from '@/lib/data/loadSchedule';
+import { NowPlayingWidget } from '@/components/home/NowPlayingWidget';
 
 const SECTIONS = [
   {
@@ -38,6 +40,7 @@ const SECTIONS = [
 ] as { href: string; emoji: string; title: string; description: string; color: string; iconBg: string; external?: boolean }[];
 
 export default function HomePage() {
+  const schedule = loadSchedule();
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Hero */}
@@ -65,6 +68,9 @@ export default function HomePage() {
           </a>
         </div>
       </section>
+
+      {/* 今ステージで（開催中のみリアルタイム表示） */}
+      <NowPlayingWidget schedule={schedule} />
 
       {/* Section cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

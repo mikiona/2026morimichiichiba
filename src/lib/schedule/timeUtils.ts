@@ -63,3 +63,36 @@ export function minutesBetween(startTime: string, endTime: string): number {
   const [eh, em] = endTime.split(':').map(Number);
   return (eh * 60 + em) - (sh * 60 + sm);
 }
+
+/**
+ * 同一日内で出演時間が重複する公演の id 集合を返す。
+ * 2公演は同じ day で `aStart < bEnd && bStart < aEnd` のとき重複とみなす。
+ */
+export function findConflicts(entries: ScheduleEntry[]): Set<string> {
+  const conflicts = new Set<string>();
+  const byDay = new Map<FestivalDay, ScheduleEntry[]>();
+  for (const e of entries) {
+    if (!e.endTime) continue;
+    const list = byDay.get(e.day) ?? [];
+    list.push(e);
+    byDay.set(e.day, list);
+  }
+
+  for (const list of byDay.values()) {
+    for (let i = 0; i < list.length; i++) {
+      for (let j = i + 1; j < list.length; j++) {
+        const a = list[i];
+        const b = list[j];
+        const aStart = toDateOnDay(a.startTime, a.day).getTime();
+        const aEnd = toDateOnDay(a.endTime, a.day).getTime();
+        const bStart = toDateOnDay(b.startTime, b.day).getTime();
+        const bEnd = toDateOnDay(b.endTime, b.day).getTime();
+        if (aStart < bEnd && bStart < aEnd) {
+          conflicts.add(a.id);
+          conflicts.add(b.id);
+        }
+      }
+    }
+  }
+  return conflicts;
+}
